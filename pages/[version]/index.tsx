@@ -19,6 +19,7 @@ import { useNavBarCollapsedContext } from "../../docs-v1/context/NavBarCollapseC
 import { useRouteChangingContext } from "../../docs-v1/context/RouteChangingContext";
 import { SkeletonWidth } from "../../docs-v1/enums/SkeletonLoder.enum";
 import { getVersionsList } from "../../docs-v1/lib/api";
+import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -34,13 +35,15 @@ export default function Index({ versionsList }: Readonly<Props>) {
       document.body.classList.add("min-width-600");
     }
   }, [isMobileDevice]);
-  console.log("here");
 
   return (
     <>
       <GoogleAnalyticsScript />
       <div className="nav-bar-container">
-        <TopNav versionsList={versionsList} />
+        <TopNav
+          logo={<CollateIcon width={128} height={50} />}
+          versionsList={versionsList}
+        />
         <CategoriesNav menu={menuItems} />
       </div>
       <div className="home-page">

@@ -18,6 +18,7 @@ import { useNavBarCollapsedContext } from "../docs-v1/context/NavBarCollapseCont
 import { useRouteChangingContext } from "../docs-v1/context/RouteChangingContext";
 import { getVersionsList } from "../docs-v1/lib/api";
 import { getVersionFromUrl } from "../docs-v1/utils/CommonUtils";
+import { ReactComponent as CollateIcon } from "../images/icons/collate-logo.svg";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -51,7 +52,10 @@ function ErrorComponent({ versionsList }: Readonly<Props>) {
   return (
     <div className="flex flex-col">
       <GoogleAnalyticsScript />
-      <TopNav versionsList={versionsList} />
+      <TopNav
+        logo={<CollateIcon width={128} height={50} />}
+        versionsList={versionsList}
+      />
       <CategoriesNav menu={menuItems} />
       <div className="flex">
         <SideNav

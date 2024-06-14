@@ -21,6 +21,7 @@ import { SkeletonWidth } from "../docs-v1/enums/SkeletonLoder.enum";
 import { MenuItem } from "../docs-v1/interface/common.interface";
 import { getVersionsList } from "../docs-v1/lib/api";
 import { fetchMenuList } from "../docs-v1/utils/CommonUtils";
+import { ReactComponent as CollateIcon } from "../images/icons/collate-logo.svg";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -51,7 +52,10 @@ export default function Index({ versionsList }: Readonly<Props>) {
     <>
       <GoogleAnalyticsScript />
       <div className="nav-bar-container">
-        <TopNav versionsList={versionsList} />
+      <TopNav
+          logo={<CollateIcon width={128} height={50} />}
+          versionsList={versionsList}
+        />
         <CategoriesNav menu={menu} />
       </div>
       <div className="home-page">

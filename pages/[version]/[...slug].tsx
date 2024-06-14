@@ -20,6 +20,7 @@ import {
 } from "../../docs-v1/lib/api";
 import { configs } from "../../docs-v1/lib/markdoc";
 import { getFormattedPartials } from "../../docs-v1/utils/CommonUtils";
+import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
 
 interface Props {
   content: string;
@@ -90,6 +91,7 @@ export default function Article({
           />
         ) : (
           <DocsPageLayout
+            logo={<CollateIcon width={128} height={50} />}
             parsedContent={parsedContent}
             slug={slug}
             versionsList={versionsList}

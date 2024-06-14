@@ -3,8 +3,8 @@ import React from "react";
 
 import "prismjs";
 // Import other Prism themes here
-import "../docs-v1/public/globals.css";
 import "../docs-v1/public/modal.css";
+import "../public/globals.css";
 
 import type { MarkdocNextJsPageProps } from "@markdoc/next.js";
 import type { AppProps } from "next/app";
@@ -28,8 +28,8 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
       <Head>
         <title>{TITLE}</title>
         <link rel="icon" href="/favicon.png" />
-        <link rel="alternate icon" href="/favicon.png" />
-        <link rel="shortcut icon" href="/favicon180.png" />
+        <link rel="alternate icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
         <meta name="theme-color" content="#ffffff" />
         <meta content="OpenMetadata Docs" property="og:title" />
         <meta content="OpenMetadata Docs" name="twitter:title" />
