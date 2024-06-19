@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import {
+  COLLATE_BANNER_LINKS_INFO,
+  COLLATE_HOME_PAGE_BANNER_INFO,
+} from "../constants/Homepage.constants";
 import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
 import Footer from "../docs-v1/components/Footer/Footer";
@@ -52,7 +56,7 @@ export default function Index({ versionsList }: Readonly<Props>) {
     <>
       <GoogleAnalyticsScript />
       <div className="nav-bar-container">
-      <TopNav
+        <TopNav
           logo={<CollateIcon width={128} height={50} />}
           versionsList={versionsList}
         />
@@ -71,7 +75,10 @@ export default function Index({ versionsList }: Readonly<Props>) {
           </div>
         ) : (
           <>
-            <HomePageBanner />
+            <HomePageBanner
+              bannerInfo={COLLATE_HOME_PAGE_BANNER_INFO}
+              quickLinks={COLLATE_BANNER_LINKS_INFO}
+            />
 
             <div className="overview-container">
               <div className="overview-heading">{OVERVIEW_INFO.title}</div>
