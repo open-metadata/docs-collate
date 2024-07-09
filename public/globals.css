@@ -1,5 +1,9 @@
 @import "../docs-v1/public/globals.css";
 
 :root {
-  --primary-color: #0968da;
+  --primary-color: #CD3C4D;
+}
+
+.overview-container {
+  background: linear-gradient(160deg, #F4FDFF, #FBF4F4);
 }

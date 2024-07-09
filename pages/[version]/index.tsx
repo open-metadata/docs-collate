@@ -11,12 +11,10 @@ import NewsEntry from "../../docs-v1/components/NewsEntry/NewsEntry";
 import { SelectOption } from "../../docs-v1/components/SelectDropdown/SelectDropdown";
 import TopNav from "../../docs-v1/components/TopNav/TopNav";
 import Card from "../../docs-v1/components/common/Card/Card";
-import HomePageBanner from "../../docs-v1/components/common/HomePageBanner/HomePageBanner";
 import SkeletonLoader from "../../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
 import {
   BLOGS_INFO,
   OVERVIEW_INFO,
-  QUICK_LINK_CARDS,
 } from "../../docs-v1/constants/homePage.constants";
 import { useMenuItemsContext } from "../../docs-v1/context/MenuItemsContext";
 import { useNavBarCollapsedContext } from "../../docs-v1/context/NavBarCollapseContext";
@@ -24,6 +22,7 @@ import { useRouteChangingContext } from "../../docs-v1/context/RouteChangingCont
 import { SkeletonWidth } from "../../docs-v1/enums/SkeletonLoder.enum";
 import { getVersionsList } from "../../docs-v1/lib/api";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
+import HomePageBanner from "../../components/Header/HomePageBanner";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -71,21 +70,6 @@ export default function Index({ versionsList }: Readonly<Props>) {
             <div className="overview-container">
               <div className="overview-heading">{OVERVIEW_INFO.title}</div>
               <p className="m-0">{OVERVIEW_INFO.description}</p>
-            </div>
-            <div className="homepage-containers">
-              <div className="container-heading">Quick Links</div>
-              <div className="cards-container">
-                {QUICK_LINK_CARDS.map((cardInfo) => (
-                  <Card
-                    content={cardInfo.content}
-                    key={`${cardInfo.heading}${cardInfo.url}`}
-                    heading={cardInfo.heading}
-                    url={cardInfo.url}
-                    isExternalLink={cardInfo.isExternalLink}
-                    icon={cardInfo.icon}
-                  />
-                ))}
-              </div>
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Connectors</div>
