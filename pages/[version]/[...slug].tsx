@@ -21,6 +21,7 @@ import {
 import { configs } from "../../docs-v1/lib/markdoc";
 import { getFormattedPartials } from "../../docs-v1/utils/CommonUtils";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
+import Footer from "../../components/Footer/Footer";
 
 interface Props {
   content: string;
@@ -95,6 +96,7 @@ export default function Article({
             parsedContent={parsedContent}
             slug={slug}
             versionsList={versionsList}
+            footer={<Footer />}
           />
         )}
       </ErrorBoundary>
