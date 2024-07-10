@@ -25,4 +25,7 @@ body {
 .active-connector {
   border: 1px solid var(--primary-color);
   border-radius: 30px;
+  color: black;
+  font-weight: 400;
+  background-color: transparent;
 }
