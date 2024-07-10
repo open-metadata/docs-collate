@@ -16,9 +16,9 @@ import { NavBarCollapseContextProvider } from "../docs-v1/context/NavBarCollapse
 import { RouteChangingContextProvider } from "../docs-v1/context/RouteChangingContext";
 import { StepsContextProvider } from "../docs-v1/context/StepsContext";
 
-const TITLE = "OpenMetadata Documentation: Get Help Instantly";
+const TITLE = "Collate Documentation: Get Help Instantly";
 const DESCRIPTION =
-  "Follow the step-by-step guides to get started with OpenMetadata, the #1 open source data catalog tool. Get discovery, collaboration, governance, observability, quality tools all in one place.";
+  "Follow the step-by-step guides to get started with Collate, the #1 open source data catalog tool. Get discovery, collaboration, governance, observability, quality tools all in one place.";
 
 export type MyAppProps = MarkdocNextJsPageProps;
 
@@ -31,8 +31,8 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <link rel="alternate icon" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta name="theme-color" content="#ffffff" />
-        <meta content="OpenMetadata Docs" property="og:title" />
-        <meta content="OpenMetadata Docs" name="twitter:title" />
+        <meta content="Collate Docs" property="og:title" />
+        <meta content="Collate Docs" name="twitter:title" />
         <meta
           name="keywords"
           content="best open-source data catalog, #1 open source data catalog, openmetadata documentation, data governance solutions, centralized metadata platform, best data discovery tool, data collaboration platform, modern data catalog, data catalog data lineage, best metadata management tool"
