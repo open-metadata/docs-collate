@@ -5,7 +5,6 @@ import {
 } from "../../constants/Homepage.constants";
 import CategoriesNav from "../../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
-import Footer from "../../docs-v1/components/Footer/Footer";
 import GoogleAnalyticsScript from "../../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import NewsEntry from "../../docs-v1/components/NewsEntry/NewsEntry";
 import { SelectOption } from "../../docs-v1/components/SelectDropdown/SelectDropdown";
@@ -22,6 +21,7 @@ import { SkeletonWidth } from "../../docs-v1/enums/SkeletonLoder.enum";
 import { getVersionsList } from "../../docs-v1/lib/api";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
 import HomePageBanner from "../../components/Header/HomePageBanner";
+import Footer from "../../components/Footer/Footer";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -72,7 +72,7 @@ export default function Index({ versionsList }: Readonly<Props>) {
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Connectors</div>
-              <ConnectorsInfo />
+              <ConnectorsInfo tabStyle="connector-tab" activeTabStyle="active-connector" />
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Blogs</div>
