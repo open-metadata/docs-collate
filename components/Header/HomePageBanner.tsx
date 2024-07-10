@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { HomePageBannerProps } from "../../docs-v1/components/common/HomePageBanner/HomePageBanner.interface";
 import YouTube from "../../docs-v1/components/common/Youtube/Youtube";
 import { useDocVersionContext } from "../../docs-v1/context/DocVersionContext";
 import styles from "./HomePageBanner.module.css";
 import { getUrlWithVersion } from "../../docs-v1/utils/CommonUtils";
+import { HomePageBannerProps } from "./HomePageBanner.interface";
 
 export default function HomePageBanner({
   quickLinks,
