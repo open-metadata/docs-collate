@@ -11,7 +11,6 @@ export const COLLATE_BANNER_LINKS_INFO = [
     description: "Install OpenMetadata to explore its full potential.",
     linkTitle: "Get Started",
     href: "/quick-start",
-    icon: '/images/icons/quick-start.svg'
   },
   {
     title: "How-to Guides",
@@ -19,6 +18,5 @@ export const COLLATE_BANNER_LINKS_INFO = [
       "Get a complete overview of the features in OpenMetadata from our How-to Guides",
     linkTitle: "Explore Features",
     href: "/how-to-guides",
-    icon: '/images/icons/guide.svg'
   },
 ];
