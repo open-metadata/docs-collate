@@ -12,3 +12,17 @@ body {
 .overview-container {
   background: linear-gradient(160deg, #F4FDFF, #FBF4F4);
 }
+
+.connector-tab {
+  display: block;
+  width: 100%;
+  text-align: start;
+  padding: 8px 36px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.active-connector {
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+}
