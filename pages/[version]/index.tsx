@@ -10,7 +10,6 @@ import GoogleAnalyticsScript from "../../docs-v1/components/GoogleAnalyticsScrip
 import NewsEntry from "../../docs-v1/components/NewsEntry/NewsEntry";
 import { SelectOption } from "../../docs-v1/components/SelectDropdown/SelectDropdown";
 import TopNav from "../../docs-v1/components/TopNav/TopNav";
-import Card from "../../docs-v1/components/common/Card/Card";
 import SkeletonLoader from "../../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
 import {
   BLOGS_INFO,
