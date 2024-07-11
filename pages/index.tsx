@@ -23,7 +23,6 @@ import { getVersionsList } from "../docs-v1/lib/api";
 import { fetchMenuList } from "../docs-v1/utils/CommonUtils";
 import { ReactComponent as CollateIcon } from "../images/icons/collate-logo.svg";
 import HomePageBanner from "../components/Header/HomePageBanner";
-import styles from "../../docs-v1/components/ConnectorsInfo/ConnectorsInfo.module.css"
 import Footer from "../components/Footer/Footer";
 
 interface Props {
@@ -85,7 +84,7 @@ export default function Index({ versionsList }: Readonly<Props>) {
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Connectors</div>
-              <ConnectorsInfo tabStyle="connector-tab" activeTabStyle={styles.SelectedTab} />
+              <ConnectorsInfo tabStyle="connector-tab" activeTabStyle="active-connector" />
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Blogs</div>
