@@ -22,6 +22,10 @@ body {
   box-sizing: border-box;
 }
 
+.connector-tab:hover {
+  background-color: transparent;
+}
+
 .active-connector {
   border: 1px solid var(--primary-color);
   border-radius: 30px;
