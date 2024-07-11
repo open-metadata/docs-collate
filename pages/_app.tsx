@@ -17,8 +17,7 @@ import { RouteChangingContextProvider } from "../docs-v1/context/RouteChangingCo
 import { StepsContextProvider } from "../docs-v1/context/StepsContext";
 
 const TITLE = "Collate Documentation: Get Help Instantly";
-const DESCRIPTION =
-  "Follow the step-by-step guides to get started with Collate, the #1 open source data catalog tool. Get discovery, collaboration, governance, observability, quality tools all in one place.";
+const DESCRIPTION = "Unified Platform for data discovery, observability and governance.";
 
 export type MyAppProps = MarkdocNextJsPageProps;
 
