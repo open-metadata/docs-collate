@@ -1,16 +1,13 @@
 import Link from "next/link";
 import YouTube from "../../docs-v1/components/common/Youtube/Youtube";
-import { useDocVersionContext } from "../../docs-v1/context/DocVersionContext";
 import styles from "./HomePageBanner.module.css";
-import { getUrlWithVersion } from "../../docs-v1/utils/CommonUtils";
 import { HomePageBannerProps } from "./HomePageBanner.interface";
+import { HEADER_TABS } from "../../constants/Homepage.constants";
 
 export default function HomePageBanner({
   quickLinks,
   bannerInfo,
 }: Readonly<HomePageBannerProps>) {
-  const { docVersion } = useDocVersionContext();
-
   return (
     <div className={styles.Container}>
       <div className={styles.HeaderContainer}>
@@ -24,29 +21,29 @@ export default function HomePageBanner({
             </p>
           </div>
         </div>
-        <div className={styles.Video}>
-          <YouTube videoId="oGFWjj_2gM4" />
-        </div>
-      </div>
-      <div className={styles.BannerNavLinkContainer}>
-        {quickLinks.map(
-          (
-            { title, description, linkTitle, href, externalURL }
-          ) => (
-            <div key={href} className={styles.BannerNavLink}>
-              <div className={styles.ContentContainer}>
-                <div className={styles.Header}>{title}</div>
-                <p className={styles.DescriptionText}>{description}</p>
-              </div>
-              <Link
-                href={externalURL ? href : getUrlWithVersion(href, docVersion)}
-                target={externalURL ? "_blank" : "_self"}
-              >
-                <div className={styles.Button}>{linkTitle}</div>
-              </Link>
+        <div className={styles.ContentContainer}>
+          <div className={styles.Video}>
+            <YouTube videoId="oGFWjj_2gM4" className={styles.VideoContainer} />
+          </div>
+          <div>
+            <div className={styles.BannerHeading}>How-to Guides</div>
+            <div className={styles.DescriptionText}>
+              Get a complete overview of the features in OpenMetadata from our
+              How-to Guides. The How-to Guides will give you a walk through on
+              accomplishing the basic to the most advanced things in
+              OpenMetadata. These step-by-step guides will help get an overview
+              of the features and also help explore the various functionalities.
             </div>
-          )
-        )}
+            <div className={styles.TabContainer}>
+              {HEADER_TABS.map(item => (
+                <div key={item.name} className={styles.Tabs}>
+                  <img src={item.icon} alt={item.name} />
+                  <span>{item.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -5,18 +5,29 @@ export const COLLATE_HOME_PAGE_BANNER_INFO = {
   title: "Collate Documentation",
 };
 
-export const COLLATE_BANNER_LINKS_INFO = [
+export const HEADER_TABS = [
   {
-    title: "Quick Start",
-    description: "Install OpenMetadata to explore its full potential.",
-    linkTitle: "Get Started",
-    href: "/quick-start",
+    icon: '/images/header-tabs/discovery.svg',
+    name: 'Discovery'
   },
   {
-    title: "How-to Guides",
-    description:
-      "Get a complete overview of the features in OpenMetadata from our How-to Guides",
-    linkTitle: "Explore Features",
-    href: "/how-to-guides",
+    icon: '/images/header-tabs/lineage.svg',
+    name: 'Lineage'
   },
-];
+  {
+    icon: '/images/header-tabs/observability.svg',
+    name: 'Observability'
+  },
+  {
+    icon: '/images/header-tabs/quality.svg',
+    name: 'Quality'
+  },
+  {
+    icon: '/images/header-tabs/collaboration.svg',
+    name: 'Collaboration'
+  },
+  {
+    icon: '/images/header-tabs/governance.svg',
+    name: 'Governance'
+  },
+]

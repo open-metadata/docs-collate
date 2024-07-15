@@ -32,48 +32,77 @@
 }
 
 .Video {
-  width: 50%;
-  margin-bottom: 48px;
-}
-
-.BannerNavLinkContainer {
   width: 100%;
-  padding: 100px 10%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+  border: 16px solid #CCF6FF;
+  border-radius: 20px;
+  margin: 0;
 }
 
-.BannerNavLink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 32%;
-  box-shadow: 0px 4px 14px 0px #00000017;
-  border-radius: 10px;
-  padding: 30px 52px;
+.VideoContainer {
+  margin: 0px 0px;
 }
 
 .ContentContainer {
-  min-height: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 30px 100px;
+  gap: 48px;
 }
 
-.Header {
-  font-size: 22px;
+.BannerHeading {
+  color: #3C4257;
+  font-size: 28px;
+  font-weight: 500;
 }
 
-.Header,
 .DescriptionText {
-  color: #3c4257;
+  color: #3C4257;
+  font-size: 18px;
+  padding-bottom: 14px;
 }
 
-.Button {
-  background-color: var(--primary-color);
-  color: white;
-  margin-top: 28px;
-  padding: 8px 32px;
-  border-radius: 40px;
+.TabContainer {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 14px;
+  border-top: 1px solid rgba(41, 41, 41, 0.1);
+}
+
+.Tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid #D6D8DF;
+  background-color: white;
+  padding: 10px 0;
+  border-radius: 100px;
+  color: #5C6181;
+  font-weight: 500;
+}
+
+@media (max-width: 1250px) {
+  .ContentContainer {
+    padding: 30px;
+  }
+  .TabContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .ContentContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .TabContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Video {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -82,7 +111,7 @@
     align-items: flex-start;
   }
   .HeaderContainer {
-    padding: 20px 60px;
+    padding: 20px;
   }
   .Content,
   .Video {
@@ -90,13 +119,11 @@
   }
 }
 
-@media (max-width: 600px) {
-  .BannerNavLinkContainer {
-    flex-direction: column;
-    gap: 24px;
+@media (max-width: 640px) {
+  .TabContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .BannerNavLink {
-    width: 100%;
-    padding: 0px;
-  }
+  .ContentContainer {
+    padding: 30px 10px;
+  } 
 }
