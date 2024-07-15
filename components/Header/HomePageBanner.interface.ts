@@ -1,5 +1,4 @@
 export interface HomePageBannerProps {
-  quickLinks: Array<QuickLinksInfo>;
   bannerInfo: BannerInfo;
 }
 

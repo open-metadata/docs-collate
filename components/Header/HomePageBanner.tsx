@@ -1,11 +1,9 @@
-import Link from "next/link";
 import YouTube from "../../docs-v1/components/common/Youtube/Youtube";
 import styles from "./HomePageBanner.module.css";
 import { HomePageBannerProps } from "./HomePageBanner.interface";
 import { HEADER_INFO, HEADER_TABS } from "../../constants/Homepage.constants";
 
 export default function HomePageBanner({
-  quickLinks,
   bannerInfo,
 }: Readonly<HomePageBannerProps>) {
   return (

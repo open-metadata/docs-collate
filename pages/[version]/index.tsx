@@ -1,8 +1,5 @@
 import { useEffect } from "react";
-import {
-  COLLATE_BANNER_LINKS_INFO,
-  COLLATE_HOME_PAGE_BANNER_INFO,
-} from "../../constants/Homepage.constants";
+import { COLLATE_HOME_PAGE_BANNER_INFO } from "../../constants/Homepage.constants";
 import CategoriesNav from "../../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
 import GoogleAnalyticsScript from "../../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
@@ -61,10 +58,7 @@ export default function Index({ versionsList }: Readonly<Props>) {
           </div>
         ) : (
           <>
-            <HomePageBanner
-              bannerInfo={COLLATE_HOME_PAGE_BANNER_INFO}
-              quickLinks={COLLATE_BANNER_LINKS_INFO}
-            />
+            <HomePageBanner bannerInfo={COLLATE_HOME_PAGE_BANNER_INFO} />
 
             <div className="overview-container">
               <div className="overview-heading">{OVERVIEW_INFO.title}</div>
@@ -72,7 +66,10 @@ export default function Index({ versionsList }: Readonly<Props>) {
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Connectors</div>
-              <ConnectorsInfo tabStyle="connector-tab" activeTabStyle="active-connector" />
+              <ConnectorsInfo
+                tabStyle="connector-tab"
+                activeTabStyle="active-connector"
+              />
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Blogs</div>
