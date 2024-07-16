@@ -2,7 +2,6 @@ import classNames from "classnames";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
-import Footer from "../docs-v1/components/Footer/Footer";
 import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import { SelectOption } from "../docs-v1/components/SelectDropdown/SelectDropdown";
 import SideNav from "../docs-v1/components/SideNav/SideNav";
@@ -19,6 +18,7 @@ import { useRouteChangingContext } from "../docs-v1/context/RouteChangingContext
 import { getVersionsList } from "../docs-v1/lib/api";
 import { getVersionFromUrl } from "../docs-v1/utils/CommonUtils";
 import { ReactComponent as CollateIcon } from "../images/icons/collate-logo.svg";
+import Footer from "../components/Footer/Footer";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -92,7 +92,7 @@ function ErrorComponent({ versionsList }: Readonly<Props>) {
               </>
             )}
           </div>
-          <Footer />
+          <Footer bordered />
         </div>
       </div>
     </div>

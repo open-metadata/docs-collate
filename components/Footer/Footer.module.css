@@ -16,6 +16,10 @@ a.Link:hover {
   color: var(--primary-color);
 }
 
+.BorderContainer {
+  border-top: 1px solid rgb(220, 227, 236)
+}
+
 @media (max-width: 640px) {
   .Container {
     padding-left: 30px;
