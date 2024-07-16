@@ -3,14 +3,10 @@ import { COLLATE_HOME_PAGE_BANNER_INFO } from "../constants/Homepage.constants";
 import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
 import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
-import NewsEntry from "../docs-v1/components/NewsEntry/NewsEntry";
 import { SelectOption } from "../docs-v1/components/SelectDropdown/SelectDropdown";
 import TopNav from "../docs-v1/components/TopNav/TopNav";
 import SkeletonLoader from "../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
-import {
-  BLOGS_INFO,
-  OVERVIEW_INFO,
-} from "../docs-v1/constants/homePage.constants";
+import { OVERVIEW_INFO } from "../docs-v1/constants/homePage.constants";
 import { useDocVersionContext } from "../docs-v1/context/DocVersionContext";
 import { useNavBarCollapsedContext } from "../docs-v1/context/NavBarCollapseContext";
 import { useRouteChangingContext } from "../docs-v1/context/RouteChangingContext";
