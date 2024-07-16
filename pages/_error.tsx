@@ -92,7 +92,7 @@ function ErrorComponent({ versionsList }: Readonly<Props>) {
               </>
             )}
           </div>
-          <Footer />
+          <Footer bordered />
         </div>
       </div>
     </div>

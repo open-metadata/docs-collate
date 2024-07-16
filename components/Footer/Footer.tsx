@@ -1,16 +1,14 @@
-import { useRouter } from "next/router";
+import classNames from "classnames";
 import { footerItemsData } from "../../constants/Footer.constants";
 import styles from "./Footer.module.css";
 import Link from "next/link";
-import classNames from "classnames";
 
-export default function Footer() {
-  const { pathname } = useRouter();
+export default function Footer({ bordered }: { bordered?: boolean }) {
   return (
     <footer
       className={classNames(
         styles.Container,
-        pathname !== "/[version]" && styles.BorderContainer
+        bordered && styles.BorderContainer
       )}
     >
       <div className={styles.InnerContainer}>

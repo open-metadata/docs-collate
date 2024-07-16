@@ -96,7 +96,7 @@ export default function Article({
             parsedContent={parsedContent}
             slug={slug}
             versionsList={versionsList}
-            footer={<Footer />}
+            footer={<Footer bordered />}
           />
         )}
       </ErrorBoundary>
