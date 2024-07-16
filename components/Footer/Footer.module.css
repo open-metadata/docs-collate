@@ -1,0 +1,23 @@
+.Container {
+  padding: 40px 0 50px;
+  padding-left: 60px;
+}
+
+.InnerContainer {
+  display: flex;
+  gap: 36px;
+}
+
+a.Link {
+  color: #37352f;
+}
+
+a.Link:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 640px) {
+  .Container {
+    padding-left: 30px;
+  }
+}

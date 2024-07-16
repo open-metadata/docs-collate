@@ -1,22 +1,15 @@
 import { useEffect, useState } from "react";
-import {
-  COLLATE_BANNER_LINKS_INFO,
-  COLLATE_HOME_PAGE_BANNER_INFO,
-} from "../constants/Homepage.constants";
+import { COLLATE_HOME_PAGE_BANNER_INFO } from "../constants/Homepage.constants";
 import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
-import Footer from "../docs-v1/components/Footer/Footer";
 import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import NewsEntry from "../docs-v1/components/NewsEntry/NewsEntry";
 import { SelectOption } from "../docs-v1/components/SelectDropdown/SelectDropdown";
 import TopNav from "../docs-v1/components/TopNav/TopNav";
-import Card from "../docs-v1/components/common/Card/Card";
-import HomePageBanner from "../docs-v1/components/common/HomePageBanner/HomePageBanner";
 import SkeletonLoader from "../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
 import {
   BLOGS_INFO,
   OVERVIEW_INFO,
-  QUICK_LINK_CARDS,
 } from "../docs-v1/constants/homePage.constants";
 import { useDocVersionContext } from "../docs-v1/context/DocVersionContext";
 import { useNavBarCollapsedContext } from "../docs-v1/context/NavBarCollapseContext";
@@ -26,6 +19,8 @@ import { MenuItem } from "../docs-v1/interface/common.interface";
 import { getVersionsList } from "../docs-v1/lib/api";
 import { fetchMenuList } from "../docs-v1/utils/CommonUtils";
 import { ReactComponent as CollateIcon } from "../images/icons/collate-logo.svg";
+import HomePageBanner from "../components/Header/HomePageBanner";
+import Footer from "../components/Footer/Footer";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -75,33 +70,18 @@ export default function Index({ versionsList }: Readonly<Props>) {
           </div>
         ) : (
           <>
-            <HomePageBanner
-              bannerInfo={COLLATE_HOME_PAGE_BANNER_INFO}
-              quickLinks={COLLATE_BANNER_LINKS_INFO}
-            />
+            <HomePageBanner bannerInfo={COLLATE_HOME_PAGE_BANNER_INFO} />
 
             <div className="overview-container">
               <div className="overview-heading">{OVERVIEW_INFO.title}</div>
               <p className="m-0">{OVERVIEW_INFO.description}</p>
             </div>
             <div className="homepage-containers">
-              <div className="container-heading">Quick Links</div>
-              <div className="cards-container">
-                {QUICK_LINK_CARDS.map((cardInfo) => (
-                  <Card
-                    content={cardInfo.content}
-                    key={`${cardInfo.heading}${cardInfo.url}`}
-                    heading={cardInfo.heading}
-                    url={cardInfo.url}
-                    isExternalLink={cardInfo.isExternalLink}
-                    icon={cardInfo.icon}
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="homepage-containers">
               <div className="container-heading">Connectors</div>
-              <ConnectorsInfo />
+              <ConnectorsInfo
+                tabStyle="connector-tab"
+                activeTabStyle="active-connector"
+              />
             </div>
             <div className="homepage-containers">
               <div className="container-heading">Blogs</div>

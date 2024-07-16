@@ -1,5 +1,33 @@
 @import "../docs-v1/public/globals.css";
-
 :root {
-  --primary-color: #0968da;
+  --primary-color: #CD3C4D;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.overview-container {
+  background: none;
+}
+
+.connector-tab {
+  display: block;
+  width: 100%;
+  text-align: start;
+  padding: 8px 36px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.connector-tab:hover {
+  background-color: transparent;
+}
+
+.active-connector {
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  color: black;
+  font-weight: 400;
+  background-color: transparent;
 }
