@@ -17,7 +17,7 @@ import HomePageBanner from "../../components/Header/HomePageBanner";
 import Footer from "../../components/Footer/Footer";
 import { getPosts } from "../../externalAPIS/hashnode";
 import { HASHNODE_QUERY } from "../../constants/blog.constant";
-import BlogsInfo from "../../components/BlogsInfo/BlogsInfo";
+import NewsEntry from "../../docs-v1/components/NewsEntry/NewsEntry";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -93,25 +93,28 @@ export default function Index({ versionsList }: Readonly<Props>) {
             <div className="homepage-containers">
               <div className="container-heading">Blogs</div>
               <div className="blogs-container">
-                {loading ? (
-                  <SkeletonLoader
-                    paragraph={{
-                      rows: 16,
-                      width: SkeletonWidth.FULL,
-                    }}
-                    title={SkeletonWidth.SMALL}
-                  />
-                ) : (
-                  blogPosts.map((cardInfo) => (
-                    <BlogsInfo
-                      image={cardInfo.coverImage.url}
-                      key={`${cardInfo.title}${cardInfo.link}`}
-                      link={cardInfo.url}
-                      title={cardInfo.title}
-                      text={cardInfo.brief}
-                    />
-                  ))
-                )}
+                {loading
+                  ? new Array(3).fill("").map((_, i) => (
+                      <NewsEntry link="/">
+                        <SkeletonLoader
+                          className="p-4"
+                          paragraph={{
+                            rows: 6,
+                            width: SkeletonWidth.FULL,
+                          }}
+                          title={SkeletonWidth.SMALL}
+                        />
+                      </NewsEntry>
+                    ))
+                  : blogPosts.map((cardInfo) => (
+                      <NewsEntry
+                        image={cardInfo.coverImage.url}
+                        key={`${cardInfo.title}${cardInfo.link}`}
+                        link={cardInfo.url}
+                        title={cardInfo.title}
+                        text={cardInfo.brief}
+                      />
+                    ))}
               </div>
             </div>
             <div className="mt-20" />
