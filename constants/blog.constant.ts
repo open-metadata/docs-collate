@@ -4,23 +4,14 @@ export const HASHNODE_QUERY = `
     query Publication {
       publication(host: "blog.getcollate.io") {
         posts(first: 3) {
-          totalDocuments
-          pageInfo {
-            hasNextPage
-            endCursor
-          }
           edges {
             node {
               url
               title
               brief
-              slug
-              publishedAt
               coverImage {
                 url
               }
-              reactionCount
-              replyCount
             }
           }
         }

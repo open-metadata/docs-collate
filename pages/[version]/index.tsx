@@ -94,8 +94,8 @@ export default function Index({ versionsList }: Readonly<Props>) {
               <div className="container-heading">Blogs</div>
               <div className="blogs-container">
                 {loading
-                  ? new Array(3).fill("").map((_, i) => (
-                      <NewsEntry link="/">
+                  ? Array.of("1", "2", "3").map((item) => (
+                      <NewsEntry key={item} link="/">
                         <SkeletonLoader
                           className="p-4"
                           paragraph={{
