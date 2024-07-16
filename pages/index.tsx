@@ -31,6 +31,7 @@ export default function Index({ versionsList }: Readonly<Props>) {
   const { isMobileDevice } = useNavBarCollapsedContext();
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     if (isMobileDevice) {
@@ -38,14 +39,17 @@ export default function Index({ versionsList }: Readonly<Props>) {
     }
   }, [isMobileDevice]);
 
-  const fetchPosts = async (): Promise<void> => {
+  const fetchPosts = async () => {
     try {
+      setLoading(true)
       const response = await getPosts(HASHNODE_QUERY);
       setBlogPosts(
         response.data.publication.posts.edges.map((edge) => edge.node)
       );
     } catch (error) {
       // handle error
+    } finally {
+      setLoading(false)
     }
   };
 
@@ -101,15 +105,25 @@ export default function Index({ versionsList }: Readonly<Props>) {
             <div className="homepage-containers">
               <div className="container-heading">Blogs</div>
               <div className="blogs-container">
-                {blogPosts.map((cardInfo) => (
-                  <BlogsInfo
-                    image={cardInfo.coverImage.url}
-                    key={`${cardInfo.title}${cardInfo.link}`}
-                    link={cardInfo.url}
-                    title={cardInfo.title}
-                    text={cardInfo.brief}
+              {loading ? (
+                  <SkeletonLoader
+                    paragraph={{
+                      rows: 16,
+                      width: SkeletonWidth.FULL,
+                    }}
+                    title={SkeletonWidth.SMALL}
                   />
-                ))}
+                ) : (
+                  blogPosts.map((cardInfo) => (
+                    <BlogsInfo
+                      image={cardInfo.coverImage.url}
+                      key={`${cardInfo.title}${cardInfo.link}`}
+                      link={cardInfo.url}
+                      title={cardInfo.title}
+                      text={cardInfo.brief}
+                    />
+                  ))
+                )}
               </div>
             </div>
             <div className="mt-20" />

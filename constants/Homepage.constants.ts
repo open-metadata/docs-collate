@@ -24,7 +24,7 @@ export const HEADER_TABS = [
   {
     icon: '/images/header-tabs/observability.svg',
     name: 'Observability',
-    link: '/how-to-guides/data-insights'
+    link: '/quality-and-observability'
   },
   {
     icon: '/images/header-tabs/quality.svg',
