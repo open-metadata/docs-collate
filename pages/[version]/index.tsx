@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { COLLATE_HOME_PAGE_BANNER_INFO } from "../../constants/Homepage.constants";
 import CategoriesNav from "../../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
@@ -19,6 +19,9 @@ import { getVersionsList } from "../../docs-v1/lib/api";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
 import HomePageBanner from "../../components/Header/HomePageBanner";
 import Footer from "../../components/Footer/Footer";
+import { getPosts } from "../../externalAPIS/hashnode";
+import { HASHNODE_QUERY } from "../../constants/blog.constant";
+import BlogsInfo from "../../components/BlogsInfo/BlogsInfo";
 
 interface Props {
   versionsList: Array<SelectOption<string>>;
@@ -28,6 +31,22 @@ export default function Index({ versionsList }: Readonly<Props>) {
   const { isRouteChanging } = useRouteChangingContext();
   const { isMobileDevice } = useNavBarCollapsedContext();
   const { menuItems } = useMenuItemsContext();
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  const fetchPosts = async (): Promise<void> => {
+    try {
+      const response = await getPosts(HASHNODE_QUERY);
+      setBlogPosts(
+        response.data.publication.posts.edges.map((edge) => edge.node)
+      );
+    } catch (error) {
+      // handle error
+    } 
+  };
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   useEffect(() => {
     if (isMobileDevice) {
@@ -74,13 +93,13 @@ export default function Index({ versionsList }: Readonly<Props>) {
             <div className="homepage-containers">
               <div className="container-heading">Blogs</div>
               <div className="blogs-container">
-                {BLOGS_INFO.map((cardInfo) => (
-                  <NewsEntry
-                    image={cardInfo.image}
+                {blogPosts.map((cardInfo) => (
+                  <BlogsInfo
+                    image={cardInfo.coverImage.url}
                     key={`${cardInfo.title}${cardInfo.link}`}
-                    link={cardInfo.link}
+                    link={cardInfo.url}
                     title={cardInfo.title}
-                    text={cardInfo.text}
+                    text={cardInfo.brief}
                   />
                 ))}
               </div>
