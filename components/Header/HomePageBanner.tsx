@@ -33,10 +33,10 @@ export default function HomePageBanner({
             </div>
             <div className={styles.TabContainer}>
               {HEADER_TABS.map((item) => (
-                <div key={item.name} className={styles.Tabs}>
+                <Link href={item.link} key={item.name} className={styles.Tabs}>
                   <img src={item.icon} alt={item.name} />
                   <span>{item.name}</span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
