@@ -69,5 +69,5 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         </RouteChangingContextProvider>
       </ErrorBoundary>
     </>
-  );
+  )
 }
