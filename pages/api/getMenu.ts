@@ -12,7 +12,7 @@ export default function handler(req, res) {
   try {
     const menu = [];
 
-    const fullPath = join(ARTICLES_DIRECTORY, req.query.version, `menu.md`);
+    const fullPath = join(ARTICLES_DIRECTORY, `menu.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const data = matter(fileContents);
 
