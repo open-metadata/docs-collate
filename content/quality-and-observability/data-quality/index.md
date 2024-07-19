@@ -121,7 +121,7 @@ On the next page, you will be able to add existing test cases from different ent
  /%}
 
 
-{% partial file="/v1.4/connectors/yaml/data-quality.md" /%}
+{% partial file="/connectors/yaml/data-quality.md" /%}
 
 ## How to Visualize Test Results
 ### From the Quality Page
