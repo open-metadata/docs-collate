@@ -69,6 +69,7 @@ export default function TopNav() {
         </InstantSearch>
       </SearchContextProvider>
       <a
+        className={classNames(styles.IconContainer, styles.Icon)}
         href="/swagger.html"
         target="_blank"
         title="Swagger"
