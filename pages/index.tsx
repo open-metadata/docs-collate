@@ -4,29 +4,22 @@ import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
 import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import { SelectOption } from "../docs-v1/components/SelectDropdown/SelectDropdown";
-import TopNav from "../docs-v1/components/TopNav/TopNav";
 import SkeletonLoader from "../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
 import { OVERVIEW_INFO } from "../docs-v1/constants/homePage.constants";
-import { useDocVersionContext } from "../docs-v1/context/DocVersionContext";
 import { useNavBarCollapsedContext } from "../docs-v1/context/NavBarCollapseContext";
 import { useRouteChangingContext } from "../docs-v1/context/RouteChangingContext";
 import { SkeletonWidth } from "../docs-v1/enums/SkeletonLoder.enum";
 import { MenuItem } from "../docs-v1/interface/common.interface";
 import { getVersionsList } from "../docs-v1/lib/api";
 import { fetchMenuList } from "../docs-v1/utils/CommonUtils";
-import { ReactComponent as CollateIcon } from "../images/icons/collate-logo.svg";
 import HomePageBanner from "../components/Header/HomePageBanner";
 import Footer from "../components/Footer/Footer";
 import { getPosts } from "../externalAPIS/hashnode";
 import { HASHNODE_QUERY } from "../constants/blog.constant";
 import NewsEntry from "../docs-v1/components/NewsEntry/NewsEntry";
+import TopNav from "../components/TopNav/TopNav";
 
-interface Props {
-  versionsList: Array<SelectOption<string>>;
-}
-
-export default function Index({ versionsList }: Readonly<Props>) {
-  const { docVersion } = useDocVersionContext();
+export default function Index() {
   const { isRouteChanging } = useRouteChangingContext();
   const { isMobileDevice } = useNavBarCollapsedContext();
   const [menu, setMenu] = useState<MenuItem[]>([]);
@@ -57,23 +50,20 @@ export default function Index({ versionsList }: Readonly<Props>) {
     fetchPosts();
   }, []);
 
-  const fetchMenuItems = async (docVersion: string) => {
-    const res = await fetchMenuList(docVersion);
+  const fetchMenuItems = async () => {
+    const res = await fetchMenuList();
     setMenu(res);
   };
 
   useEffect(() => {
-    fetchMenuItems(docVersion);
-  }, [docVersion]);
+    fetchMenuItems();
+  }, []);
 
   return (
     <>
       <GoogleAnalyticsScript />
       <div className="nav-bar-container">
-        <TopNav
-          logo={<CollateIcon width={128} height={50} />}
-          versionsList={versionsList}
-        />
+        <TopNav />
         <CategoriesNav menu={menu} />
       </div>
       <div className="home-page">

@@ -1,32 +1,22 @@
 import classNames from "classnames";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
 import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import { SelectOption } from "../docs-v1/components/SelectDropdown/SelectDropdown";
 import SideNav from "../docs-v1/components/SideNav/SideNav";
-import TopNav from "../docs-v1/components/TopNav/TopNav";
 import SkeletonLoader from "../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
 import Tile from "../docs-v1/components/common/Tiles/Tile/Tile";
 import TilesContainer from "../docs-v1/components/common/Tiles/TilesContainer/TilesContainer";
 import { tilesInfoArray } from "../docs-v1/constants/404Page.constants";
 import { SKELETON_PARAGRAPH_WIDTHS } from "../docs-v1/constants/SkeletonLoader.constants";
-import { useDocVersionContext } from "../docs-v1/context/DocVersionContext";
 import { useMenuItemsContext } from "../docs-v1/context/MenuItemsContext";
 import { useNavBarCollapsedContext } from "../docs-v1/context/NavBarCollapseContext";
 import { useRouteChangingContext } from "../docs-v1/context/RouteChangingContext";
 import { getVersionsList } from "../docs-v1/lib/api";
-import { getVersionFromUrl } from "../docs-v1/utils/CommonUtils";
-import { ReactComponent as CollateIcon } from "../images/icons/collate-logo.svg";
 import Footer from "../components/Footer/Footer";
+import TopNav from "../components/TopNav/TopNav";
 
-interface Props {
-  versionsList: Array<SelectOption<string>>;
-}
-
-function ErrorComponent({ versionsList }: Readonly<Props>) {
-  const router = useRouter();
-  const { docVersion, onChangeDocVersion } = useDocVersionContext();
+function ErrorComponent() {
   const { isRouteChanging } = useRouteChangingContext();
   const { isMobileDevice } = useNavBarCollapsedContext();
   const { menuItems } = useMenuItemsContext();
@@ -42,20 +32,10 @@ function ErrorComponent({ versionsList }: Readonly<Props>) {
     }
   }, [isMobileDevice]);
 
-  useEffect(() => {
-    const version = getVersionFromUrl(router.asPath);
-    if (docVersion !== version) {
-      onChangeDocVersion(version);
-    }
-  }, [router.asPath]);
-
   return (
     <div className="flex flex-col">
       <GoogleAnalyticsScript />
-      <TopNav
-        logo={<CollateIcon width={128} height={50} />}
-        versionsList={versionsList}
-      />
+      <TopNav />
       <CategoriesNav menu={menuItems} />
       <div className="flex">
         <SideNav
