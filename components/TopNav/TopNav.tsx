@@ -10,8 +10,8 @@ import { SearchContextProvider } from "../../docs-v1/context/SearchContext";
 import { ReactComponent as ApiIcon } from "../../docs-v1/images/icons/api.svg";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
 import Search from "../../docs-v1/components/Search/Search";
-import styles from "../../docs-v1/components/TopNav/TopNav.module.css";
-import styles1 from "./TopNav.module.css";
+import OMStyles from "../../docs-v1/components/TopNav/TopNav.module.css";
+import collateStyles from "./TopNav.module.css";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -38,25 +38,25 @@ export default function TopNav() {
   return (
     <nav
       className={classNames(
-        styles.NavBar,
-        styles1.NavBar,
-        navBarCollapsed ? styles.CollapsedNavBar : ""
+        OMStyles.NavBar,
+        collateStyles.NavBar,
+        navBarCollapsed ? OMStyles.CollapsedNavBar : ""
       )}
     >
       <div
         className={classNames(
-          styles.CollapsedDivContainer,
-          styles1.CollapsedDivContainer
+          OMStyles.CollapsedDivContainer,
+          collateStyles.CollapsedDivContainer
         )}
       >
-        <div className={styles.LogoContainer}>
+        <div className={OMStyles.LogoContainer}>
           <Link href="/" aria-label="collate-icon">
             <CollateIcon width={128} height={50} />
           </Link>
         </div>
         {displayNavBarCollapseButton && (
           <button
-            className={styles.CollapseButton}
+            className={OMStyles.CollapseButton}
             onClick={handleCollapseButtonClick}
             aria-label="menu-icon"
           >
@@ -72,11 +72,11 @@ export default function TopNav() {
             preserveSharedStateOnUnmount: false,
           }}
         >
-          <Search className={styles1.SearchDiv} />
+          <Search className={collateStyles.SearchDiv} />
         </InstantSearch>
       </SearchContextProvider>
       <a
-        className={classNames(styles.IconContainer, styles1.Icon)}
+        className={classNames(OMStyles.IconContainer, collateStyles.Icon)}
         href="/swagger.html"
         target="_blank"
         title="Swagger"
