@@ -11,6 +11,7 @@ import { ReactComponent as ApiIcon } from "../../docs-v1/images/icons/api.svg";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
 import Search from "../../docs-v1/components/Search/Search";
 import styles from "../../docs-v1/components/TopNav/TopNav.module.css";
+import styles1 from "./TopNav.module.css";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -38,10 +39,16 @@ export default function TopNav() {
     <nav
       className={classNames(
         styles.NavBar,
+        styles1.NavBar,
         navBarCollapsed ? styles.CollapsedNavBar : ""
       )}
     >
-      <div className={styles.CollapsedDivContainer}>
+      <div
+        className={classNames(
+          styles.CollapsedDivContainer,
+          styles1.CollapsedDivContainer
+        )}
+      >
         <div className={styles.LogoContainer}>
           <Link href="/" aria-label="collate-icon">
             <CollateIcon width={128} height={50} />
@@ -65,11 +72,11 @@ export default function TopNav() {
             preserveSharedStateOnUnmount: false,
           }}
         >
-          <Search />
+          <Search className={styles1.SearchDiv} />
         </InstantSearch>
       </SearchContextProvider>
       <a
-        className={classNames(styles.IconContainer, styles.Icon)}
+        className={classNames(styles.IconContainer, styles1.Icon)}
         href="/swagger.html"
         target="_blank"
         title="Swagger"
