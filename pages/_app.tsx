@@ -27,8 +27,8 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
       <Head>
         <title>{TITLE}</title>
         <link rel="icon" href="/favicon.png" />
-        <link rel="alternate icon" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" />
         <meta name="theme-color" content="#ffffff" />
         <meta content="Collate Docs" property="og:title" />
@@ -55,7 +55,7 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
       </Head>
       <ErrorBoundary>
         <RouteChangingContextProvider>
-          <DocVersionContextProvider>
+          <DocVersionContextProvider enableVersion={false}>
             <MenuItemsContextProvider>
               <NavBarCollapseContextProvider>
                 <StepsContextProvider>
@@ -69,5 +69,5 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         </RouteChangingContextProvider>
       </ErrorBoundary>
     </>
-  );
+  )
 }

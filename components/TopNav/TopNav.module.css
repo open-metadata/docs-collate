@@ -1,0 +1,28 @@
+.Icon {
+  justify-content: end;
+  max-width: max-content;
+}
+
+@media (max-width: 600px) {
+  .NavBar {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px
+  }
+  .CollapsedDivContainer {
+    grid-column-start: 1;
+    grid-column-end: 9;
+  }
+  .SearchDiv {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    width: 100%;
+  }
+  .Icon {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    justify-self: end;
+    padding-right: 12px;
+  }
+}

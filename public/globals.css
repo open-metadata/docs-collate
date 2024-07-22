@@ -1,6 +1,7 @@
 @import "../docs-v1/public/globals.css";
 :root {
   --primary-color: #CD3C4D;
+  --icon-background-color: #FFF5F6;
 }
 
 body {

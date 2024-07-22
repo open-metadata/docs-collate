@@ -13,26 +13,32 @@ export const HEADER_INFO = {
 export const HEADER_TABS = [
   {
     icon: '/images/header-tabs/discovery.svg',
-    name: 'Discovery'
+    name: 'Discovery',
+    link: '/how-to-guides/data-discovery'
   },
   {
     icon: '/images/header-tabs/lineage.svg',
-    name: 'Lineage'
+    name: 'Lineage',
+    link: '/how-to-guides/data-lineage'
   },
   {
     icon: '/images/header-tabs/observability.svg',
-    name: 'Observability'
+    name: 'Observability',
+    link: '/quality-and-observability'
   },
   {
     icon: '/images/header-tabs/quality.svg',
-    name: 'Quality'
+    name: 'Quality',
+    link: '/how-to-guides/data-quality-profiler'
   },
   {
     icon: '/images/header-tabs/collaboration.svg',
-    name: 'Collaboration'
+    name: 'Collaboration',
+    link: '/how-to-guides/data-collaboration'
   },
   {
     icon: '/images/header-tabs/governance.svg',
-    name: 'Governance'
+    name: 'Governance',
+    link: '/how-to-guides/data-governance'
   },
 ]
