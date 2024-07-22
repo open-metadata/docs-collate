@@ -7,20 +7,21 @@
   .NavBar {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px
   }
   .CollapsedDivContainer {
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 9;
   }
   .SearchDiv {
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 8;
     width: 100%;
   }
   .Icon {
-    grid-column-start: 5;
-    grid-column-end: 6;
+    grid-column-start: 8;
+    grid-column-end: 9;
     justify-self: end;
     padding-right: 12px;
   }
