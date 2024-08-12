@@ -5,6 +5,9 @@ import { isEqual, isObject } from "lodash";
 import Script from "next/script";
 import { basename } from "path";
 import { useMemo } from "react";
+import Footer from "../components/Footer/Footer";
+import Roadmap from "../components/Roadmap/Roadmap";
+import TopNav from "../components/TopNav/TopNav";
 import ErrorBoundary from "../docs-v1/components/ErrorBoundary";
 import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import APIPageLayout from "../docs-v1/components/PageLayouts/APIPageLayout/APIPageLayout";
@@ -18,8 +21,6 @@ import {
 } from "../docs-v1/lib/api";
 import { configs } from "../docs-v1/lib/markdoc";
 import { getFormattedPartials } from "../docs-v1/utils/CommonUtils";
-import Footer from "../components/Footer/Footer";
-import TopNav from "../components/TopNav/TopNav";
 
 interface Props {
   content: string;
@@ -88,6 +89,7 @@ export default function Article({ content, slug, partials }: Readonly<Props>) {
             parsedContent={parsedContent}
             slug={slug}
             footer={<Footer bordered />}
+            componentsList={{ Roadmap }}
           />
         )}
       </ErrorBoundary>

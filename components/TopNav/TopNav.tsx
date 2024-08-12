@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { MdMenu, MdMenuOpen } from "react-icons/md";
 import { InstantSearch } from "react-instantsearch";
+import OMStyles from "../../docs-v1/components/TopNav/TopNav.module.css";
 import { useDocVersionContext } from "../../docs-v1/context/DocVersionContext";
 import { useNavBarCollapsedContext } from "../../docs-v1/context/NavBarCollapseContext";
 import { SearchContextProvider } from "../../docs-v1/context/SearchContext";
 import { ReactComponent as ApiIcon } from "../../docs-v1/images/icons/api.svg";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
-import Search from "../../docs-v1/components/Search/Search";
-import OMStyles from "../../docs-v1/components/TopNav/TopNav.module.css";
+import Search from "../Search/Search";
 import collateStyles from "./TopNav.module.css";
 
 const searchClient = algoliasearch(
