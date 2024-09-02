@@ -18,7 +18,7 @@ Configure and schedule QuickSight metadata and profiler workflows from the OpenM
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/quicksight/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/quicksight/yaml"} /%}
 ## Requirements
 
 To execute metadata extraction and usage workflow successfully the IAM User should have enough access to fetch required data. Following table describes the minimum required permissions
@@ -73,12 +73,12 @@ Here is how to add Permissions to an IAM user.
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Quicksight", 
-    selectServicePath: "/images/v1.4/connectors/quicksight/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/quicksight/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/quicksight/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/quicksight/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/quicksight/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/quicksight/service-connection.png",
 } 
 /%}
 
@@ -153,12 +153,12 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}

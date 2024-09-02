@@ -15,21 +15,22 @@ In this section, we provide guides and references to use the Impala connector.
 
 Configure and schedule Impala metadata and profiler workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
+- [Enable Security](#securing-impala-connection-with-ssl-in-openmetadata)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/impala/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/impala/yaml"} /%}
 
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Impala", 
-    selectServicePath: "/images/v1.4/connectors/impala/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/impala/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/impala/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/impala/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/impala/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/impala/service-connection.png",
 } 
 /%}
 
@@ -49,18 +50,28 @@ Configure and schedule Impala metadata and profiler workflows from the OpenMetad
 - **useSSL**: Establish secure connection with Impala. Enables SSL for the connector.
 - **authOptions**: Enter the auth options string for impala connection.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+## Securing Impala Connection with SSL in OpenMetadata
 
-{% partial file="/connectors/database/related.md" /%}
+To configure SSL for secure connections between OpenMetadata and an Impala database, add the key `use_ssl` with a value of `true` to the `connectionArguments` to enable SSL. Additionally, include the key `ca_cert` with the path to the CA certificate file as its value. Ensure that the certificate file is accessible by the server, and if deploying via Docker or Kubernetes, update the CA certificate in the OpenMetadata server to reflect these changes.
+
+{% image
+  src="/images/v1.5/connectors/ssl_Impala.png"
+  alt="SSL Configuration"
+  height="450px"
+  caption="SSL Configuration" /%}
+
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
+
+{% partial file="/v1.5/connectors/database/related.md" /%}

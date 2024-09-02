@@ -5,7 +5,9 @@ slug: /deployment/ingestion/external
 
 # Ingestion Framework External Deployment
 
-Any tool capable of running Python code can be used to configure the metadata extraction from your sources({% partial file="/connectors/python-requirements.md" /%}).
+Any tool capable of running Python code can be used to configure the metadata extraction from your sources.
+
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 ## 1. How does the Ingestion Framework work?
 
@@ -15,13 +17,17 @@ component that can be run from - **literally** - anywhere.
 
 In order to install it, you just need to get it from [PyPI](https://pypi.org/project/openmetadata-ingestion/).
 
+```shell
+pip install openmetadata-ingestion
+```
+
 We will show further examples later, but a piece of code is the best showcase for its simplicity. In order to run
-a full ingestion process, you just need to execute a single function. For example, if we wanted to run the metadata 
+a full ingestion process, you just need to execute a single function. For example, if we wanted to run the metadata
 ingestion from within a simple Python script:
 
 ```python
 from metadata.workflow.metadata import MetadataWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 # Specify your YAML configuration
 CONFIG = """
@@ -40,7 +46,7 @@ def run():
     workflow = MetadataWorkflow.create(workflow_config)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 
 
@@ -161,6 +167,56 @@ workflowConfig:
     #   caCertificate: /local/path/to/certificate
 ```
 
+#### JWT Token with Secrets Manager
+
+If you are using the [Secrets Manager](/deployment/secrets-manager), you can let the Ingestion client to pick up
+the JWT Token dynamically from the Secrets Manager at runtime. Let's show an example:
+
+We have an OpenMetadata server running with the `managed-aws` Secrets Manager. Since we used the `OPENMETADATA_CLUSTER_NAME` env var
+as `test`, our `ingestion-bot` JWT Token is safely stored under the secret ID `
+/test/bot/ingestion-bot/config/jwttoken`.
+
+Now, we can use the following workflow config to run the ingestion without having to pass the token, but just pointing to the secret itself:
+
+```yaml
+workflowConfig:
+  loggerLevel: INFO  # DEBUG, INFO, WARNING or ERROR
+  openMetadataServerConfig:
+    hostPort: "http://localhost:8585/api"
+    authProvider: openmetadata
+    securityConfig:
+      jwtToken: "secret:/test/bot/ingestion-bot/config/jwttoken"
+    secretsManagerProvider: aws
+    secretsManagerLoader: env
+```
+
+Notice how:
+1. We specify the `secretsManagerProvider` pointing to `aws`, since that's the manager we are using.
+2. We set `secretsManagerLoader` as `env`. Since we're running this from our local, we'll let the AWS credentials to be 
+  loaded from the local env vars. (When running this using the UI, note that the generated workflows will have this
+  value set as `airflow`!)
+3. We set the `jwtToken` value as `secret:/test/bot/ingestion-bot/config/jwttoken`, which tells the client that
+  this value is a `secret` located under `/test/bot/ingestion-bot/config/jwttoken`.
+
+
+Those are our env vars:
+
+```
+export AWS_ACCESS_KEY_ID=...
+export AWS_SECRET_ACCESS_KEY=...
+export AWS_DEFAULT_REGION=...
+```
+
+And we can run this normally with `metadata ingest -c <path to yaml>`.
+
+{% note %}
+
+Note that **even if you are not using the Secrets Manager for the OpenMetadata Server**, you can still apply the same
+approach by storing the JWT token manually to the secrets manager, and let the Ingestion client pick it up
+from there automatically.
+
+{% /note %}
+
 ## 3. (Optional) Ingestion Pipeline
 
 Additionally, if you want to see your runs logged in the `Ingestions` tab of the connectors page in the UI as you would
@@ -242,6 +298,14 @@ don't hesitate to reach to us in [Slack](https://slack.open-metadata.org/) or di
 Let's jump now into some examples on how you could create the function the run the different workflows. Note that this code
 can then be executed inside a DAG, a GitHub action, or a vanilla Python script. It will work for any environment.
 
+### Testing
+
+You can easily test every YAML configuration using the `metadata` CLI from the Ingestion Framework.
+In order to install it, you just need to get it from [PyPI](https://pypi.org/project/openmetadata-ingestion/).
+
+In each of the examples below, we'll showcase how to run the CLI, assuming you have a YAML file that contains
+the workflow configuration.
+
 ### Metadata Workflow
 
 This is the first workflow you have to configure and run. It will take care of fetching the metadata from your sources,
@@ -293,7 +357,7 @@ import yaml
 
 ```python  {% srNumber=1 %}
 from metadata.workflow.metadata import MetadataWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 ```
 
@@ -332,13 +396,19 @@ def run():
     workflow = MetadataWorkflow.create(CONFIG)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 ```
 
 {% /codeBlock %}
 
 {% /codePreview %}
+
+{% note %}
+
+You can test the workflow via `metadata ingest -c <path-to-yaml>`.
+
+{% /note %}
 
 
 ### Lineage Workflow
@@ -369,7 +439,7 @@ read from a file, parse secrets from your environment, or any other approach you
 Note how we have not added here the `serviceConnection`. Since the service would have been created during the
 metadata ingestion, we can let the Ingestion Framework dynamically fetch the Service Connection information.
 
-If, however, you are configuring the workflow with `storeServiceConnection: false`, you'll need to explicitly 
+If, however, you are configuring the workflow with `storeServiceConnection: false`, you'll need to explicitly
 define the `serviceConnection`.
 
 {% note %}
@@ -398,7 +468,7 @@ import yaml
 
 ```python  {% srNumber=1 %}
 from metadata.workflow.metadata import MetadataWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 ```
 
@@ -433,13 +503,19 @@ def run():
     workflow = MetadataWorkflow.create(CONFIG)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 ```
 
 {% /codeBlock %}
 
 {% /codePreview %}
+
+{% note %}
+
+You can test the workflow via `metadata ingest -c <path-to-yaml>`.
+
+{% /note %}
 
 
 ### Usage Workflow
@@ -498,7 +574,7 @@ import yaml
 
 ```python  {% srNumber=1 %}
 from metadata.workflow.usage import UsageWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 ```
 
@@ -541,13 +617,19 @@ def run():
     workflow = UsageWorkflow.create(CONFIG)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 ```
 
 {% /codeBlock %}
 
 {% /codePreview %}
+
+{% note %}
+
+You can test the workflow via `metadata usage -c <path-to-yaml>`.
+
+{% /note %}
 
 ### Profiler Workflow
 
@@ -556,7 +638,7 @@ metrics about your data and give you a high-level view of its shape, together wi
 
 This is an interesting previous step before creating Data Quality Workflows.
 
-You can find more information about this workflow [here](/connectors/ingestion/workflows/profiler).
+You can find more information about this workflow [here](/how-to-guides/data-quality-observability/profiler/workflow).
 
 {% codePreview %}
 
@@ -608,7 +690,7 @@ import yaml
 
 ```python  {% srNumber=1 %}
 from metadata.workflow.profiler import ProfilerWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 ```
 
@@ -645,13 +727,19 @@ def run():
     workflow = ProfilerWorkflow.create(CONFIG)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 ```
 
 {% /codeBlock %}
 
 {% /codePreview %}
+
+{% note %}
+
+You can test the workflow via `metadata profile -c <path-to-yaml>`.
+
+{% /note %}
 
 
 ### Data Quality Workflow
@@ -661,7 +749,7 @@ metrics about your data and give you a high-level view of its shape, together wi
 
 This is an interesting previous step before creating Data Quality Workflows.
 
-You can find more information about this workflow [here](/connectors/ingestion/workflows/data-quality).
+You can find more information about this workflow [here](/how-to-guides/data-quality-observability/quality/configure).
 
 {% codePreview %}
 
@@ -687,7 +775,7 @@ metadata ingestion, we can let the Ingestion Framework dynamically fetch the Ser
 If, however, you are configuring the workflow with `storeServiceConnection: false`, you'll need to explicitly
 define the `serviceConnection`.
 
-Moreover, see how we are not configuring any tests in the `processor`. You can do [that](/connectors/ingestion/workflows/data-quality#full-yaml-config-example),
+Moreover, see how we are not configuring any tests in the `processor`. You can do [that](/how-to-guides/data-quality-observability/quality/configure#full-yaml-config-example),
 but even if nothing gets defined in the YAML, we will execute all the tests configured against the table.
 
 {% note %}
@@ -716,7 +804,7 @@ import yaml
 
 ```python  {% srNumber=1 %}
 from metadata.workflow.data_quality import TestSuiteWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 ```
 
@@ -752,10 +840,16 @@ def run():
     workflow = TestSuiteWorkflow.create(CONFIG)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 ```
 
 {% /codeBlock %}
 
 {% /codePreview %}
+
+{% note %}
+
+You can test the workflow via `metadata test -c <path-to-yaml>`.
+
+{% /note %}

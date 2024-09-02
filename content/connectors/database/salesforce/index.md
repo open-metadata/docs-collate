@@ -18,8 +18,9 @@ Configure and schedule Salesforce metadata and profiler workflows from the OpenM
 
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
+- [Enable Security](#securing-salesforce-connection-with-ssl-in-openmetadata)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/salesforce/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/salesforce/yaml"} /%}
 
 ## Requirements
 
@@ -31,12 +32,12 @@ These are the permissions you will require to fetch the metadata from Salesforce
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Salesforce", 
-    selectServicePath: "/images/v1.4/connectors/salesforce/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/salesforce/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/salesforce/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/salesforce/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/salesforce/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/salesforce/service-connection.png",
 } 
 /%}
 
@@ -53,18 +54,32 @@ These are the permissions you will require to fetch the metadata from Salesforce
 - **Salesforce Domain**: When connecting to Salesforce, you can specify the domain to use for accessing the platform. The common domains include `login` and `test`, and you can also utilize Salesforce My Domain.
 By default, the domain `login` is used for accessing Salesforce.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+**SSL Configuration**
+
+In order to integrate SSL in the Metadata Ingestion Config, the user will have to add the SSL config under sslConfig which is placed in the source.
+
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+## Securing Salesforce Connection with SSL in OpenMetadata
 
-{% partial file="/connectors/database/related.md" /%}
+To establish secure connections between OpenMetadata and Salesforce, navigate to the `Advanced Config` section. Here, you can provide the CA certificate used for SSL validation by specifying the `caCertificate`.  Alternatively, if both client and server require mutual authentication, you'll need to use all three parameters: `ssl_key`, `ssl_cert`, and `ssl_ca`. In this case, `ssl_cert` is used for the client’s SSL certificate, `ssl_key` for the private key associated with the SSL certificate, and `ssl_ca` for the CA certificate to validate the server’s certificate.
+
+{% image
+  src="/images/v1.5/connectors/ssl_connection.png"
+  alt="SSL Configuration"
+  height="450px"
+  caption="SSL Configuration" /%}
+
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
+
+{% partial file="/v1.5/connectors/database/related.md" /%}

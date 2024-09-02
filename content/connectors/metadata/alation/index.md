@@ -20,13 +20,13 @@ Configure and schedule Alation metadata workflow from the OpenMetadata UI:
 - [Data Mapping and Assumptions](#data-mapping-and-assumptions)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/metadata/alation/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/metadata/alation/yaml"} /%}
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
-Follow the official documentation to generate a API Access Token from [here](https://developer.alation.com/dev/docs/authentication-into-alation-apis)
+Follow the official documentation to generate a API Access Token from [here](https://developer.alation.com/dev/docs/authentication-into-alation-apis#create-an-api-access-token)
 
 ## Data Mapping and Assumptions
 
@@ -61,12 +61,12 @@ Following entities are supported and will be mapped to the OpenMetadata entities
 ## Metadata Ingestion
 
 {% partial
-  file="/connectors/metadata-ingestion-ui.md"
+  file="/v1.5/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "Alation",
-    selectServicePath: "/images/v1.4/connectors/alation/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/alation/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/alation/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/alation/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/alation/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/alation/service-connection.png",
   }
 /%}
 
@@ -84,7 +84,7 @@ We'll use the user credentials to generate the access token required to authenti
 - **password**: Password of the user.
 
 2. **Access Token Authentication**:
-The access token created using the steps mentioned [here](https://developer.alation.com/dev/docs/authentication-into-alation-apis#create-via-ui) can directly be entered. We'll use that directly to authenticate the Alation APIs
+The access token created using the steps mentioned [here](https://developer.alation.com/dev/docs/authentication-into-alation-apis#create-an-api-access-token) can directly be entered. We'll use that directly to authenticate the Alation APIs
 - **accessToken**: Generated access token
 
 #### For Alation backend database Connection:
@@ -139,16 +139,16 @@ To perform incremental ingestion, these arguments should be used together. For i
 - 3rd execution: {"skip": 20, "limit": 10}
 
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/metadata/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/metadata/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}

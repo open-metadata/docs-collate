@@ -17,11 +17,11 @@ Configure and schedule Singlestore metadata and profiler workflows from the Open
 
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/singlestore/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/singlestore/yaml"} /%}
 
 ## Requirements
 
@@ -44,17 +44,17 @@ GRANT SELECT ON world.hello TO '<username>';
 ```
 
 ### Profiler & Data Quality
-Executing the profiler workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. More information on the profiler workflow setup can be found [here](/connectors/ingestion/workflows/profiler) and data quality tests [here](/connectors/ingestion/workflows/data-quality).
+Executing the profiler workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. More information on the profiler workflow setup can be found [here](/how-to-guides/data-quality-observability/profiler/workflow) and data quality tests [here](/how-to-guides/data-quality-observability/quality).
 
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Singlestore", 
-    selectServicePath: "/images/v1.4/connectors/singlestore/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/singlestore/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/singlestore/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/singlestore/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/singlestore/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/singlestore/service-connection.png",
 } 
 /%}
 
@@ -68,18 +68,18 @@ Executing the profiler workflow or data quality tests, will require the user to 
 - **Host and Port**: Enter the fully qualified hostname and port number for your SingleStore deployment in the Host and Port field.
 - **databaseName**: Optional name to give to the database in OpenMetadata. If left blank, we will use default as the database name.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
 
-{% partial file="/connectors/database/related.md" /%}
+{% partial file="/v1.5/connectors/database/related.md" /%}

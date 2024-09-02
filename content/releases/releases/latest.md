@@ -3,4 +3,4 @@ title: Latest Release
 slug: /releases/latest-release
 ---
 
-{% partial file="/releases/latest.md" /%}
+{% partial file="/v1.5/releases/latest.md" /%}

@@ -19,9 +19,9 @@ Configure and schedule MongoDB metadata workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Data Profiler](#data-profiler)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mongodb/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mongodb/yaml"} /%}
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -29,7 +29,7 @@ To fetch the metadata from MongoDB to OpenMetadata, the MongoDB user must have a
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the MongoDB ingestion, you will need to install:
 
@@ -84,17 +84,17 @@ This is a sample config for MongoDB:
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=7 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
@@ -128,17 +128,17 @@ source:
       databaseName: custom_database_name
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
 ## Data Profiler
 
@@ -292,7 +292,7 @@ workflowConfig:
 
 {% /codePreview %}
 
-- You can learn more about how to configure and run the Profiler Workflow to extract Profiler data and execute the Data Quality from [here](/connectors/ingestion/workflows/profiler)
+- You can learn more about how to configure and run the Profiler Workflow to extract Profiler data and execute the Data Quality from [here](/how-to-guides/data-quality-observability/profiler/workflow)
 
 
 

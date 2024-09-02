@@ -18,7 +18,7 @@ Configure and schedule Azure metadata workflows from the CLI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -44,7 +44,7 @@ file at the bucket root.
 
 You can learn more about this [here](/connectors/storage). Keep reading for an example on the shape of the manifest file.
 
-{% partial file="/connectors/storage/manifest.md" /%}
+{% partial file="/v1.5/connectors/storage/manifest.md" /%}
 
 ## Metadata Ingestion
 
@@ -115,23 +115,23 @@ Here are the step-by-step instructions for finding the account name for an Azure
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/storage/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/storage/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=6 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to storage service during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=7 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to storage service during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
@@ -172,11 +172,11 @@ source:
         # key: value
 ```
 
-{% partial file="/connectors/yaml/storage/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/storage/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
@@ -184,7 +184,7 @@ source:
 
 
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
 ## Related
 

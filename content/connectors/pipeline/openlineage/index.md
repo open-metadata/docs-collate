@@ -18,7 +18,7 @@ Configure and schedule OpenLineage metadata workflows from the OpenMetadata UI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/openlineage/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/openlineage/yaml"} /%}
 
 ## Requirements
 
@@ -60,7 +60,7 @@ To Configure your Airflow instance
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Openlineage", 
     selectServicePath: "/images/v1.3/connectors/openlineage/select-service.webp",
@@ -73,9 +73,9 @@ To Configure your Airflow instance
 {% extraContent parentTagNme="stepsContainer" %}
 
 {% /extraContent %}
-{% partial file="/connectors/test-connection.md" /%}
-{% partial file="/connectors/pipeline/configure-ingestion.md" /%}
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 {% /stepsContainer %}
 
 
@@ -276,4 +276,4 @@ metadata.create_or_update(openlineage_service_request)
 
 ```
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}

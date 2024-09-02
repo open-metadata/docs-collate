@@ -17,11 +17,12 @@ In this section, we provide guides and references to use the Hive connector.
 Configure and schedule Hive metadata and profiler workflows from the OpenMetadata UI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
+- [Enable Security](#securing-hive-connection-with-ssl-in-openmetadata)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/hive/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/hive/yaml"} /%}
 
 ## Requirements
 
@@ -30,17 +31,17 @@ Configure and schedule Hive metadata and profiler workflows from the OpenMetadat
 To extract metadata, the user used in the connection needs to be able to perform `SELECT`, `SHOW`, and `DESCRIBE` operations in the database/schema where the metadata needs to be extracted from.
 
 ### Profiler & Data Quality
-Executing the profiler workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. More information on the profiler workflow setup can be found [here](/connectors/ingestion/workflows/profiler) and data quality tests [here](/connectors/ingestion/workflows/data-quality).
+Executing the profiler workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. More information on the profiler workflow setup can be found [here](/how-to-guides/data-quality-observability/profiler/workflow) and data quality tests [here](/how-to-guides/data-quality-observability/quality).
 
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Hive", 
-    selectServicePath: "/images/v1.4/connectors/hive/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/hive/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/hive/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/hive/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/hive/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/hive/service-connection.png",
 } 
 /%}
 
@@ -67,7 +68,7 @@ You can also ingest the metadata using Mysql metastore. This step is optional if
 - **Host and Port**: Enter the fully qualified hostname and port number for your MySQL Metastore deployment in the Host and Port field in the format `hostname:port`.
 - **databaseSchema**: Enter the database schema which is associated with the metastore.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 #### For Postgres Metastore Connection
 
@@ -78,21 +79,31 @@ You can also ingest the metadata using Postgres metastore. This step is optional
 - **Host and Port**: Enter the fully qualified hostname and port number for your Postgres deployment in the Host and Port field in the format `hostname:port`.
 - **Database**: Initial Postgres database to connect to. Specify the name of database associated with metastore instance.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+## Securing Hive Connection with SSL in OpenMetadata
 
-{% partial file="/connectors/database/related.md" /%}
+To configure SSL for secure connections between OpenMetadata and a Hive database, you need to add `ssl_cert` as a key and the path to the CA certificate as its value under `connectionArguments`. Ensure that the certificate is accessible by the server. If you use a Docker or Kubernetes deployment, update the CA certificate in the Open Metadata server.
+
+{% image
+  src="/images/v1.5/connectors/ssl_argument.png"
+  alt="SSL Configuration"
+  height="450px"
+  caption="SSL Configuration" /%}
+
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
+
+{% partial file="/v1.5/connectors/database/related.md" /%}

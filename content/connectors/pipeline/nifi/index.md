@@ -18,7 +18,7 @@ Configure and schedule Nifi metadata workflows from the OpenMetadata UI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/nifi/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/nifi/yaml"} /%}
 
 ## Requirements
 
@@ -32,12 +32,12 @@ The user should be able to send request to the Nifi API and access the `Resource
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Nifi", 
-    selectServicePath: "/images/v1.4/connectors/nifi/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/nifi/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/nifi/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/nifi/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/nifi/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/nifi/service-connection.png",
 } 
 /%}
 
@@ -63,12 +63,12 @@ The user should be able to send request to the Nifi API and access the `Resource
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}

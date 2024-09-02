@@ -19,7 +19,7 @@ Configure and schedule Deltalake metadata and profiler workflows from the OpenMe
 - [Metadata Ingestion](#metadata-ingestion)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -28,13 +28,22 @@ for Python 3.11
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the Deltalake ingestion, you will need to install:
 
+- If extracting from a metastore
+
 ```bash
-pip3 install "openmetadata-ingestion[deltalake]"
+pip3 install "openmetadata-ingestion[deltalake-spark]"
 ```
+
+- If extracting directly from the storage
+
+```bash
+pip3 install "openmetadata-ingestion[deltalake-storage]"
+```
+
 
 ## Metadata Ingestion
 
@@ -51,13 +60,13 @@ The workflow is modeled around the following
 
 ### 1. Define the YAML Config
 
-This is a sample config for Deltalake:
+#### Source Configuration - From Metastore
 
 {% codePreview %}
 
 {% codeInfoContainer %}
 
-#### Source Configuration - Service Connection
+##### Source Configuration - Service Connection
 
 {% codeInfo srNumber=1 %}
 
@@ -78,33 +87,33 @@ This is a sample config for Deltalake:
 We are internally running with `pyspark` 3.X and `delta-lake` 2.0.0. This means that we need to consider Spark
 configuration options for 3.X.
 
-##### Metastore Host Port
+###### Metastore Host Port
 
 When connecting to an External Metastore passing the parameter `Metastore Host Port`, we will be preparing a Spark Session with the configuration
 
 ```
-.config("hive.metastore.uris", "thrift://{connection.metastoreHostPort}") 
+.config("hive.metastore.uris", "thrift://{connection.metastoreHostPort}")
 ```
 
 Then, we will be using the `catalog` functions from the Spark Session to pick up the metadata exposed by the Hive Metastore.
 
-##### Metastore File Path
+###### Metastore File Path
 
 If instead we use a local file path that contains the metastore information (e.g., for local testing with the default `metastore_db` directory), we will set
 
 ```
-.config("spark.driver.extraJavaOptions", "-Dderby.system.home={connection.metastoreFilePath}") 
+.config("spark.driver.extraJavaOptions", "-Dderby.system.home={connection.metastoreFilePath}")
 ```
 
 To update the `Derby` information. More information about this in a great [SO thread](https://stackoverflow.com/questions/38377188/how-to-get-rid-of-derby-log-metastore-db-from-spark-shell).
 
 - You can find all supported configurations [here](https://spark.apache.org/docs/latest/configuration.html)
 - If you need further information regarding the Hive metastore, you can find
-  it [here](https://spark.apache.org/docs/3.0.0-preview/sql-data-sources-hive-tables.html), and in The Internals of
+  it [here](https://spark.apache.org/docs/latest/sql-data-sources-hive-tables.html), and in The Internals of
   Spark SQL [book](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/content/spark-sql-hive-metastore.html).
 
 
-##### Metastore Database
+###### Metastore Database
 
 You can also connect to the metastore by directly pointing to the Hive Metastore db, e.g., `jdbc:mysql://localhost:3306/demo_hive`.
 
@@ -116,23 +125,23 @@ You will need to provide the driver to the ingestion image, and pass the `classp
 {% /codeInfo %}
 
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
-#### Advanced Configuration
+##### Advanced Configuration
 
 {% codeInfo srNumber=2 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=3 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 - In case you are using Single-Sign-On (SSO) for authentication, add the `authenticator` details in the Connection Arguments as a Key-Value pair as follows: `"authenticator" : "sso_login_url"`
 
@@ -151,19 +160,23 @@ source:
       type: DeltaLake
 ```
 ```yaml {% srNumber=1 %}
-      metastoreConnection:
-        # Pick only of the three
-        ## 1. Hive Service Thrift Connection
-        metastoreHostPort: "<metastore host port>"
-        ## 2. Hive Metastore db connection
-        # metastoreDb: jdbc:mysql://localhost:3306/demo_hive
-        # username: username
-        # password: password
-        # driverName: org.mariadb.jdbc.Driver
-        # jdbcDriverClassPath: /some/path/
-        ## 3. Local file for Testing
-        # metastoreFilePath: "<path_to_metastore>/metastore_db"
-      appName: MyApp
+      configSource:
+        connection:
+            # Pick only of these
+
+            ## 1. Hive Service Thrift Connection
+            metastoreHostPort: "<metastore host port>"
+
+            ## 2. Hive Metastore db connection
+            # metastoreDb: jdbc:mysql://localhost:3306/demo_hive
+            # username: username
+            # password: password
+            # driverName: org.mariadb.jdbc.Driver
+            # jdbcDriverClassPath: /some/path/
+
+            ## 3. Local file for Testing
+            # metastoreFilePath: "<path_to_metastore>/metastore_db"
+            appName: MyApp
 ```
 ```yaml {% srNumber=2 %}
       # connectionOptions:
@@ -174,17 +187,75 @@ source:
       #   key: value
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+#### Source Configuration - From Storage - S3
+
+{% codePreview %}
+
+{% codeInfoContainer %}
+
+##### Source Configuration - Service Connection
+
+{% codeInfo srNumber=1 %}
+
+* **awsAccessKeyId**: Enter your secure access key ID for your DynamoDB connection. The specified key ID should be authorized to read all databases you want to include in the metadata ingestion workflow.
+* **awsSecretAccessKey**: Enter the Secret Access Key (the passcode key pair to the key ID from above).
+* **awsRegion**: Specify the region in which your DynamoDB is located. This setting is required even if you have configured a local AWS profile.
+* **schemaFilterPattern** and **tableFilterPattern**: Note that the `schemaFilterPattern` and `tableFilterPattern` both support regex as `include` or `exclude`. E.g.,
+
+{% /codeInfo %}
+
+
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
+
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
+
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
+
+{% /codeInfoContainer %}
+
+{% codeBlock fileName="filename.yaml" %}
+
+```yaml {% isCodeBlock=true %}
+source:
+  type: deltalake
+  serviceName: <service_name>
+  serviceConnection:
+    config:
+      type: DeltaLake
+```
+
+```yaml {% srNumber=1 %}
+      configSource:
+        connection:
+            securityConfig:
+            awsAccessKeyId: aws access key id
+            awsSecretAccessKey: aws secret access key
+            awsRegion: aws region
+        bucketName: bucket name
+        prefix: prefix
+```
+
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
+
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
+
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
+
+{% /codeBlock %}
+
+{% /codePreview %}
+
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
 ## dbt Integration
 

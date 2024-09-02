@@ -3,7 +3,7 @@ title: Run the ingestion from AWS MWAA
 slug: /deployment/ingestion/external/mwaa
 ---
 
-{% partial file="/deployment/external-ingestion.md" /%}
+{% partial file="/v1.5/deployment/external-ingestion.md" /%}
 
 # Run the ingestion from AWS MWAA
 
@@ -54,7 +54,7 @@ except ModuleNotFoundError:
 from airflow.utils.dates import days_ago
 
 from metadata.workflow.metadata import MetadataWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 default_args = {
     "retries": 3,
@@ -71,7 +71,7 @@ def metadata_ingestion_workflow():
     workflow = MetadataWorkflow.create(workflow_config)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 
 with DAG(
@@ -91,7 +91,7 @@ with DAG(
 Where you can update the YAML configuration and workflow classes accordingly. accordingly. Further examples on how to 
 run the ingestion can be found on the documentation (e.g., [Snowflake](/connectors/database/snowflake)).
 
-{% partial file="/deployment/run-connectors-class.md" /%}
+{% partial file="/v1.5/deployment/run-connectors-class.md" /%}
 
 ## Ingestion Workflows as an ECS Operator
 
@@ -392,7 +392,7 @@ default_args = {
 
 def metadata_ingestion_workflow():
     from metadata.workflow.metadata import MetadataWorkflow
-    from metadata.workflow.workflow_output_handler import print_status
+     
     
     import yaml
     
@@ -403,7 +403,7 @@ YAML config
     workflow = MetadataWorkflow.create(workflow_config)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 
 with DAG(
@@ -434,4 +434,4 @@ For Airflow providers, you will want to pull the provider versions from [the mat
 
 Also note that the ingestion workflow function must be entirely self-contained as it will run by itself in the virtualenv. Any imports it needs, including the configuration, must exist within the function itself.
 
-{% partial file="/deployment/run-connectors-class.md" /%}
+{% partial file="/v1.5/deployment/run-connectors-class.md" /%}

@@ -18,15 +18,15 @@ Configure and schedule Couchbase metadata workflows from the OpenMetadata UI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/couchbase/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/couchbase/yaml"} /%}
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the Couchbase ingestion, you will need to install:
 
@@ -81,17 +81,17 @@ This is a sample config for Couchbase:
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=7 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
@@ -122,17 +122,17 @@ source:
       bucket: custom_bucket_name
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
 ## Related
 

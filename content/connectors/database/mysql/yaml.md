@@ -20,14 +20,15 @@ Configure and schedule MySQL metadata and profiler workflows from the OpenMetada
 - [Data Profiler](#data-profiler)
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
+- [Enable Security](#securing-mysql-connection-with-ssl-in-openmetadata)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the MySQL ingestion, you will need to install:
 
@@ -154,23 +155,23 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=6 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=7 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 - In case you are using Single-Sign-On (SSO) for authentication, add the `authenticator` details in the Connection Arguments as a Key-Value pair as follows: `"authenticator" : "sso_login_url"`
 
@@ -218,21 +219,31 @@ source:
       #   key: value
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/connectors/yaml/data-profiler.md" variables={connector: "mysql"} /%}
+{% partial file="/v1.5/connectors/yaml/data-profiler.md" variables={connector: "mysql"} /%}
 
-{% partial file="/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.5/connectors/yaml/data-quality.md" /%}
+
+## Securing MySQL Connection with SSL in OpenMetadata
+
+To establish secure connections between OpenMetadata and MySQL, navigate to the Advanced Config section. Here, you can provide the CA certificate used for SSL validation by specifying the `caCertificate`.  Alternatively, if both client and server require mutual authentication, you'll need to use all three parameters: `ssl_key`, `ssl_cert`, and `ssl_ca`. In this case, `ssl_cert` is used for the client’s SSL certificate, `ssl_key` for the private key associated with the SSL certificate, and `ssl_ca` for the CA certificate to validate the server’s certificate.
+```yaml
+      sslConfig:
+            caCertificate: "/path/to/ca_certificate"
+            sslCertificate: "/path/to/your/ssl_cert"
+            sslKey: "/path/to/your/ssl_key"
+```
 
 ## dbt Integration
 

@@ -13,7 +13,7 @@ Once the metadata ingestion runs correctly and we are able to explore the servic
 This will populate the dbt tab from the Table Entity Page.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/dbt-features/dbt-query.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/dbt-features/dbt-query.webp"
   alt="dbt"
   caption="dbt"
  /%}
@@ -26,7 +26,7 @@ We can create a workflow that will obtain the dbt information from the dbt files
 From the Service Page, go to the Ingestions tab to add a new ingestion and click on Add dbt Ingestion.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/add-ingestion.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/add-ingestion.webp"
   alt="add-ingestion"
   caption="Add dbt Ingestion"
  /%}
@@ -53,7 +53,7 @@ The name of the s3 bucket and prefix path to the folder in which the dbt files a
 Follow the link [here](/connectors/ingestion/workflows/dbt/setup-multiple-dbt-projects) for instructions on setting up multiple dbt projects.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/aws-s3.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/aws-s3.webp"
   alt="aws-s3-bucket"
   caption="AWS S3 Bucket Config"
  /%}
@@ -72,7 +72,7 @@ GCS credentials can be stored in two ways:
 Follow the link [here](/connectors/ingestion/workflows/dbt/setup-multiple-dbt-projects) for instructions on setting up multiple dbt projects.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/gcp-bucket-form.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/gcp-bucket-form.webp"
   alt="gcp-storage-bucket-form"
   caption="GCS Bucket config"
  /%}
@@ -81,7 +81,7 @@ Follow the link [here](/connectors/ingestion/workflows/dbt/setup-multiple-dbt-pr
 **2.** Entering the path of file in which the GCS bucket credentials are stored.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/gcp-bucket-path.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/gcp-bucket-path.webp"
   alt="gcp-storage-bucket-path"
   caption="GCS Bucket Path Config"
  /%}
@@ -98,7 +98,7 @@ The name of the s3 bucket and prefix path to the folder in which the dbt files a
 Follow the link [here](/connectors/ingestion/workflows/dbt/setup-multiple-dbt-projects) for instructions on setting up multiple dbt projects.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/azure-config.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/azure-config.webp"
   alt="azure-bucket"
   caption="Azure Storage Config"
  /%}
@@ -108,7 +108,7 @@ Follow the link [here](/connectors/ingestion/workflows/dbt/setup-multiple-dbt-pr
 Path of the `manifest.json`, `catalog.json` and `run_results.json` files stored in the local system or in the container in which openmetadata server is running can be directly provided.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/local-storage.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/local-storage.webp"
   alt="local-storage"
   caption="Local Storage Config"
  /%}
@@ -118,7 +118,7 @@ Path of the `manifest.json`, `catalog.json` and `run_results.json` files stored 
 File server path of the `manifest.json`, `catalog.json` and `run_results.json` files stored on a file server directly provided.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/file_server.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/file_server.webp"
   alt="file-server"
   caption="File Server Config"
  /%}
@@ -127,11 +127,22 @@ File server path of the `manifest.json`, `catalog.json` and `run_results.json` f
 #### 6. dbt Cloud
 
 Click on the the link [here](https://docs.getdbt.com/guides/getting-started) for getting started with dbt cloud account setup if not done already.
-OpenMetadata uses dbt cloud APIs to fetch the `run artifacts` (manifest.json, catalog.json and run_results.json) from the most recent dbt run.
-The APIs need to be authenticated using an Authentication Token. Follow the link [here](https://docs.getdbt.com/dbt-cloud/api-v2#section/Authentication) to generate an authentication token for your dbt cloud account.
+The APIs need to be authenticated using an Authentication Token. Follow the link [here](https://docs.getdbt.com/docs/dbt-cloud-apis/service-tokens) to generate an authentication token for your dbt cloud account.
+
+The `Account Viewer` permission is the minimum requirement for the dbt cloud token.
+
+{% note %}
+
+The dbt Cloud workflow leverages the [dbt Cloud v2](https://docs.getdbt.com/dbt-cloud/api-v2#/) APIs to retrieve dbt run artifacts (manifest.json, catalog.json, and run_results.json) and ingest the dbt metadata.
+
+It uses the [/runs](https://docs.getdbt.com/dbt-cloud/api-v2#/operations/List%20Runs) API to obtain the most recent successful dbt run, filtering by account_id, project_id and job_id if specified. The artifacts from this run are then collected using the [/artifacts](https://docs.getdbt.com/dbt-cloud/api-v2#/operations/List%20Run%20Artifacts) API.
+
+Refer to the code [here](https://github.com/open-metadata/OpenMetadata/blob/main/ingestion/src/metadata/ingestion/source/database/dbt/dbt_config.py#L142)
+
+{% /note %}
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/dbt-cloud.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/dbt-cloud.webp"
   alt="dbt-cloud"
   caption="dbt Cloud config"
  /%}
@@ -139,6 +150,8 @@ The APIs need to be authenticated using an Authentication Token. Follow the link
 {% note %}
 
 The fields for `Dbt Cloud Account Id`, `Dbt Cloud Project Id` and `Dbt Cloud Job Id` should be numeric values.
+
+To know how to get the values for `Dbt Cloud Account Id`, `Dbt Cloud Project Id` and `Dbt Cloud Job Id` fields check [here](/connectors/ingestion/workflows/dbt/run-dbt-workflow-externally).
 
 {% /note %}
 
@@ -148,7 +161,7 @@ The fields for `Dbt Cloud Account Id`, `Dbt Cloud Project Id` and `Dbt Cloud Job
 After clicking Next, you will be redirected to the Scheduling form. This will be the same as the Metadata Ingestion. Select your desired schedule and click on Deploy to find the lineage pipeline being added to the Service Ingestions.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/schedule-and-deploy.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/schedule-and-deploy.webp"
   alt="schedule-and-deploy"
   caption="Schedule dbt ingestion pipeline"
  /%}

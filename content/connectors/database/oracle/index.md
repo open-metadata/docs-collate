@@ -17,12 +17,12 @@ Configure and schedule Oracle metadata and profiler workflows from the OpenMetad
 
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [Lineage](/connectors/ingestion/lineage)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/oracle/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/oracle/yaml"} /%}
 
 ## Requirements
 
@@ -40,18 +40,50 @@ CREATE ROLE new_role;
 -- GRANT ROLE TO USER 
 GRANT new_role TO user_name;
 
--- GRANT CREATE SESSION PRIVILEGE TO USER
+-- Grant CREATE SESSION Privilege.
+--   This allows the role to connect.
 GRANT CREATE SESSION TO new_role;
 
--- GRANT SELECT CATALOG ROLE PRIVILEGE TO FETCH METADATA TO ROLE / USER
+-- Grant SELECT_CATALOG_ROLE Privilege.
+--   This allows the role ReadOnly Access to Data Dictionaries
 GRANT SELECT_CATALOG_ROLE TO new_role;
 ```
 
-With just these permissions, your user should be able to ingest the schemas, but not the tables inside them. To get
-the tables, you should grant `SELECT` permissions to the tables you are interested in. E.g.,
+If you don't want to create a role, and directly give permissions to the user, you can take a look at an example given below.
 
 ```sql
-SELECT ON ADMIN.EXAMPLE_TABLE TO new_role;
+-- Create a New User
+CREATE USER my_user IDENTIFIED by my_password;
+
+-- Grant CREATE SESSION Privilege.
+--   This allows the user to connect.
+GRANT CREATE SESSION TO my_user;
+
+-- Grant SELECT_CATALOG_ROLE Privilege.
+--   This allows the user ReadOnly Access to Data Dictionaries
+GRANT SELECT_CATALOG_ROLE to my_user;
+```
+
+**Note**: With just these permissions, your user should be able to ingest the metadata, but not the `Profiler & Data Quality`, you should grant `SELECT` permissions to the tables you are interested in for the `Profiler & Data Quality` features to work. 
+
+```sql
+-- If you are using a role and do not want to specify a specific table, but any
+GRANT SELECT ANY TABLE TO new_role;
+
+-- If you are not using a role, but directly giving permission to the user and do not want to specify a specific table, but any
+GRANT SELECT ANY TABLE TO my_user;
+
+-- if you are using role
+GRANT SELECT ON ADMIN.EXAMPLE_TABLE TO new_role;
+
+-- if you are not using role, but directly giving permission to the user
+GRANT SELECT ON ADMIN.EXAMPLE_TABLE TO my_user;
+
+-- if you are using role
+GRANT SELECT ON {schema}.{table} TO new_role;
+
+-- if you are not using role, but directly giving permission to the user
+GRANT SELECT ON {schema}.{table} TO my_user;
 ```
 
 You can find further information [here](https://docs.oracle.com/javadb/10.8.3.0/ref/rrefsqljgrant.html). Note that
@@ -60,12 +92,12 @@ there is no routine out of the box in Oracle to grant SELECT to a full schema.
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Oracle", 
-    selectServicePath: "/images/v1.4/connectors/oracle/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/oracle/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/oracle/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/oracle/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/oracle/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/oracle/service-connection.png",
 } 
 /%}
 
@@ -86,18 +118,18 @@ there is no routine out of the box in Oracle to grant SELECT to a full schema.
     We are shipping the binaries for ARM and AMD architectures from [here](https://www.oracle.com/database/technologies/instant-client/linux-x86-64-downloads.html)
     and [here](https://www.oracle.com/database/technologies/instant-client/linux-arm-aarch64-downloads.html) for the instant client version 19.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
 
-{% partial file="/connectors/database/related.md" /%}
+{% partial file="/v1.5/connectors/database/related.md" /%}

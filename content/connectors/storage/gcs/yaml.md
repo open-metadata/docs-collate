@@ -18,9 +18,15 @@ Configure and schedule GCS metadata workflows from the CLI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
+
+To run the GCS ingestion, you will need to install:
+
+```bash
+pip3 install "openmetadata-ingestion[datalake-gcs]"
+```
 
 {%inlineCallout icon="description" bold="OpenMetadata 1.0 or later" href="/deployment"%}
 To deploy OpenMetadata, check the Deployment guides.
@@ -46,7 +52,7 @@ file at the bucket root.
 
 You can learn more about this [here](/connectors/storage). Keep reading for an example on the shape of the manifest file.
 
-{% partial file="/connectors/storage/manifest.md" /%}
+{% partial file="/v1.5/connectors/storage/manifest.md" /%}
 
 ## Metadata Ingestion
 
@@ -98,7 +104,8 @@ source:
     config:
       type: GCS
       credentials:
-        gcpConfig: <path to file>
+        gcpConfig: 
+        path: <path to file>
 ```
 
 - If you want to use [ADC authentication](https://cloud.google.com/docs/authentication#adc) for GCP you can just leave
@@ -119,23 +126,23 @@ source:
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/storage/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/storage/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=2 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to storage service during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=3 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to storage service during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
@@ -162,7 +169,7 @@ source:
             Super secret key
             -----END PRIVATE KEY-----
           clientEmail: client@mail.com
-          clientId: 1234
+          clientId: "1234"
           # authUri: https://accounts.google.com/o/oauth2/auth (default)
           # tokenUri: https://oauth2.googleapis.com/token (default)
           # authProviderX509CertUrl: https://www.googleapis.com/oauth2/v1/certs (default)
@@ -180,11 +187,11 @@ source:
       #   key: value
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/storage/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 

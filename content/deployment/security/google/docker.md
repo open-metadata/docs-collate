@@ -33,4 +33,4 @@ AUTHENTICATION_CALLBACK_URL=http://localhost:8585/callback
 docker compose --env-file ~/openmetadata_google.env up -d
 ```
 
-{% partial file="/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.5/deployment/configure-ingestion.md" /%}

@@ -22,8 +22,9 @@ Configure and schedule Postgres metadata and profiler workflows from the OpenMet
 - [Data Profiler](#data-profiler)
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
+- [Enable Security](#securing-postgres-connection-with-ssl-in-openmetadata)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -50,7 +51,7 @@ GRANT pg_read_all_stats TO your_user;
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the Postgres ingestion, you will need to install:
 
@@ -183,23 +184,23 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=7 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=8 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 - In case you are using Single-Sign-On (SSO) for authentication, add the `authenticator` details in the Connection Arguments as a Key-Value pair as follows: `"authenticator" : "sso_login_url"`
 
@@ -273,25 +274,43 @@ source:
       #   key: value
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/connectors/yaml/query-usage.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.5/connectors/yaml/query-usage.md" variables={connector: "postgres"} /%}
 
-{% partial file="/connectors/yaml/lineage.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.5/connectors/yaml/lineage.md" variables={connector: "postgres"} /%}
 
-{% partial file="/connectors/yaml/data-profiler.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.5/connectors/yaml/data-profiler.md" variables={connector: "postgres"} /%}
 
-{% partial file="/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.5/connectors/yaml/data-quality.md" /%}
+
+## Securing Postgres Connection with SSL in OpenMetadata
+
+To configure SSL for secure connections between OpenMetadata and a PostgreSQL database, PostgreSQL offers various SSL modes, each providing different levels of connection security.
+
+When running the ingestion process externally, specify the SSL mode to be used for the PostgreSQL connection, such as `prefer`, `verify-ca`, `allow`, and others. Once you've chosen the SSL mode, provide the CA certificate for SSL validation (`caCertificate`). Only the CA certificate is required for SSL validation in PostgreSQL.
+
+{% note %}
+
+For IAM authentication, it is recommended to select the `allow` mode or another SSL mode that aligns with your specific needs.
+
+{% /note %}
+
+```yaml
+      sslMode: disable #allow prefer require verify-ca verify-full
+      sslConfig:
+            caCertificate: "/path/to/ca/certificate"
+```
 
 ## dbt Integration
 

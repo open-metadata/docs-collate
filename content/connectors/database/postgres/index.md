@@ -18,12 +18,13 @@ Configure and schedule PostgreSQL metadata and profiler workflows from the OpenM
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 - [Query Usage](/connectors/ingestion/workflows/usage)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [Lineage](/connectors/ingestion/lineage)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
+- [Enable Security](#securing-postgres-connection-with-ssl-in-openmetadata)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/postgres/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/postgres/yaml"} /%}
 
 ## Requirements
 
@@ -52,12 +53,12 @@ GRANT pg_read_all_stats TO your_user;
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Postgres", 
-    selectServicePath: "/images/v1.4/connectors/postgres/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/postgres/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/postgres/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/postgres/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/postgres/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/postgres/service-connection.png",
 } 
 /%}
 
@@ -146,18 +147,36 @@ There are a couple of types of SSL modes that Postgres supports which can be add
 
 In order to integrate SSL in the Metadata Ingestion Config, the user will have to add the SSL config under sslConfig which is placed in the source.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+## Securing Postgres Connection with SSL in OpenMetadata
 
-{% partial file="/connectors/database/related.md" /%}
+To establish secure connections between OpenMetadata and a PostgreSQL database, you can configure SSL using different SSL modes provided by PostgreSQL, each offering varying levels of security.
+
+Under `Advanced Config`, specify the SSL mode appropriate for your connection, such as `prefer`, `verify-ca`, `allow`, and others. After selecting the SSL mode, provide the CA certificate used for SSL validation (`caCertificate`). Note that PostgreSQL requires only the CA certificate for SSL validation.
+
+{% note %}
+
+For IAM authentication, it is recommended to choose the `allow` mode or another SSL mode that fits your specific requirements.
+
+{% /note %}
+
+{% image
+  src="/images/v1.5/connectors/ssl_connection.png"
+  alt="SSL Configuration"
+  height="450px"
+  caption="SSL Configuration" /%}
+
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
+
+{% partial file="/v1.5/connectors/database/related.md" /%}

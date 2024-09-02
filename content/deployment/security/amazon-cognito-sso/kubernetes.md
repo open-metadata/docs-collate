@@ -29,4 +29,4 @@ openmetadata:
       callbackUrl: "http://localhost:8585/callback"
 ```
 
-{% partial file="/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.5/deployment/configure-ingestion.md" /%}

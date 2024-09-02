@@ -3,7 +3,7 @@ title: Run the ingestion from your Airflow
 slug: /deployment/ingestion/external/airflow
 ---
 
-{% partial file="/deployment/external-ingestion.md" /%}
+{% partial file="/v1.5/deployment/external-ingestion.md" /%}
 
 # Run the ingestion from your Airflow
 
@@ -54,7 +54,7 @@ except ModuleNotFoundError:
 
 from metadata.config.common import load_config_file
 from metadata.workflow.metadata import MetadataWorkflow
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 from airflow.utils.dates import days_ago
 
@@ -76,7 +76,7 @@ def metadata_ingestion_workflow():
     workflow = MetadataWorkflow.create(workflow_config)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 
 with DAG(
@@ -101,7 +101,7 @@ the whole process.
 The drawback here? You need to install some requirements, which is not always possible. Here you have two alternatives,
 either you use the `PythonVirtualenvOperator`, or read below on how to run the ingestion with the `DockerOperator`.
 
-{% partial file="/deployment/run-connectors-class.md" /%}
+{% partial file="/v1.5/deployment/run-connectors-class.md" /%}
 
 ## Docker Operator
 
@@ -175,7 +175,7 @@ The final important elements here are:
 - `environment={"config": config, "pipelineType": "metadata"}`: Again, in most cases you will just need to update
   the `config` string to point to the right connector.
 
-Other supported values of `pipelineType` are `usage`, `lineage`, `profiler` or `TestSuite`. Pass the required flag
+Other supported values of `pipelineType` are `usage`, `lineage`, `profiler`, `dataInsight`, `elasticSearchReindex`, `dbt`, `application` or `TestSuite`. Pass the required flag
 depending on the type of workflow you want to execute. Make sure that the YAML config reflects what ingredients
 are required for your Workflow.
 
@@ -225,7 +225,7 @@ default_args = {
 
 def metadata_ingestion_workflow():
     from metadata.workflow.metadata import MetadataWorkflow
-    from metadata.workflow.workflow_output_handler import print_status
+     
     import yaml
     config = """
         ...
@@ -235,7 +235,7 @@ def metadata_ingestion_workflow():
     workflow = MetadataWorkflow.create(workflow_config)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 
 

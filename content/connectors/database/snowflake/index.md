@@ -20,12 +20,12 @@ Configure and schedule Snowflake metadata and profiler workflows from the OpenMe
 - [Metadata Ingestion](#metadata-ingestion)
     - [Incremental Extraction](/connectors/ingestion/workflows/metadata/incremental-extraction/snowflake)
 - [Query Usage](/connectors/ingestion/workflows/usage)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [Lineage](/connectors/ingestion/lineage)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/snowflake/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/snowflake/yaml"} /%}
 
 ## Requirements
 
@@ -61,14 +61,22 @@ GRANT SELECT ON ALL VIEWS IN SCHEMA TEST_SCHEMA TO ROLE NEW_ROLE;
 GRANT SELECT ON ALL DYNAMIC TABLES IN SCHEMA TEST_SCHEMA TO ROLE NEW_ROLE;
 ```
 
-While running the usage workflow, Openmetadata fetches the query logs by querying `snowflake.account_usage.query_history` table. For this the snowflake user should be granted the `ACCOUNTADMIN` role or a role granted IMPORTED PRIVILEGES on the database `SNOWFLAKE`.
+{% note %}
+If running any of:
+  - Incremental Extraction
+  - Ingesting Tags
+  - Usage Workflow
 
-```sql
--- Grant IMPORTED PRIVILEGES on all Schemas of SNOWFLAKE DB to New Role
-GRANT IMPORTED PRIVILEGES ON ALL SCHEMAS IN DATABASE SNOWFLAKE TO ROLE NEW_ROLE;
-```
+The following Grant is needed
+{% /note %}
 
-If ingesting tags, the user should also have permissions to query `snowflake.account_usage.tag_references`.For this the snowflake user should be granted the `ACCOUNTADMIN` role or a role granted IMPORTED PRIVILEGES on the database
+- **Incremental Extraction**: Openmetadata fetches the information by querying `snowflake.account_usage.tables`.
+
+- **Ingesting Tags**: Openmetadata fetches the information by querying `snowflake.account_usage.tag_references`.
+
+- **Usage Workflow**: Openmetadata fetches the query logs by querying `snowflake.account_usage.query_history` table. For this the snowflake user should be granted the `ACCOUNTADMIN` role or a role granted IMPORTED PRIVILEGES on the database `SNOWFLAKE`.
+
+In order to be able to query those tables, the user should be either granted the `ACCOUNTADMIN` role or a role with the `IMPORTED PRIVILEGES` grant on the `SNOWFLAKE` database:
 
 ```sql
 -- Grant IMPORTED PRIVILEGES on all Schemas of SNOWFLAKE DB to New Role
@@ -88,12 +96,12 @@ Make sure to add the `GRANT <USAGE|OWNERSHIP> ON PROCEDURE <NAME>(<SIGNATURE>) t
 ## Metadata Ingestion
 
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Snowflake", 
-    selectServicePath: "/images/v1.4/connectors/snowflake/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/snowflake/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/snowflake/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/snowflake/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/snowflake/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/snowflake/service-connection.png",
 } 
 /%}
 
@@ -115,19 +123,19 @@ Make sure to add the `GRANT <USAGE|OWNERSHIP> ON PROCEDURE <NAME>(<SIGNATURE>) t
 Optional configuration for ingestion of `TRANSIENT` and `TEMPORARY` tables, By default, it will skip the `TRANSIENT` and `TEMPORARY` tables.
 - **Client Session Keep Alive**: Optional Configuration to keep the session active in case the ingestion job runs for longer duration.
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
 
 ### Incomplete Column Level for Views
 
@@ -144,4 +152,4 @@ GRANT APPLY TAG TO ROLE NEW_ROLE;
 
 Depending on your view ddl you can grant the relevant privileged as per above queries.
 
-{% partial file="/connectors/database/related.md" /%}
+{% partial file="/v1.5/connectors/database/related.md" /%}

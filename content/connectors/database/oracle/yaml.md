@@ -22,11 +22,11 @@ Configure and schedule Oracle metadata and profiler workflows from the OpenMetad
 - [Lineage](#lineage)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
-**Note**: To retrieve metadata from an Oracle database, the python-oracledb library can be utilized, which provides support for versions 12c, 18c, 19c, and 21c.
+**Note**: To retrieve metadata from an Oracle database, we use the `python-oracledb` library, which provides support for versions 12c, 18c, 19c, and 21c.
 
 To ingest metadata from oracle user must have `CREATE SESSION` privilege for the user.
 
@@ -40,18 +40,50 @@ CREATE ROLE new_role;
 -- GRANT ROLE TO USER 
 GRANT new_role TO user_name;
 
--- GRANT CREATE SESSION PRIVILEGE TO USER
+-- Grant CREATE SESSION Privilege.
+--   This allows the role to connect.
 GRANT CREATE SESSION TO new_role;
 
--- GRANT SELECT CATALOG ROLE PRIVILEGE TO FETCH METADATA TO ROLE / USER
+-- Grant SELECT_CATALOG_ROLE Privilege.
+--   This allows the role ReadOnly Access to Data Dictionaries
 GRANT SELECT_CATALOG_ROLE TO new_role;
 ```
 
-With just these permissions, your user should be able to ingest the schemas, but not the tables inside them. To get
-the tables, you should grant `SELECT` permissions to the tables you are interested in. E.g.,
+If you don't want to create a role, and directly give permissions to the user, you can take a look at an example given below.
 
 ```sql
-SELECT ON ADMIN.EXAMPLE_TABLE TO new_role;
+-- Create a New User
+CREATE USER my_user IDENTIFIED by my_password;
+
+-- Grant CREATE SESSION Privilege.
+--   This allows the user to connect.
+GRANT CREATE SESSION TO my_user;
+
+-- Grant SELECT_CATALOG_ROLE Privilege.
+--   This allows the user ReadOnly Access to Data Dictionaries
+GRANT SELECT_CATALOG_ROLE to my_user;
+```
+
+**Note**: With just these permissions, your user should be able to ingest the metadata, but not the `Profiler & Data Quality`, you should grant `SELECT` permissions to the tables you are interested in for the `Profiler & Data Quality` features to work. 
+
+```sql
+-- If you are using a role and do not want to specify a specific table, but any
+GRANT SELECT ANY TABLE TO new_role;
+
+-- If you are not using a role, but directly giving permission to the user and do not want to specify a specific table, but any
+GRANT SELECT ANY TABLE TO my_user;
+
+-- if you are using role
+GRANT SELECT ON ADMIN.EXAMPLE_TABLE TO new_role;
+
+-- if you are not using role, but directly giving permission to the user
+GRANT SELECT ON ADMIN.EXAMPLE_TABLE TO my_user;
+
+-- if you are using role
+GRANT SELECT ON {schema}.{table} TO new_role;
+
+-- if you are not using role, but directly giving permission to the user
+GRANT SELECT ON {schema}.{table} TO my_user;
 ```
 
 You can find further information [here](https://docs.oracle.com/javadb/10.8.3.0/ref/rrefsqljgrant.html). Note that
@@ -59,7 +91,7 @@ there is no routine out of the box in Oracle to grant SELECT to a full schema.
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the Oracle ingestion, you will need to install:
 
@@ -126,23 +158,23 @@ This is a sample config for Oracle:
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=5 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=6 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 - In case you are using Single-Sign-On (SSO) for authentication, add the `authenticator` details in the Connection Arguments as a Key-Value pair as follows: `"authenticator" : "sso_login_url"`
 
@@ -187,21 +219,21 @@ source:
       #   key: value
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/connectors/yaml/data-profiler.md" variables={connector: "oracle"} /%}
+{% partial file="/v1.5/connectors/yaml/data-profiler.md" variables={connector: "oracle"} /%}
 
-{% partial file="/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.5/connectors/yaml/data-quality.md" /%}
 
 ## Lineage
 

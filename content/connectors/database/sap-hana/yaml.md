@@ -21,7 +21,7 @@ Configure and schedule SAP Hana metadata and profiler workflows from the OpenMet
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -29,21 +29,48 @@ Configure and schedule SAP Hana metadata and profiler workflows from the OpenMet
 To deploy OpenMetadata, check the Deployment guides.
 {%/inlineCallout%}
 
-
-
 {% note %}
 The connector is compatible with HANA or HANA express versions since HANA SPS 2.
 {% /note %}
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the SAP Hana ingestion, you will need to install:
 
 ```bash
 pip3 install "openmetadata-ingestion[sap-hana]"
 ```
+
+### Metadata
+
+To extract metadata the user used in the connection needs to have access to the `SYS` schema.
+
+You can create a new user to run the ingestion with:
+
+```SQL
+CREATE USER openmetadata PASSWORD Password123;
+```
+
+And, if you have password policies forcing users to reset the password, you can disable that policy for this technical user with:
+
+```SQL
+ALTER USER openmetadata DISABLE PASSWORD LIFETIME;
+```
+
+Note that in order to get the metadata for **Calculation Views**, **Analytics Views** and **Attribute Views**, you need to have enough
+permissions on the `_SYS_BIC` schema. You can grant the required permissions to the user by running the following SQL commands:
+
+```SQL
+GRANT SELECT ON SCHEMA _SYS_BIC TO <user_or_role>;
+```
+
+The same applies to the `_SYS_REPO` schema, required for lineage extraction.
+
+### Profiler & Data Quality
+
+Executing the profiler Workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. The user should also be allowed to view information in `tables` for all objects in the database. More information on the profiler workflow setup can be found [here](/connectors/ingestion/workflows/profiler) and data quality tests [here](/connectors/ingestion/workflows/data-quality).
 
 ## Metadata Ingestion
 
@@ -118,22 +145,22 @@ If you have a User Store configured, then:
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 #### Advanced Configuration
 
 {% codeInfo srNumber=7 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=8 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 - In case you are using Single-Sign-On (SSO) for authentication, add the `authenticator` details in the Connection Arguments as a Key-Value pair as follows: `"authenticator" : "sso_login_url"`
 
@@ -181,21 +208,21 @@ source:
       #   key: value
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/connectors/yaml/data-profiler.md" variables={connector: "sapHana"} /%}
+{% partial file="/v1.5/connectors/yaml/data-profiler.md" variables={connector: "sapHana"} /%}
 
-{% partial file="/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.5/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 

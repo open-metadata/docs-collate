@@ -35,4 +35,4 @@ authorizerConfiguration:
   principalDomain: "open-metadata.org"
 ```
 
-{% partial file="/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.5/deployment/configure-ingestion.md" /%}

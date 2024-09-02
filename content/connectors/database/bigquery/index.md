@@ -20,16 +20,27 @@ Configure and schedule BigQuery metadata and profiler workflows from the OpenMet
 - [Metadata Ingestion](#metadata-ingestion)
     - [Incremental Extraction](/connectors/ingestion/workflows/metadata/incremental-extraction/bigquery)
 - [Query Usage](/connectors/ingestion/workflows/usage)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality/configure)
 - [Lineage](/connectors/ingestion/lineage)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/bigquery/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/bigquery/yaml"} /%}
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
+
+You need to create an service account in order to ingest metadata from bigquery refer [this](/connectors/database/bigquery/create-credentials) guide on how to create service account.
+
+{% tilesContainer %}
+{% tile
+icon="manage_accounts"
+title="Create Custom GCP Role"
+description="Check out this documentation on how to create a custom role and assign it to the service account."
+link="/connectors/database/bigquery/create-credentials"
+  / %}
+{% /tilesContainer %}
 
 ### Data Catalog API Permissions 
 
@@ -58,22 +69,13 @@ To execute metadata extraction and usage workflow successfully the user or the s
 | 11   | datacatalog.taxonomies.list   | Fetch Policy Tags       |
 | 12   | bigquery.readsessions.create  | Bigquery Usage & Lineage Workflow |
 | 13   | bigquery.readsessions.getData | Bigquery Usage & Lineage Workflow |
+| 14   | logging.operations.list       | Incremental Metadata Ingestion    |
 
 {% /multiTablesWrapper %}
 
 {% note %}
 If the user has `External Tables`, please attach relevant permissions needed for external tables, alongwith the above list of permissions.
 {% /note %}
-
-{% tilesContainer %}
-{% tile
-icon="manage_accounts"
-title="Create Custom GCP Role"
-description="Checkout this documentation on how to create a custom role and assign it to the service account."
-link="/connectors/database/bigquery/roles"
-  / %}
-{% /tilesContainer %}
-
 
 {% note %}
 If you are using BigQuery and have sharded tables, you might want to consider using partitioned tables instead. Partitioned tables allow you to efficiently query data by date or other criteria, without having to manage multiple tables. Partitioned tables also have lower storage and query costs than sharded tables. 
@@ -85,12 +87,12 @@ This will help you simplify your data management and optimize your performance i
 ## Metadata Ingestion
 
 {% partial
-  file="/connectors/metadata-ingestion-ui.md"
+  file="/v1.5/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "BigQuery",
-    selectServicePath: "/images/v1.4/connectors/bigquery/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/bigquery/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/bigquery/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/bigquery/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/bigquery/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/bigquery/service-connection.png",
   }
 /%}
 
@@ -104,7 +106,7 @@ This will help you simplify your data management and optimize your performance i
 **GCP Credentials**: 
 You can authenticate with your bigquery instance using either `GCP Credentials Path` where you can specify the file path of the service account key or you can pass the values directly by choosing the `GCP Credentials Values` from the service account key file.
 
-You can checkout [this](https://cloud.google.com/iam/docs/keys-create-delete#iam-service-account-keys-create-console) documentation on how to create the service account keys and download it.
+You can check out [this](https://cloud.google.com/iam/docs/keys-create-delete#iam-service-account-keys-create-console) documentation on how to create the service account keys and download it.
 
 **GCP Credentials Values**: Passing the raw credential values provided by BigQuery. This requires us to provide the following information, all provided by BigQuery:
 
@@ -142,15 +144,15 @@ the GCP credentials empty. This is why they are not marked as required.
 {% /note %}
 
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -158,6 +160,6 @@ the GCP credentials empty. This is why they are not marked as required.
 
 We support cross-project lineage, but the data must be ingested within a single service. This means you need to perform lineage ingestion for just one service while including multiple projects.
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
 
-{% partial file="/connectors/database/related.md" /%}
+{% partial file="/v1.5/connectors/database/related.md" /%}

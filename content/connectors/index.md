@@ -31,32 +31,32 @@ the following docs to run the Ingestion Framework in any orchestrator externally
 
 ## Database / DataWarehouse Services
 
-{% partial file="/connectors/database/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/database/connectors-list.md" /%}
 
 ## Dashboard Services
 
-{% partial file="/connectors/dashboard/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/dashboard/connectors-list.md" /%}
 
 ## Messaging Services
 
-{% partial file="/connectors/messaging/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/messaging/connectors-list.md" /%}
 
 ## Pipeline Services
 
-{% partial file="/connectors/pipeline/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/pipeline/connectors-list.md" /%}
 
 ## ML Model Services
 
-{% partial file="/connectors/ml-model/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/ml-model/connectors-list.md" /%}
 
 ## Storage Services
 
-{% partial file="/connectors/storage/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/storage/connectors-list.md" /%}
 
 ## Metadata Services
 
-{% partial file="/connectors/metadata/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/metadata/connectors-list.md" /%}
 
 ## Search Services
 
-{% partial file="/connectors/search/connectors-list.md" /%}
+{% partial file="/v1.5/connectors/search/connectors-list.md" /%}

@@ -3,7 +3,7 @@ title: Run the ingestion from GitHub Actions
 slug: /deployment/ingestion/external/github-actions
 ---
 
-{% partial file="/deployment/external-ingestion.md" /%}
+{% partial file="/v1.5/deployment/external-ingestion.md" /%}
 
 # Run the ingestion from GitHub Actions
 
@@ -38,7 +38,7 @@ import yaml
 
 from metadata.workflow.metadata import MetadataWorkflow
 
-from metadata.workflow.workflow_output_handler import print_status
+ 
 
 CONFIG = f"""
 source:
@@ -57,7 +57,7 @@ def run():
     workflow = MetadataWorkflow.create(workflow_config)
     workflow.execute()
     workflow.raise_from_status()
-    print_status(workflow)
+    workflow.print_status()
     workflow.stop()
 
 

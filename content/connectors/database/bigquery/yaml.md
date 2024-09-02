@@ -24,13 +24,13 @@ Configure and schedule BigQuery metadata and profiler workflows from the OpenMet
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/connectors/python-requirements.md" /%}
+{% partial file="/v1.5/connectors/python-requirements.md" /%}
 
 To run the BigQuery ingestion, you will need to install:
 
@@ -71,7 +71,7 @@ If the user has `External Tables`, please attach relevant permissions needed for
 icon="manage_accounts"
 title="Create Custom GCP Role"
 description="Checkout this documentation on how to create a custom role and assign it to the service account."
-link="/connectors/database/bigquery/roles"
+link="/connectors/database/bigquery/create-credentials"
   / %}
 {% /tilesContainer %}
 
@@ -136,7 +136,8 @@ Location used to query `INFORMATION_SCHEMA.JOBS_BY_PROJECT` to fetch usage data.
 - If you prefer to pass the credentials file, you can do so as follows:
 ```yaml
 credentials:
-  gcpConfig: <path to file>
+  gcpConfig: 
+    path: <path to file>
 ```
 
 - If you want to use [ADC authentication](https://cloud.google.com/docs/authentication#adc) for BigQuery you can just leave
@@ -153,23 +154,23 @@ the GCP credentials empty. This is why they are not marked as required.
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
 {% codeInfo srNumber=2 %}
 
-**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
 {% codeInfo srNumber=3 %}
 
-**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Athena during the connection. These details must be added as Key-Value pairs.
+**Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 - In case you are using Single-Sign-On (SSO) for authentication, add the `authenticator` details in the Connection Arguments as a Key-Value pair as follows: `"authenticator" : "sso_login_url"`
 
@@ -198,7 +199,7 @@ source:
             Super secret key
             -----END PRIVATE KEY-----
           clientEmail: role@project.iam.gserviceaccount.com
-          clientId: 1234
+          clientId: "1234"
           # authUri: https://accounts.google.com/o/oauth2/auth (default)
           # tokenUri: https://oauth2.googleapis.com/token (default)
           # authProviderX509CertUrl: https://www.googleapis.com/oauth2/v1/certs (default)
@@ -216,25 +217,25 @@ source:
       #   key: value
 ```
 
-{% partial file="/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/connectors/yaml/query-usage.md" variables={connector: "bigquery"} /%}
+{% partial file="/v1.5/connectors/yaml/query-usage.md" variables={connector: "bigquery"} /%}
 
-{% partial file="/connectors/yaml/lineage.md" variables={connector: "bigquery"} /%}
+{% partial file="/v1.5/connectors/yaml/lineage.md" variables={connector: "bigquery"} /%}
 
-{% partial file="/connectors/yaml/data-profiler.md" variables={connector: "bigquery"} /%}
+{% partial file="/v1.5/connectors/yaml/data-profiler.md" variables={connector: "bigquery"} /%}
 
-{% partial file="/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.5/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 

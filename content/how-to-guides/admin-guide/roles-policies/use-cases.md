@@ -16,7 +16,7 @@ For individual teams, tailor your policies according to the specific needs of bo
 You can create a policy with DatabaseService, Ingesiton Pipeline, and Workflow resources with All operations set to allow.
 
 {% image
-src="/images/v1.4/how-to-guides/roles-policies/policy1.png"
+src="/images/v1.5/how-to-guides/roles-policies/policy1.png"
 alt="Creating Roles & Policies in OpenMetadata"
 caption="Allow All Operations"
 /%}
@@ -34,7 +34,7 @@ Here is an example of a policy to enable it for Data Stewards using two rules.
 You can fine tune these permissions to suit your organizational needs.
 
 {% image
-src="/images/v1.4/how-to-guides/roles-policies/policy2.png"
+src="/images/v1.5/how-to-guides/roles-policies/policy2.png"
 alt="Roles for Data Steward"
 caption="Roles for Data Steward"
 /%}
@@ -46,7 +46,7 @@ To safeguard the data owned by a specific team, you can prevent external access.
 The above rule specifies to deny all operations if the logged-in user is not the owner, or if the logged-in user’s team is not the owner of an asset.
 
 {% image
-src="/images/v1.4/how-to-guides/roles-policies/policy3.png"
+src="/images/v1.5/how-to-guides/roles-policies/policy3.png"
 alt="Team Only Policy"
 caption="Team Only Policy"
 /%}
@@ -56,50 +56,9 @@ caption="Team Only Policy"
 Just like the above policy, you can create a rule with complex conditions as shown below
 
 {% image
-src="/images/v1.4/how-to-guides/roles-policies/policy4.png"
+src="/images/v1.5/how-to-guides/roles-policies/policy4.png"
 alt="PII Sensitive Tag Policy"
 caption="PII Sensitive Tag Policy"
 /%}
 
 In this rule, we are specifying to deny operations if the table tag contains PII.Sensitive tag and if the logged-in user is not the owner, or their team is not the owner of the Table.
-
-### Use Case 5: Restrict User Account Access to a Specific Service/Database
-
-To restrict a user account to only see data from one specific service/database, you can create a policy that includes rules to allow access to the desired service and deny access to others. This involves setting up policies with specific conditions based on the service name. The following steps outline how this can be done using the API:
-
-1. **Create a Policy**: Define a policy that allows access to the specific service.
-2. **Assign the Policy**: Assign this policy to the user or role.
-
-## Example Policy:
-
-```json
-{
-  "name": "ServiceAccessPolicy",
-  "rules": [
-    {
-      "name": "AllowSpecificService",
-      "resource": "DatabaseService",
-      "operation": "View",
-      "condition": {
-        "match": {
-          "service.name": "desired_service_name"
-        }
-      },
-      "effect": "Allow"
-    },
-    {
-      "name": "DenyOtherServices",
-      "resource": "DatabaseService",
-      "operation": "View",
-      "condition": {
-        "notMatch": {
-          "service.name": "desired_service_name"
-        }
-      },
-      "effect": "Deny"
-    }
-  ]
-}
-```
-
-By implementing this policy, the user account will be restricted to access only the specified service, enhancing data security and ensuring that users can only view the data they are authorised to see.

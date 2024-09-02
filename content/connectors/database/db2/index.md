@@ -33,11 +33,11 @@ Configure and schedule DB2 metadata and profiler workflows from the OpenMetadata
 
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
-- [Data Profiler](/connectors/ingestion/workflows/profiler)
-- [Data Quality](/connectors/ingestion/workflows/data-quality)
+- [Data Profiler](/how-to-guides/data-quality-observability/profiler/workflow)
+- [Data Quality](/how-to-guides/data-quality-observability/quality)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 
-{% partial file="/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/db2/yaml"} /%}
+{% partial file="/v1.5/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/db2/yaml"} /%}
 
 ## Requirements
 
@@ -65,16 +65,16 @@ GRANT SELECT ON SYSCAT.VIEWS TO USER_NAME;
 
 ### Profiler & Data Quality
 
-Executing the profiler workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. More information on the profiler workflow setup can be found [here](/connectors/ingestion/workflows/profiler) and data quality tests [here](/connectors/ingestion/workflows/data-quality).
+Executing the profiler workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. More information on the profiler workflow setup can be found [here](/how-to-guides/data-quality-observability/profiler/workflow) and data quality tests [here](/how-to-guides/data-quality-observability/quality).
 
 ## Metadata Ingestion
 {% partial 
-  file="/connectors/metadata-ingestion-ui.md" 
+  file="/v1.5/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "DB2", 
-    selectServicePath: "/images/v1.4/connectors/db2/select-service.png",
-    addNewServicePath: "/images/v1.4/connectors/db2/add-new-service.png",
-    serviceConnectionPath: "/images/v1.4/connectors/db2/service-connection.png",
+    selectServicePath: "/images/v1.5/connectors/db2/select-service.png",
+    addNewServicePath: "/images/v1.5/connectors/db2/add-new-service.png",
+    serviceConnectionPath: "/images/v1.5/connectors/db2/service-connection.png",
 } 
 /%}
 
@@ -88,21 +88,26 @@ Executing the profiler workflow or data quality tests, will require the user to 
 - **database**: Database of the data source.
 - **Host and Port**: Enter the fully qualified hostname and port number for your DB2 deployment in the Host and Port field.
 
-Note: In case you are using Db2 for IBM i, then from advanced config you need choose the `ibmi` scheme.
+{% note %}
+If you are using DB2 for IBM i:
 
-{% partial file="/connectors/database/advanced-configuration.md" /%}
+- From advanced config you need to chose `ibmi` scheme
+- In Host and Port you should not add the Port Number.
+{% /note %}
+
+{% partial file="/v1.5/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/connectors/test-connection.md" /%}
+{% partial file="/v1.5/connectors/test-connection.md" /%}
 
-{% partial file="/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.5/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.5/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/connectors/troubleshooting.md" /%}
+{% partial file="/v1.5/connectors/troubleshooting.md" /%}
 
-{% partial file="/connectors/database/related.md" /%}
+{% partial file="/v1.5/connectors/database/related.md" /%}
 

@@ -11,7 +11,7 @@ Once the metadata ingestion runs correctly and we are able to explore the servic
 This will populate the dbt tab from the Table Entity Page.
 
 {% image
-  src="/images/v1.4/features/ingestion/workflows/dbt/dbt-features/dbt-query.webp"
+  src="/images/v1.5/features/ingestion/workflows/dbt/dbt-features/dbt-query.webp"
   alt="dbt"
   caption="dbt"
  /%}
@@ -22,12 +22,12 @@ We can create a workflow that will obtain the dbt information from the dbt files
 ## 1. Define the YAML Config
 
 Select the yaml config from one of the below sources:
-- [AWS S3 Buckets](#1.aws-s3-buckets)
-- [Google Cloud Storage Buckets](#2.google-cloud-storage-buckets)
-- [Azure Storage Buckets](#3.azure-storage-buckets)
-- [Local Storage](#4.local-storage)
-- [File Server](#5.file-server)
-- [dbt Cloud](#6.dbt-cloud)
+- [AWS S3 Buckets](#1.-aws-s3-buckets)
+- [Google Cloud Storage Buckets](#2.-google-cloud-storage-buckets)
+- [Azure Storage Buckets](#3.-azure-storage-buckets)
+- [Local Storage](#4.-local-storage)
+- [File Server](#5.-file-server)
+- [dbt Cloud](#6.-dbt-cloud)
 
 
 The dbt files should be present on the source mentioned and should have the necessary permissions to be able to access the files.
@@ -79,13 +79,13 @@ You can find further information about configuring your credentials [here](https
 
 {% /codeInfo %}
 
-{% partial file="/connectors/yaml/dbt/dbt-prefix-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/dbt-prefix-def.md" /%}
 
-{% partial file="/connectors/yaml/dbt/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config-def.md" /%}
 
-{% partial file="/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -115,13 +115,13 @@ source:
           awsRegion: AWS_REGION
 ```
 
-{% partial file="//connectors/yaml/dbt/dbt-prefix.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/dbt-prefix.md" /%}
 
-{% partial file="//connectors/yaml/dbt/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
@@ -197,13 +197,13 @@ source:
 
 {% /codeInfo %}
 
-{% partial file="//connectors/yaml/dbt/dbt-prefix-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/dbt-prefix-def.md" /%}
 
-{% partial file="//connectors/yaml/dbt/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config-def.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -239,13 +239,13 @@ source:
             clientX509CertUrl: https://cert.url (URI)
 ```
 
-{% partial file="//connectors/yaml/dbt/dbt-prefix.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/dbt-prefix.md" /%}
 
-{% partial file="//connectors/yaml/dbt/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
@@ -305,13 +305,13 @@ Here are the step-by-step instructions for finding the account name for an Azure
 
 {% /codeInfo %}
 
-{% partial file="//connectors/yaml/dbt/dbt-prefix-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/dbt-prefix-def.md" /%}
 
-{% partial file="//connectors/yaml/dbt/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config-def.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -343,13 +343,13 @@ source:
           accountName: accountName
 ```
 
-{% partial file="//connectors/yaml/dbt/dbt-prefix.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/dbt-prefix.md" /%}
 
-{% partial file="//connectors/yaml/dbt/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
@@ -381,11 +381,11 @@ In this configuration, we will be fetching the dbt `manifest.json`, `catalog.jso
 - **dbtRunResultsFilePath**: run_results.json file path to extract dbt models tests and test results metadata. Tests from dbt will only be ingested if this file is present.
 {% /codeInfo %}
 
-{% partial file="//connectors/yaml/dbt/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config-def.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -413,11 +413,11 @@ source:
         dbtRunResultsFilePath: path/to/run_results.json
 ```
 
-{% partial file="//connectors/yaml/dbt/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
@@ -448,11 +448,11 @@ In this configuration we will be fetching the dbt `manifest.json`, `catalog.json
 - **dbtRunResultsHttpPath**: run_results.json http path to extract dbt models tests and test results metadata. Tests from dbt will only be ingested if this file is present.
 {% /codeInfo %}
 
-{% partial file="//connectors/yaml/dbt/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config-def.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -480,11 +480,11 @@ source:
         dbtRunResultsHttpPath: http://path-to-run_results.json
 ```
 
-{% partial file="//connectors/yaml/dbt/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
@@ -492,6 +492,18 @@ source:
 
 ### 6. dbt Cloud
 In this configuration we will be fetching the dbt `manifest.json`, `catalog.json` and `run_results.json` files from dbt cloud APIs.
+
+The `Account Viewer` permission is the minimum requirement for the dbt cloud token.
+
+{% note %}
+
+The dbt Cloud workflow leverages the [dbt Cloud v2](https://docs.getdbt.com/dbt-cloud/api-v2#/) APIs to retrieve dbt run artifacts (manifest.json, catalog.json, and run_results.json) and ingest the dbt metadata.
+
+It uses the [/runs](https://docs.getdbt.com/dbt-cloud/api-v2#/operations/List%20Runs) API to obtain the most recent successful dbt run, filtering by account_id, project_id and job_id if specified. The artifacts from this run are then collected using the [/artifacts](https://docs.getdbt.com/dbt-cloud/api-v2#/operations/List%20Run%20Artifacts) API.
+
+Refer to the code [here](https://github.com/open-metadata/OpenMetadata/blob/main/ingestion/src/metadata/ingestion/source/database/dbt/dbt_config.py#L142)
+
+{% /note %}
 
 {% codePreview %}
 
@@ -505,6 +517,7 @@ In this configuration we will be fetching the dbt `manifest.json`, `catalog.json
 
 {% codeInfo srNumber=61 %}
 - **dbtCloudAuthToken**: Please follow the instructions in [dbt Cloud's API](https://docs.getdbt.com/docs/dbt-cloud-apis/service-tokens) documentation to create a dbt Cloud authentication token.
+The `Account Viewer` permission is the minimum requirement for the dbt cloud token.
 {% /codeInfo %}
 
 {% codeInfo srNumber=62 %}
@@ -514,14 +527,20 @@ For example, if the URL is `https://cloud.getdbt.com/#/accounts/1234/projects/67
 {% /codeInfo %}
 
 {% codeInfo srNumber=63 %}
-- **dbtCloudJobId**: InIn case of multiple jobs in a dbt cloud account, specify the job's ID from which you want to extract the dbt run artifacts.
+- **dbtCloudJobId**: In case of multiple jobs in a dbt cloud account, specify the job's ID from which you want to extract the dbt run artifacts.
 If left empty, the dbt artifacts will be fetched from the most recent run on dbt cloud.
+
+After creating a dbt job, take note of the url which will be similar to `https://cloud.getdbt.com/#/accounts/1234/projects/6789/jobs/553344/`. The job ID is `553344`.
+
 The value entered should be a `numeric` value.
 {% /codeInfo %}
 
 {% codeInfo srNumber=64 %}
 - **dbtCloudProjectId**: In case of multiple projects in a dbt cloud account, specify the project's ID from which you want to extract the dbt run artifacts.
 If left empty, the dbt artifacts will be fetched from the most recent run on dbt cloud.
+
+To find your project ID, sign in to your dbt cloud account and choose a specific project. Take note of the url which will be similar to `https://cloud.getdbt.com/#/accounts/1234/settings/projects/6789/`, the project ID is `6789`.
+
 The value entered should be a `numeric` value.
 {% /codeInfo %}
 
@@ -529,11 +548,11 @@ The value entered should be a `numeric` value.
 - **dbtCloudUrl**: URL to connect to your dbt cloud instance. E.g., `https://cloud.getdbt.com` or `https://emea.dbt.com/`.
 {% /codeInfo %}
 
-{% partial file="//connectors/yaml/dbt/source-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config-def.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -567,11 +586,11 @@ source:
         dbtCloudUrl: https://cloud.getdbt.com
 ```
 
-{% partial file="//connectors/yaml/dbt/source-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/dbt/source-config.md" /%}
 
-{% partial file="//connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="//connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
