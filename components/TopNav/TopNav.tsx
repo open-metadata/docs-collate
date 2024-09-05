@@ -66,7 +66,7 @@ export default function TopNav() {
       </div>
       <SearchContextProvider>
         <InstantSearch
-          indexName={`openmetadata-v1-${docVersion}`}
+          indexName="collate-docs"
           searchClient={searchClient}
           future={{
             preserveSharedStateOnUnmount: false,
