@@ -65,6 +65,10 @@ def get_algolia_doc_from_file(file: Path) -> Optional[AlgoliaDoc]:
         with open(file.absolute()) as f:
             page = frontmatter.load(f)
 
+            # Skip the indexing if the page is marked as `collate: false`
+            if not page.metadata.get("collate", True):
+                return None
+
             return AlgoliaDoc(
                 objectID=page.metadata["slug"],
                 title=page.metadata["title"],
