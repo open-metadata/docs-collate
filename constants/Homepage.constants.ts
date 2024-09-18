@@ -1,10 +1,10 @@
 import { HOME_PAGE_BANNER_INFO } from "../docs-v1/constants/homePage.constants";
+import { ReactComponent as CollaborationIcon } from "../images/header-tabs/collaboration.svg";
+import { ReactComponent as InsightsIcon } from "../images/header-tabs/data-insights.svg";
 import { ReactComponent as DiscoveryIcon } from "../images/header-tabs/discovery.svg";
+import { ReactComponent as GovernanceIcon } from "../images/header-tabs/governance.svg";
 import { ReactComponent as LineageIcon } from "../images/header-tabs/lineage.svg";
 import { ReactComponent as ObservabilityIcon } from "../images/header-tabs/observability.svg";
-import { ReactComponent as QualityIcon } from "../images/header-tabs/quality.svg";
-import { ReactComponent as CollaborationIcon } from "../images/header-tabs/collaboration.svg";
-import { ReactComponent as GovernanceIcon } from "../images/header-tabs/governance.svg";
 
 export const COLLATE_HOME_PAGE_BANNER_INFO = {
   ...HOME_PAGE_BANNER_INFO,
@@ -24,24 +24,24 @@ export const HEADER_TABS = [
     link: "/how-to-guides/data-discovery",
   },
   {
+    Icon: CollaborationIcon,
+    name: "Collaboration",
+    link: "/how-to-guides/data-collaboration",
+  },
+  {
+    Icon: ObservabilityIcon,
+    name: "Observability",
+    link: "/how-to-guides/data-quality-observability",
+  },
+  {
     Icon: LineageIcon,
     name: "Lineage",
     link: "/how-to-guides/data-lineage",
   },
   {
-    Icon: ObservabilityIcon,
-    name: "Observability",
-    link: "/quality-and-observability",
-  },
-  {
-    Icon: QualityIcon,
-    name: "Quality",
-    link: "/how-to-guides/data-quality-profiler",
-  },
-  {
-    Icon: CollaborationIcon,
-    name: "Collaboration",
-    link: "/how-to-guides/data-collaboration",
+    Icon: InsightsIcon,
+    name: "Insights",
+    link: "/how-to-guides/data-insights",
   },
   {
     Icon: GovernanceIcon,

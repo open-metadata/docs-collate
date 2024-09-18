@@ -1,8 +1,8 @@
-import YouTube from "../../docs-v1/components/common/Youtube/Youtube";
-import styles from "./HomePageBanner.module.css";
-import { HomePageBannerProps } from "./HomePageBanner.interface";
-import { HEADER_INFO, HEADER_TABS } from "../../constants/Homepage.constants";
 import Link from "next/link";
+import { HEADER_INFO, HEADER_TABS } from "../../constants/Homepage.constants";
+import YouTube from "../../docs-v1/components/common/Youtube/Youtube";
+import { HomePageBannerProps } from "./HomePageBanner.interface";
+import styles from "./HomePageBanner.module.css";
 
 export default function HomePageBanner({
   bannerInfo,
@@ -22,7 +22,7 @@ export default function HomePageBanner({
         </div>
         <div className={styles.ContentContainer}>
           <div className={styles.Video}>
-            <YouTube videoId="oGFWjj_2gM4" className={styles.VideoContainer} />
+            <YouTube videoId="QRcR3m9cCGo" className={styles.VideoContainer} />
           </div>
           <div>
             <Link href="/how-to-guides" className={styles.BannerHeading}>
@@ -34,7 +34,7 @@ export default function HomePageBanner({
             <div className={styles.TabContainer}>
               {HEADER_TABS.map(({ link, Icon, name }) => (
                 <Link href={link} key={name} className={styles.Tabs}>
-                  <Icon />
+                  <Icon height={20} />
                   <span>{name}</span>
                 </Link>
               ))}
