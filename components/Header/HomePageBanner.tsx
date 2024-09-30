@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { HEADER_INFO, HEADER_TABS } from "../../constants/Homepage.constants";
+import {
+  HEADER_INFO,
+  HEADER_TABS,
+  HOME_PAGE_BANNER_VIDEO_ID,
+} from "../../constants/Homepage.constants";
 import YouTube from "../../docs-v1/components/common/Youtube/Youtube";
 import { HomePageBannerProps } from "./HomePageBanner.interface";
 import styles from "./HomePageBanner.module.css";
@@ -22,7 +26,10 @@ export default function HomePageBanner({
         </div>
         <div className={styles.ContentContainer}>
           <div className={styles.Video}>
-            <YouTube videoId="QRcR3m9cCGo" className={styles.VideoContainer} />
+            <YouTube
+              videoId={HOME_PAGE_BANNER_VIDEO_ID}
+              className={styles.VideoContainer}
+            />
           </div>
           <div>
             <Link href="/how-to-guides" className={styles.BannerHeading}>
