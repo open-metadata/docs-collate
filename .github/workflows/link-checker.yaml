@@ -27,6 +27,10 @@ jobs:
         with:
           ref: main
 
+      - name: Update Git SubModules
+        run: |
+          git submodule update --init --remote
+
       - name: Set up Node 
         uses: actions/setup-node@v4
         with:
@@ -52,7 +56,7 @@ jobs:
         continue-on-error: true
         run: |
           cd linkcheck
-          ./linkcheck :8000 -e --skip-file ../skip_links.txt | tee -a linkchecker.log
+          ./linkcheck :8000 -e --skip-file ../docs-v1/skip_links.txt | tee -a linkchecker.log
           echo "FILE_LOCATION=$(pwd)" >> $GITHUB_ENV
 
       - name: Output stats
@@ -85,7 +89,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "<!here> Link-checker build result: *${{ job.status }}*\n Please check the <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Build URL> for logs and linkchecker report."
+                    "text": "<!here> Collate link-checker build result: *${{ job.status }}*\n Please check the <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Build URL> for logs and linkchecker report."
                   }
                 },
                 {
