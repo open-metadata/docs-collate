@@ -1,6 +1,6 @@
 ---
-title: Adding test suits through the UI
-slug: /how-to-guides/data-quality-observability/quality/adding-test-suits
+title: Adding test suites through the UI
+slug: /how-to-guides/data-quality-observability/quality/adding-test-suites
 ---
 
 # Adding Test Suites Through the UI
