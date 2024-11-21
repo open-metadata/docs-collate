@@ -40,4 +40,18 @@ module.exports =
       locales: ["en"],
       defaultLocale: "en",
     },
+    async redirects() {
+      return [
+        {
+          source: "/metapilot/how-to-use-metapilot",
+          destination: "/collateai/how-to-use-collate-ai",
+          permanent: true,
+        },
+        {
+          source: "/metapilot",
+          destination: "/collateai",
+          permanent: true,
+        },
+      ];
+    },
   });
