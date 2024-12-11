@@ -3,25 +3,34 @@ site_menu:
   - category: Home
     url: /
 
-  - category: Getting Started
-    url: /getting-started
-  
-  - category: Getting Started / Day 1
-    url: /getting-started/day-1
-  - category: Getting Started / Day 1 / Collate SaaS
-    url: /getting-started/day-1/collate-saas
-  - category: Getting Started / Day 1 / Hybrid SaaS
-    url: /getting-started/day-1/hybrid-saas
-  - category: Getting Started / Day 1 / Hybrid SaaS / Airflow
-    url: /getting-started/day-1/hybrid-saas/airflow
-  - category: Getting Started / Day 1 / Hybrid SaaS / MWAA
-    url: /getting-started/day-1/hybrid-saas/mwaa
-  - category: Getting Started / Day 1 / Hybrid SaaS / GCS Composer
-    url: /getting-started/day-1/hybrid-saas/gcs-composer
-  - category: Getting Started / Day 1 / Hybrid SaaS / GitHub Actions
-    url: /getting-started/day-1/hybrid-saas/github-actions
-  - category: Getting Started / Day 1 / Hybrid SaaS / Credentials
-    url: /getting-started/day-1/hybrid-saas/credentials
+  - category: Enable Security
+    url: /deployment
+  - category: Enable Security / Ldap Authentication
+    url: /deployment/security/ldap
+  - category: Enable Security / Auth0 SSO
+    url: /deployment/security/auth0
+  - category: Enable Security / Azure SSO
+    url: /deployment/security/azure
+  - category: Enable Security / Custom OIDC SSO
+    url: /deployment/security/custom-oidc
+  - category: Enable Security / OIDC SSO
+    url: /deployment/security/oidc
+  - category: Enable Security / Google SSO
+    url: /deployment/security/google
+  - category: Enable Security / Okta SSO
+    url: /deployment/security/okta
+  - category: Enable Security / Amazon Cognito SSO
+    url: /deployment/security/amazon-cognito
+  - category: Enable Security / One Login SSO
+    url: /deployment/security/one-login
+  - category: Enable Security / Keycloak SSO
+    url: /deployment/security/keycloak
+  - category: Enable Security / Saml
+    url: /deployment/security/saml
+  - category: Enable Security / Saml / AWS
+    url: /deployment/security/saml/aws
+  - category: Enable Security / Saml / Azure
+    url: /deployment/security/saml/azure
 
   - category: Connectors
     url: /connectors
@@ -339,6 +348,20 @@ site_menu:
     url: /connectors/pipeline/kafkaconnect
   - category: Connectors / Pipeline / KafkaConnect / Run Externally
     url: /connectors/pipeline/kafkaconnect/yaml
+  - category: Connectors / Pipeline / Matillion
+    url: /connectors/pipeline/matillion
+
+  - category: Connectors / Pipeline / Matillion / Run Externally
+    url: /connectors/pipeline/matillion/yaml
+  - category: Connectors / Pipeline / DataFactory
+    url: /connectors/pipeline/datafactory
+
+  - category: Connectors / Pipeline / DataFactory / Run Externally
+    url: /connectors/pipeline/datafactory/yaml
+  - category: Connectors / Pipeline / Stitch
+    url: /connectors/pipeline/stitch
+  - category: Connectors / Pipeline / Stitch / Run Externally
+    url: /connectors/pipeline/stitch/yaml
   - category: Connectors / Pipeline / Databricks Pipeline
     url: /connectors/pipeline/databricks-pipeline
   - category: Connectors / Pipeline / Databricks Pipeline / Run Externally
@@ -382,6 +405,10 @@ site_menu:
     url: /connectors/ml-model/sagemaker
   - category: Connectors / ML Model / Sagemaker / Run Externally
     url: /connectors/ml-model/sagemaker/yaml
+  - category: Connectors / ML Model / VertexAI
+    url: /connectors/ml-model/vertexai
+  - category: Connectors / ML Model / VertexAI / Run Externally
+    url: /connectors/ml-model/vertexai/yaml
 
   - category: Connectors / Storage
     url: /connectors/storage
@@ -641,6 +668,7 @@ site_menu:
     url: /how-to-guides/data-quality-observability/quality/tab
   - category: How-to Guides / Data Quality and Profiler / Data Quality / Data Quality Overview Section
     url: /how-to-guides/data-quality-observability/quality/overview
+
   - category: How-to Guides / Data Quality and Profiler / Data Quality / How to Write and Deploy No-Code Test Cases
     url: /how-to-guides/data-quality-observability/quality/test
   - category: How-to Guides / Data Quality and Observability / Data Quality / Configure Data Quality
@@ -675,11 +703,12 @@ site_menu:
     url: /how-to-guides/data-quality-observability/incident-manager/workflow
   - category: How-to Guides / Data Quality and Observability / Incident Manager / Root Cause Analysis
     url: /how-to-guides/data-quality-observability/incident-manager/root-cause-analysis
+
   - category: How-to Guides / Data Quality and Observability / Anomaly Detection
     url: /how-to-guides/data-quality-observability/anomaly-detection
+
   - category: How-to Guides / Data Quality and Observability / Anomaly Detection / Steps to Set Up Anomaly Detection
     url: /how-to-guides/data-quality-observability/anomaly-detection/setting-up
-
 
   - category: How-to Guides / Data Lineage
     url: /how-to-guides/data-lineage
@@ -758,36 +787,24 @@ site_menu:
   - category: How-to Guides / Data Governance / Domains & Data Product /  How to Use Data Products
     url: /how-to-guides/data-governance/domains-&-data-products/data-products
 
-  - category: Enable Security
-    url: /security
-   
-  - category: Enable Security / Ldap Authentication
-    url: /security/ldap
-  - category: Enable Security / Auth0 SSO
-    url: /security/auth0
-  - category: Enable Security / Azure SSO
-    url: /security/azure
-  - category: Enable Security / Custom OIDC SSO
-    url: /security/custom-oidc
-  - category: Enable Security / OIDC SSO
-    url: /security/oidc
-  - category: Enable Security / Google SSO
-    url: /security/google
-  - category: Enable Security / Okta SSO
-    url: /security/okta
-  - category: Enable Security / Amazon Cognito SSO
-    url: /security/amazon-cognito
-  - category: Enable Security / One Login SSO
-    url: /security/one-login
-  - category: Enable Security / Keycloak SSO
-    url: /security/keycloak
-  - category: Enable Security / Saml
-    url: /security/saml
-  - category: Enable Security / Saml / AWS
-    url: /security/saml/aws
-  - category: Enable Security / Saml / Azure
-    url: /security/saml/azure
-   
+  - category: Getting Started
+    url: /getting-started
+
+  - category: Getting Started / Day 1
+    url: /getting-started/day-1
+  - category: Getting Started / Day 1 / Hybrid SaaS
+    url: /getting-started/day-1/hybrid-saas
+  - category: Getting Started / Day 1 / Hybrid SaaS / Airflow
+    url: /getting-started/day-1/hybrid-saas/airflow
+  - category: Getting Started / Day 1 / Hybrid SaaS / MWAA
+    url: /getting-started/day-1/hybrid-saas/mwaa
+  - category: Getting Started / Day 1 / Hybrid SaaS / GCS Composer
+    url: /getting-started/day-1/hybrid-saas/gcs-composer
+  - category: Getting Started / Day 1 / Hybrid SaaS / GitHub Actions
+    url: /getting-started/day-1/hybrid-saas/github-actions
+  - category: Getting Started / Day 1 / Hybrid SaaS / Credentials
+    url: /getting-started/day-1/hybrid-saas/credentials
+
   - category: Releases
     url: /releases
   - category: Releases / Latest Release
@@ -1905,6 +1922,7 @@ site_menu:
     url: /sdk/java
   - category: SDK / Go
     url: /sdk/go
+
   - category: Collate AI
     url: /collateai
   - category: Collate AI / How to Use Collate AI

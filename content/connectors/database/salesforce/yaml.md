@@ -19,7 +19,7 @@ Configure and schedule Salesforce metadata and profiler workflows from the OpenM
 - [Metadata Ingestion](#metadata-ingestion)
 - [Enable Security](#securing-salesforce-connection-with-ssl-in-openmetadata)
 
-{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -32,7 +32,7 @@ Following are the permissions you will require to fetch the metadata from Salesf
 
 ### Python Requirements
 
-{% partial file="/v1.5/connectors/python-requirements.md" /%}
+{% partial file="/v1.6/connectors/python-requirements.md" /%}
 
 To run the Salesforce ingestion, you will need to install:
 
@@ -90,7 +90,6 @@ This is a sample config for Salesforce:
 {% note %}
 **Note**: If you want to access salesforce metadata without token(only by using organization id), you will need to setup your ip in trusted ip ranges. You can go (`Salesforce dashboard->Setup->Security->Network Access->Trusted IP Ranges`) to configure this. You can check [here](https://help.salesforce.com/s/articleView?id=sf.security_networkaccess.htm&type=5) to configure your ip in trusted ip ranges.
 {% /note %}
-
 {% /codeInfo %}
 
 {% codeInfo srNumber=6 %}
@@ -112,11 +111,11 @@ By default, the domain `login` is used for accessing Salesforce.
 
 {% /codeInfo %}
 
-{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.6/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -176,17 +175,17 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.6/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
 
 ## Securing Salesforce Connection with SSL in OpenMetadata
 

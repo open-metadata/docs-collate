@@ -185,10 +185,8 @@ site_menu:
 
   - category: Deployment / How to enable AWS RDS IAM Auth
     url: /deployment/rds-iam-auth
-  - category: Deployment / How to enable Azure Database Auth
+  - category: Deployment / How to enable Azure Auth
     url: /deployment/azure-auth
-  - category: Deployment / Azure - Enable Passwordless Database Backend Connection
-    url: /deployment/azure-passwordless-auth
   - category: Deployment / Server Configuration Reference
     url: /deployment/configuration
   - category: Deployment / Database Connection Pooling
@@ -222,6 +220,12 @@ site_menu:
   - category: Connectors
     url: /connectors
 
+  - category: Connectors / API
+    url: /connectors/api
+  - category: Connectors / API / REST
+    url: /connectors/api/rest
+  - category: Connectors / API / REST / Run Externally
+    url: /connectors/api/rest/yaml
   - category: Connectors / Database
     url: /connectors/database
   - category: Connectors / Database / ADLS Datalake
@@ -439,6 +443,10 @@ site_menu:
     url: /connectors/dashboard/microstrategy
   - category: Connectors / Dashboard / MicroStrategy / Run Externally
     url: /connectors/dashboard/microstrategy/yaml
+  - category: Connectors / Dashboard / Sigma
+    url: /connectors/dashboard/sigma
+  - category: Connectors / Dashboard / Sigma / Run Externally
+    url: /connectors/dashboard/sigma/yaml
   - category: Connectors / Dashboard / Mode
     url: /connectors/dashboard/mode
   - category: Connectors / Dashboard / Mode / Run Externally
@@ -979,6 +987,8 @@ site_menu:
     url: /releases/all-releases/#1.3.2-release
   - category: Releases / All Releases / 1.3.1 Release
     url: /releases/all-releases/#1.3.1-release
+  - category: Releases / All Releases / 1.3.1 Release
+    url: /releases/all-releases/#1.3.1-release
   - category: Releases / All Releases / 1.3.0 Release
     url: /releases/all-releases/#1.3.0-release
   - category: Releases / All Releases / 1.2.0 Release
@@ -1482,6 +1492,8 @@ site_menu:
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/dashboard/lookerconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Dashboard / MetabaseConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/dashboard/metabaseconnection
+  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Dashboard / SigmaConnection
+    url: /main-concepts/metadata-standard/schemas/entity/services/connections/dashboard/sigmaconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Dashboard / ModeConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/dashboard/modeconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Dashboard / PowerBIConnection

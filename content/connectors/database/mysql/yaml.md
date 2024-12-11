@@ -22,13 +22,13 @@ Configure and schedule MySQL metadata and profiler workflows from the OpenMetada
 - [dbt Integration](#dbt-integration)
 - [Enable Security](#securing-mysql-connection-with-ssl-in-openmetadata)
 
-{% partial file="/v1.5/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.5/connectors/python-requirements.md" /%}
+{% partial file="/v1.6/connectors/python-requirements.md" /%}
 
 To run the MySQL ingestion, you will need to install:
 
@@ -69,6 +69,7 @@ GRANT SELECT ON mysql.general_log TO '<username>'@'<host>';
 
 ### Profiler & Data Quality
 Executing the profiler workflow or data quality tests, will require the user to have `SELECT` permission on the tables/schemas where the profiler/tests will be executed. More information on the profiler workflow setup can be found [here](/how-to-guides/data-quality-observability/profiler/workflow) and data quality tests [here](/how-to-guides/data-quality-observability/quality).
+
 
 
 ## Metadata Ingestion
@@ -190,11 +191,11 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /codeInfo %}
 
-{% partial file="/v1.5/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.6/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -254,21 +255,23 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.5/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.6/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.5/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.5/connectors/yaml/data-profiler.md" variables={connector: "mysql"} /%}
+{% partial file="/v1.6/connectors/yaml/data-profiler.md" variables={connector: "mysql"} /%}
 
-{% partial file="/v1.5/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.6/connectors/yaml/auto-classification.md" variables={connector: "mysql"} /%}
+
+{% partial file="/v1.6/connectors/yaml/data-quality.md" /%}
 
 ## Securing MySQL Connection with SSL in OpenMetadata
 

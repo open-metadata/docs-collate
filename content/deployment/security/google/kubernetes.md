@@ -26,17 +26,10 @@ openmetadata:
       provider: "google"
       publicKeys:
         - "https://www.googleapis.com/oauth2/v3/certs"
-        - "https://{your domain}/api/v1/system/config/jwks" # Update with your Domain and Make sure this "/api/v1/system/config/jwks" is always configured to enable JWT tokens
+        - "{your domain}/api/v1/system/config/jwks" # Update with your Domain and Make sure this "/api/v1/system/config/jwks" is always configured to enable JWT tokens
       authority: "https://accounts.google.com"
       clientId: "{client id}"
-      callbackUrl: "https://{your domain}/callback"
+      callbackUrl: "http://localhost:8585/callback"
 ```
 
-{% note %}
-
-`AUTHENTICATION_PUBLIC_KEYS` and `AUTHENTICATION_CALLBACK_URL` refers to https://{your domain} this is referring to your OpenMetdata installation domain name
-and please make sure to correctly put http or https depending on your installation.
-
-{% /note %}
-
-{% partial file="/v1.5/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.6/deployment/configure-ingestion.md" /%}
