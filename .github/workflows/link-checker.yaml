@@ -23,7 +23,8 @@ jobs:
       - name: Check out the Repo
         uses: actions/checkout@v4
         with:
-          ref: main
+              ref: ${{ github.ref }}
+
 
       - name: Update Git SubModules
         run: |
@@ -54,9 +55,9 @@ jobs:
         continue-on-error: true
         run: |
           cd linkcheck
+          cat ../skip_links.txt
           ./linkcheck :8000 -e --skip-file ../skip_links.txt | tee -a linkchecker.log
           echo "FILE_LOCATION=$(pwd)" >> $GITHUB_ENV
-          cat ../skip_links.txt
 
       - name: Output stats
         run: |
