@@ -54,8 +54,9 @@ jobs:
         continue-on-error: true
         run: |
           cd linkcheck
-          ./linkcheck :8000 -e --skip-file ../docs-v1/skip_links.txt | tee -a linkchecker.log
+          ./linkcheck :8000 -e --skip-file ../skip_links.txt | tee -a linkchecker.log
           echo "FILE_LOCATION=$(pwd)" >> $GITHUB_ENV
+          cat ../skip_links.txt
 
       - name: Output stats
         run: |
@@ -73,31 +74,31 @@ jobs:
           name: linkchecker.log
           path: ${{ env.FILE_LOCATION }}/linkchecker.log
 
-      - name: Post payload file summary to slack
-        id: slack
-        continue-on-error: true
-        uses: slackapi/slack-github-action@v1.24.0
-        with:
-          channel-id: ${{ secrets.SLACK_CHANNEL_IDS }}
-          payload: |
-            {
-              "text": "Collate link-checker build result: ${{ job.status }}",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "<!here> Collate link-checker build result: *${{ job.status }}*\n Please check the <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Build URL> for logs and linkchecker report."
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "Push/commit by: `${{ github.actor }}`\n>Links checked \t\t  -> ${{ env.LINKS_CHECKED }} \n>Destination URLs \t-> ${{ env.DEST_URLS }} \n>Ignored URLs \t\t   -> ${{ env.IGNORED_URL }} \n>Warnings \t\t\t\t  -> ${{ env.WARNINGS }} \n>*No. or Errors* \t\t\t-> *${{ env.ERRORS }}*"
-                  }
-                }
-              ]
-            }
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+      # - name: Post payload file summary to slack
+      #   id: slack
+      #   continue-on-error: true
+      #   uses: slackapi/slack-github-action@v1.24.0
+      #   with:
+      #     channel-id: ${{ secrets.SLACK_CHANNEL_IDS }}
+      #     payload: |
+      #       {
+      #         "text": "Collate link-checker build result: ${{ job.status }}",
+      #         "blocks": [
+      #           {
+      #             "type": "section",
+      #             "text": {
+      #               "type": "mrkdwn",
+      #               "text": "<!here> Collate link-checker build result: *${{ job.status }}*\n Please check the <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|Build URL> for logs and linkchecker report."
+      #             }
+      #           },
+      #           {
+      #             "type": "section",
+      #             "text": {
+      #               "type": "mrkdwn",
+      #               "text": "Push/commit by: `${{ github.actor }}`\n>Links checked \t\t  -> ${{ env.LINKS_CHECKED }} \n>Destination URLs \t-> ${{ env.DEST_URLS }} \n>Ignored URLs \t\t   -> ${{ env.IGNORED_URL }} \n>Warnings \t\t\t\t  -> ${{ env.WARNINGS }} \n>*No. or Errors* \t\t\t-> *${{ env.ERRORS }}*"
+      #             }
+      #           }
+      #         ]
+      #       }
+      #   env:
+      #     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
