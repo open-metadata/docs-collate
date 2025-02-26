@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
-import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import { SelectOption } from "../docs-v1/components/SelectDropdown/SelectDropdown";
 import SideNav from "../docs-v1/components/SideNav/SideNav";
 import SkeletonLoader from "../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
@@ -34,7 +33,6 @@ function ErrorComponent() {
 
   return (
     <div className="flex flex-col">
-      <GoogleAnalyticsScript />
       <TopNav />
       <CategoriesNav menu={menuItems} />
       <div className="flex">

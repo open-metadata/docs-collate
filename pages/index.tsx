@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { COLLATE_HOME_PAGE_BANNER_INFO } from "../constants/Homepage.constants";
 import CategoriesNav from "../docs-v1/components/CategoriesNav/CategoriesNav";
 import ConnectorsInfo from "../docs-v1/components/ConnectorsInfo/ConnectorsInfo";
-import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import { SelectOption } from "../docs-v1/components/SelectDropdown/SelectDropdown";
 import SkeletonLoader from "../docs-v1/components/common/SkeletonLoader/SkeletonLoader";
 import { OVERVIEW_INFO } from "../docs-v1/constants/homePage.constants";
@@ -61,7 +60,6 @@ export default function Index() {
 
   return (
     <>
-      <GoogleAnalyticsScript />
       <div className="nav-bar-container">
         <TopNav />
         <CategoriesNav menu={menu} />
