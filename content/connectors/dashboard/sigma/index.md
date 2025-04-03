@@ -18,7 +18,6 @@ Configure and schedule Sigma metadata and profiler workflows from the OpenMetada
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 - [Lineage](#lineage)
-- [Troubleshooting](/connectors/dashboard/sigma/troubleshooting)
 
 {% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/sigma/yaml"} /%}
 
@@ -78,3 +77,5 @@ To get to know the Sigma REST API Version visit [here](https://help.sigmacomputi
 {% /stepsContainer %}
 
 {% partial file="/v1.6/connectors/dashboard/dashboard-lineage.md" /%}
+
+{% partial file="/v1.6/connectors/troubleshooting.md" /%}

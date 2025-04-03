@@ -19,7 +19,6 @@ Configure and schedule Superset metadata and profiler workflows from the OpenMet
 - [Metadata Ingestion](#metadata-ingestion)
 - [Enable Security](#securing-superset-connection-with-ssl-in-openmetadata)
 - [Lineage](#lineage)
-- [Troubleshooting](/connectors/dashboard/superset/troubleshooting)
 
 {% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/superset/yaml"} /%}
 
@@ -137,3 +136,5 @@ You can use Postgres Connection when you have SSO enabled and your Superset is b
   caption="SSL Configuration" /%}
 
 {% partial file="/v1.6/connectors/dashboard/dashboard-lineage.md" /%}
+
+{% partial file="/v1.6/connectors/troubleshooting.md" /%}
