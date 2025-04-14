@@ -9,7 +9,6 @@ import Footer from "../components/Footer/Footer";
 import Roadmap from "../components/Roadmap/Roadmap";
 import TopNav from "../components/TopNav/TopNav";
 import ErrorBoundary from "../docs-v1/components/ErrorBoundary";
-import GoogleAnalyticsScript from "../docs-v1/components/GoogleAnalyticsScript/GoogleAnalyticsScript";
 import APIPageLayout from "../docs-v1/components/PageLayouts/APIPageLayout/APIPageLayout";
 import DocsPageLayout from "../docs-v1/components/PageLayouts/DocsPageLayout/DocsPageLayout";
 import { API_AND_SDK_MENU_ITEMS } from "../docs-v1/constants/categoriesNav.constants";
@@ -61,7 +60,6 @@ export default function Article({ content, slug, partials }: Readonly<Props>) {
 
   return (
     <>
-      <GoogleAnalyticsScript />
       <ErrorBoundary>
         {isAPIsPage.value ? (
           <APIPageLayout

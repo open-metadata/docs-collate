@@ -15,6 +15,7 @@ import { MenuItemsContextProvider } from "../docs-v1/context/MenuItemsContext";
 import { NavBarCollapseContextProvider } from "../docs-v1/context/NavBarCollapseContext";
 import { RouteChangingContextProvider } from "../docs-v1/context/RouteChangingContext";
 import { StepsContextProvider } from "../docs-v1/context/StepsContext";
+import GoogleTagManagerScript from "../components/GoogleTagManagerScript/GoogleTagManagerScript";
 
 const TITLE = "Collate Documentation: Get Help Instantly";
 const DESCRIPTION = "Unified Platform for data discovery, observability and governance.";
@@ -53,6 +54,7 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
           defer
         ></script> */}
       </Head>
+      <GoogleTagManagerScript />
       <ErrorBoundary>
         <RouteChangingContextProvider>
           <DocVersionContextProvider enableVersion={false}>
