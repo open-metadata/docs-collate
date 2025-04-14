@@ -11,7 +11,7 @@ function GoogleTagManagerScript() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', 'G-2TW1XM6C89');
+          gtag('config', 'G-8N4ZPTEDL2');
         `}
       </Script>
     </>
