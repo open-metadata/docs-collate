@@ -4,7 +4,7 @@ function GoogleTagManagerScript() {
   return (
     <>
       {/* Google tag (gtag.js) */}
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-4TYJK8S4V2" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-8N4ZPTEDL2" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
