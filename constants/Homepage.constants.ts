@@ -6,7 +6,7 @@ import { ReactComponent as GovernanceIcon } from "../images/header-tabs/governan
 import { ReactComponent as LineageIcon } from "../images/header-tabs/lineage.svg";
 import { ReactComponent as ObservabilityIcon } from "../images/header-tabs/observability.svg";
 
-export const HOME_PAGE_BANNER_VIDEO_ID = "yivPjt7W_Ew";
+export const HOME_PAGE_BANNER_VIDEO_ID = "j5FPvmVQgEM";
 
 export const COLLATE_HOME_PAGE_BANNER_INFO = {
   ...HOME_PAGE_BANNER_INFO,
