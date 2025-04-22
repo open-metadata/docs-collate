@@ -22,4 +22,4 @@ slug: /main-concepts/metadata-standard/schemas/type/csvimportresult
 - **`index`** *(integer, format: int64)*: Type used to indicate row number or field number. In CSV the indexes start with 1. Minimum: `1`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

@@ -11,7 +11,7 @@ with an orchestration system. It does not matter which one, but we need it to ha
 run, fetch the logs, etc. of our workflows.
 
 {% image
-  src="/images/v1.6/deployment/ingestion/openmetadata/om-orchestration.png"
+  src="/images/v1.7/deployment/ingestion/openmetadata/om-orchestration.png"
   alt="openmetadata-orchestration"
   caption="OpenMetadata Ingestion Orchestration"
 /%}
@@ -119,7 +119,7 @@ openmetadata:
 ## Custom Airflow Installation
 
 {% note %}
-- Note that the `openmetadata-ingestion` only supports Python versions 3.7, 3.8, 3.9 and 3.10.
+- Note that the `openmetadata-ingestion` only supports Python versions 3.9, 3,10, and 3.11.
 - - The supported Airflow versions for OpenMetadata include 2.3, 2.4, 2.5, 2.6, and 2.7. Starting from release 1.6, OpenMetadata supports compatibility with Airflow versions up to 2.10.5. Specifically, OpenMetadata 1.5 supports Airflow 2.9, 1.6.4 supports Airflow 2.9.3, and 1.6.5 supports Airflow 2.10.5. Ensure that your Airflow version aligns with your OpenMetadata deployment for optimal performance.
 {% /note %}
 

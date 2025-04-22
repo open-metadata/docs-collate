@@ -19,4 +19,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/utils/supersetapiconnectio
 - **`apiProvider`** *(string)*: Authentication provider for the Superset service. For basic user/password authentication, the default value `db` can be used. This parameter is used internally to connect to Superset's REST API. Must be one of: `["db", "ldap"]`. Default: `"db"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

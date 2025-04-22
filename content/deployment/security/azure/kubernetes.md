@@ -73,7 +73,7 @@ openmetadata:
           secretKey: openmetadata-oidc-client-secret  
         discoveryUri: "https://login.microsoftonline.com/.well-known/openid-configuration"     
         callbackUrl: http://localhost:8585/callback  
-        serverUrl: http://localhost:8585
+        serverUrl: http://localhost:8585  
 ```
 
 {% /codeWithLanguageSelector %}
@@ -84,7 +84,7 @@ Altering the order of claims in `jwtPrincipalClaims` may lead to problems when m
 
 {% /note %}
 
-{% partial file="/v1.6/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.7/deployment/configure-ingestion.md" /%}
 
 
 {% inlineCalloutContainer %}

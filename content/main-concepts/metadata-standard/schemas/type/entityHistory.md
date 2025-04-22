@@ -29,4 +29,4 @@ slug: /main-concepts/metadata-standard/schemas/type/entityhistory
   - **`previousVersion`**: When a change did not result in change, this could be same as the current version. Refer to *[#/definitions/entityVersion](#definitions/entityVersion)*.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

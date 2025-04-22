@@ -31,4 +31,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/services/connections/datab
 - **`verticaScheme`** *(string)*: SQLAlchemy driver scheme options. Must be one of: `["vertica+vertica_python"]`. Default: `"vertica+vertica_python"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

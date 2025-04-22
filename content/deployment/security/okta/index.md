@@ -29,14 +29,13 @@ This document will explain how to create an Okta app and configure it for OAuth.
 
 ### Step 2: Create the OIDC App Integration.
 - Once done with **Signup/Sign** in, you will be redirected to the **Getting Started** page in Okta.
-{% image src="/images/v1.6/deployment/security/okta/create-oidc-app-integration.png" alt="create-oidc-app-integration" /%}
+{% image src="/images/v1.7/deployment/security/okta/create-oidc-app-integration.png" alt="create-oidc-app-integration" /%}
 
 - Click on **Applications -> Applications** in the left navigation panel.
-{% image src="/images/v1.6/deployment/security/okta/click-applications.png" alt="click-applications" /%}
+{% image src="/images/v1.7/deployment/security/okta/click-applications.png" alt="click-applications" /%}
 
 - Click on the **Create App Integration** button.
-{% image src="/images/v1.6/deployment/security/okta/create-app-integration.png" alt="create-app-integration" /%}
-
+{% image src="/images/v1.7/deployment/security/okta/create-app-integration.png" alt="create-app-integration" /%}
 
 ## Choose Your Authentication Flow
 
@@ -64,5 +63,4 @@ After creating the account, choose the authentication flow you want to use:
 {% /note %}
 
 
-
-{% partial file="/v1.6/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.7/deployment/configure-ingestion.md" /%}

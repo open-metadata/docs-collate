@@ -8,7 +8,7 @@ slug: /connectors/dashboard/powerbi
   stage="PROD"
   platform="OpenMetadata"
   availableFeatures=["Dashboards", "Charts", "Datamodels", "Projects", "Lineage", "Column Lineage"]
-  unavailableFeatures=["Owners", "Tags"]
+  unavailableFeatures=["Owners", "Tags", "Usage"]
 / %}
 
 In this section, we provide guides and references to use the PowerBI connector.
@@ -20,7 +20,7 @@ Configure and schedule PowerBI metadata and profiler workflows from the OpenMeta
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/powerbi/troubleshooting)
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/powerbi/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/powerbi/yaml"} /%}
 
 ## Requirements
 
@@ -31,6 +31,10 @@ To access the PowerBI APIs and import dashboards, charts, and datasets from Powe
 
 {% note %}
 PowerBI dataflows are not yet supported.
+{% /note %}
+
+{% note %}
+OpenMetadata does not support Power BI usage ingestion because the Power BI Usage API does not support Service Principal authentication.
 {% /note %}
 
 {% note %}
@@ -100,12 +104,12 @@ For reference here is a [thread](https://community.powerbi.com/t5/Service/Error-
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "PowerBI", 
-    selectServicePath: "/images/v1.6/connectors/powerbi/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/powerbi/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/powerbi/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/powerbi/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/powerbi/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/powerbi/service-connection.png",
 } 
 /%}
 
@@ -177,12 +181,12 @@ Refer to the section [here](/connectors/dashboard/powerbi#powerbi-admin-and-nona
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.6/connectors/dashboard/dashboard-lineage.md" /%}
+{% partial file="/v1.7/connectors/dashboard/dashboard-lineage.md" /%}

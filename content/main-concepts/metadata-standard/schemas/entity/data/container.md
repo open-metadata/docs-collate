@@ -53,4 +53,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/data/container
 - **`fileFormat`** *(string)*: This schema defines the file formats for the object/files within a container. Must be one of: `["zip", "gz", "zstd", "csv", "tsv", "json", "parquet", "avro"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

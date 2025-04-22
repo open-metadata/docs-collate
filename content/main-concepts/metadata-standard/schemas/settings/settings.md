@@ -32,4 +32,4 @@ slug: /main-concepts/metadata-standard/schemas/settings/settings
 - **`settingType`** *(string)*: This schema defines all possible filters enum in OpenMetadata. Must be one of: `["authorizerConfiguration", "authenticationConfiguration", "jwtTokenConfiguration", "elasticsearch", "eventHandlerConfiguration", "airflowConfiguration", "fernetConfiguration", "slackEventPublishers", "secretsManagerConfiguration", "sandboxModeEnabled", "slackChat", "emailConfiguration", "customUiThemePreference", "loginConfiguration", "slackAppConfiguration", "slackBot", "slackInstaller", "slackState", "profilerConfiguration", "searchSettings", "assetCertificationSettings", "lineageSettings", "workflowSettings"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

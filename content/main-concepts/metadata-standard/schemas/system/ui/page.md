@@ -22,4 +22,4 @@ slug: /main-concepts/metadata-standard/schemas/system/ui/page
 - **`pageType`** *(string)*: This schema defines the type used for describing different types of pages. Must be one of: `["LandingPage", "Table", "StoredProcedure", "Database", "DatabaseSchema", "Topic", "Pipeline", "Dashboard", "DashboardDataModel", "Container", "SearchIndex", "Glossary", "GlossaryTerm", "Domain"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

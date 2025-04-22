@@ -7,7 +7,7 @@ slug: /connectors/database/clickhouse
 name="Clickhouse"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Sample Data"]
+availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Sample Data", "Reverse Metadata (Collate Only)"]
 unavailableFeatures=["Owners", "Tags", "Stored Procedures"]
 / %}
 
@@ -26,8 +26,10 @@ Configure and schedule Clickhouse metadata and profiler workflows from the OpenM
 - [Troubleshooting](/connectors/database/clickhouse/troubleshooting)
   - [Workflow Deployment Error](#workflow-deployment-error)
 - [Related](#related)
+{% partial file="/v1.7/connectors/reverse-metadata-link.md" collate: true /%}
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/clickhouse/yaml"} /%}
+
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/clickhouse/yaml"} /%}
 
 ## Requirements
 
@@ -59,12 +61,12 @@ For the usage and lineage workflow, the user will need `SELECT` privilege. You c
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Clickhouse", 
-    selectServicePath: "/images/v1.6/connectors/clickhouse/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/clickhouse/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/clickhouse/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/clickhouse/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/clickhouse/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/clickhouse/service-connection.png",
 } 
 /%}
 
@@ -80,16 +82,18 @@ For the usage and lineage workflow, the user will need `SELECT` privilege. You c
 - **Secure Connection**: Establish secure connection with ClickHouse. ClickHouse supports secure communication over SSL/TLS to protect data in transit, by checking this option, it establishes secure connection with ClickHouse. This flag is useful when you are using `clickhouse+native` connection scheme.
 - **Key File**: The key file path is the location when ClickHouse looks for a file containing the private key needed for secure communication over SSL/TLS. By default, ClickHouse will look for the key file in the `/etc/clickhouse-server directory`, with the file name `server.key`. However, this can be customized in the ClickHouse configuration file (`config.xml`). This flag is useful when you are using `clickhouse+native` connection scheme and the secure connection flag is enabled.
 
-{% partial file="/v1.6/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.6/connectors/database/related.md" /%}
+{% partial file="/v1.7/connectors/database/clickhouse/reverse-metadata.md" collate: true /%}
+
+{% partial file="/v1.7/connectors/database/related.md" /%}

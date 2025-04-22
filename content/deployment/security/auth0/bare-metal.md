@@ -8,6 +8,7 @@ collate: false
 
 ## Update conf/openmetadata.yaml
 
+
 In `openmetadata.yaml` file and use the following example as a reference. Replace the placeholder values with the details generated during your Auth0 account and application credentials setup.
 
 Check the more information about environment variable [here](/deployment/security/configuration-parameters).
@@ -66,7 +67,7 @@ authenticationConfiguration:
 ```
 {% /codeWithLanguageSelector %}
 
-{% partial file="/v1.6/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.7/deployment/configure-ingestion.md" /%}
 
 {% inlineCalloutContainer %}
   {% inlineCallout
@@ -77,3 +78,4 @@ authenticationConfiguration:
     Go to Auth0 Configuration
   {% /inlineCallout %}
 {% /inlineCalloutContainer %}
+

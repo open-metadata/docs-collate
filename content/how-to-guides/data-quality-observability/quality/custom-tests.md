@@ -126,7 +126,7 @@ Once you have your Test Case created you can write your results to it. You can u
 {
     "result": "<result message>",
     "testCaseStatus": "<Success or Failed or Aborted>",
-    "timestamp": <Unix timestamp>,
+    "timestamp": <Unix timestamp in milliseconds>,
     "testResultValue": [
       {
         "value": "<value>"
@@ -143,7 +143,7 @@ curl --location --request PUT 'http://localhost:8585/api/v1/dataQuality/testCase
 --data-raw '{
     "result": "found 1 values expected n",
     "testCaseStatus": "Success",
-    "timestamp": 1662129151,
+    "timestamp": 1662129151000,
     "testResultValue": [{
         "value": "10"
     }]
@@ -195,13 +195,13 @@ class ColumnEntropyToBeBetweenValidator(BaseTestValidator):
 Once you have completed A) and B) you should only need to `pip install` your package in the environment where openmetadata python SDK is install.
 
 {% image
-  src="/images/v1.6/features/ingestion/workflows/data-quality/custom-test-definition.png"
+  src="/images/v1.7/features/ingestion/workflows/data-quality/custom-test-definition.png"
   alt="Create test case"
   caption="Create test case"
  /%}
 
  {% image
-  src="/images/v1.6/features/ingestion/workflows/data-quality/custom-test-result.png"
+  src="/images/v1.7/features/ingestion/workflows/data-quality/custom-test-result.png"
   alt="Create test case"
   caption="Create test case"
  /%}

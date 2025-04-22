@@ -230,4 +230,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/data/table
 - **`fileFormat`** *(string)*: File format in case of file/datalake tables. Must be one of: `["csv", "tsv", "avro", "parquet", "json", "json.gz", "json.zip", "jsonl", "jsonl.gz", "jsonl.zip"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

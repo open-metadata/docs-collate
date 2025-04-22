@@ -16,4 +16,4 @@ slug: /main-concepts/metadata-standard/schemas/datainsight/type/aggregatedusedvs
 - **`Used`** *(number)*: Count of used assets (last access < 3 days).
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

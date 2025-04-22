@@ -11,20 +11,20 @@ collate: false
 - Once you are on the Dashboard page, click on `Applications > Applications` available on the left-hand side panel.
 
 {% image 
-src="/images/v1.6/deployment/security/auth0/create-new-app-1.png" 
+src="/images/v1.7/deployment/security/auth0/create-new-app-1.png" 
 alt="create-app" /%}
 
 - Click on `Create Application`.
 
 {% image 
-src="/images/v1.6/deployment/security/auth0/create-new-app-2.png" 
+src="/images/v1.7/deployment/security/auth0/create-new-app-2.png" 
 alt="create-app" /%}
 
 - Enter the Application name.
 - Choose an application type and click on `Create`.
 
 {% image 
-src="/images/v1.6/deployment/security/auth0/create-new-app-3.png" 
+src="/images/v1.7/deployment/security/auth0/create-new-app-3.png" 
 alt="create-app" /%}
 
 ### Step 2: Where to Find the Credentials
@@ -33,7 +33,7 @@ alt="create-app" /%}
 - You will find your `Client ID` and `Domain`.
 
 {% image 
-src="/images/v1.6/deployment/security/auth0/credentials.png" 
+src="/images/v1.7/deployment/security/auth0/credentials.png" 
 alt="credentials" /%}
 
 After the applying these steps, you can update the configuration of your deployment:
@@ -61,6 +61,8 @@ After the applying these steps, you can update the configuration of your deploym
     Configure Auth0 SSO for your Kubernetes Deployment.
   {% /inlineCallout %}
 {% /inlineCalloutContainer %}
+
+
 
 {% inlineCalloutContainer %}
   {% inlineCallout

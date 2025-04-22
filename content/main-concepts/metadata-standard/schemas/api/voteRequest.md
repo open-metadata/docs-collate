@@ -12,4 +12,4 @@ slug: /main-concepts/metadata-standard/schemas/api/voterequest
 - **`updatedVoteType`**: The updated vote type. Refer to *[../type/votes.json#/definitions/voteType](#/type/votes.json#/definitions/voteType)*.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

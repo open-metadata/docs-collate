@@ -20,15 +20,9 @@ Configure and schedule Wherescape metadata workflow from the OpenMetadata UI:
     - [Connection Details](#connection-details)
 - [Troubleshooting](/connectors/pipeline/wherescape/troubleshooting)
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/wherescape/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/wherescape/yaml"} /%}
 
 ## Requirements
-{% note %}
-
-The Wherescape connector is available only in OpenMetadata version 1.6.8 or later.
-
-{% /note %}
-
 To extract Wherescape metadata, we need the batabase connection details where the metadata is stored.
 
 - `API` Permission ( While Creating the User, from Admin -> User )
@@ -38,12 +32,12 @@ To extract Wherescape metadata, we need the batabase connection details where th
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Wherescape", 
-    selectServicePath: "/images/v1.6/connectors/wherescape/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/wherescape/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/wherescape/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/wherescape/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/wherescape/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/wherescape/service-connection.png",
 } 
 /%}
 
@@ -64,10 +58,10 @@ In terms of `connection` we support the following selections:
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

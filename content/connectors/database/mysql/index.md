@@ -7,7 +7,7 @@ slug: /connectors/database/mysql
 name="MySQL"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Data Profiler", "Data Quality", "dbt", "View Lineage", "View Column-level Lineage", "Query Usage", "Sample Data"]
+availableFeatures=["Metadata", "Data Profiler", "Data Quality", "dbt", "View Lineage", "View Column-level Lineage", "Query Usage", "Sample Data", "Reverse Metadata (Collate Only)"]
 unavailableFeatures=["Owners", "Tags", "Stored Procedures"]
 / %}
 
@@ -23,8 +23,9 @@ Configure and schedule MySQL metadata and profiler workflows from the OpenMetada
 - [Enable Security](#securing-mysql-connection-with-ssl-in-openmetadata)
 - [Data Lineage](/how-to-guides/data-lineage/workflow)
 - [Troubleshooting](/connectors/database/mysql/troubleshooting)
+{% partial file="/v1.7/connectors/reverse-metadata-link.md" collate: true /%}
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mysql/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mysql/yaml"} /%}
 
 ## Requirements
 
@@ -132,12 +133,12 @@ Executing the profiler workflow or data quality tests, will require the user to 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "MySQL", 
-    selectServicePath: "/images/v1.6/connectors/mysql/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/mysql/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/mysql/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/mysql/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/mysql/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/mysql/service-connection.png",
 } 
 /%}
 
@@ -202,7 +203,6 @@ Executing the profiler workflow or data quality tests, will require the user to 
     {%note%}
     When using Assume Role authentication, ensure you provide the following details:  
     - **AWS Region**: Specify the AWS region for your deployment.  
-    - **Assume Role ARN**: Provide the ARN of the role in your AWS account that OpenMetadata will assume.  
     {%/note%}
 
     - **Assume Role Session Name**: An identifier for the assumed role session. Use the role session name to uniquely identify a session when the same role
@@ -223,26 +223,28 @@ Executing the profiler workflow or data quality tests, will require the user to 
 - **sslCertificate**: Provide the path to ssl client certificate file (ssl_cert).
 - **sslKey**: Provide the path to ssl client certificate file (ssl_key).
 
-{% partial file="/v1.6/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
 ## Securing MySQL Connection with SSL in OpenMetadata
 
-To establish secure connections between OpenMetadata and MySQL, navigate to the `Advanced Config` section. Here, you can provide the CA certificate used for SSL validation by specifying the `caCertificate`.  Alternatively, if both client and server require mutual authentication, you'll need to use all three parameters: `ssl_key`, `ssl_cert`, and `ssl_ca`. In this case, `ssl_cert` is used for the client’s SSL certificate, `ssl_key` for the private key associated with the SSL certificate, and `ssl_ca` for the CA certificate to validate the server’s certificate.
+To establish secure connections between OpenMetadata and MySQL, navigate to the `Advanced Config` section. Here, you can provide the CA certificate used for SSL validation by specifying the `caCertificate`.  Alternatively, if both client and server require mutual authentication, you'll need to use all three parameters: `ssl_key`, `ssl_cert`, and `ssl_ca`. In this case, `ssl_cert` is used for the client's SSL certificate, `ssl_key` for the private key associated with the SSL certificate, and `ssl_ca` for the CA certificate to validate the server's certificate.
 
 {% image
-  src="/images/v1.6/connectors/ssl_connection.png"
+  src="/images/v1.7/connectors/ssl_connection.png"
   alt="SSL Configuration"
   height="450px"
   caption="SSL Configuration" /%}
 
-{% partial file="/v1.6/connectors/database/related.md" /%}
+{% partial file="/v1.7/connectors/database/mysql/reverse-metadata.md" collate: true /%}
+
+{% partial file="/v1.7/connectors/database/related.md" /%}

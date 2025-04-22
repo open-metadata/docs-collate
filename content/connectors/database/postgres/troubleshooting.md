@@ -3,7 +3,7 @@ title: PostgreSQL Connector Troubleshooting
 slug: /connectors/database/postgres/troubleshooting
 ---
 
-{% partial file="/v1.6/connectors/troubleshooting.md" /%}
+{% partial file="/v1.7/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the PostgreSQL connector.
 

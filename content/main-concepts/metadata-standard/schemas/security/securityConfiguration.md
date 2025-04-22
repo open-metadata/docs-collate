@@ -12,4 +12,4 @@ slug: /main-concepts/metadata-standard/schemas/security/securityconfiguration
 - **`maskPasswordsAPI`** *(boolean)*: If enabled, it will mask all the password fields in the responses sent from the API except for the bots. Default: `"false"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

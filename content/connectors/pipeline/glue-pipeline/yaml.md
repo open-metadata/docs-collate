@@ -7,7 +7,7 @@ slug: /connectors/pipeline/glue-pipeline/yaml
 name="Glue"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Pipelines", "Pipeline Status", "Lineage"]
+availableFeatures=["Pipelines", "Pipeline Status", "Usage", "Lineage"]
 unavailableFeatures=["Owners", "Tags"]
 / %}
 
@@ -63,7 +63,7 @@ This is a sample config for Glue:
 
 #### Source Configuration - Service Connection
 
-{% partial file="/v1.6/connectors/yaml/common/aws-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/common/aws-config-def.md" /%}
 
 {% partial file="/v1.6/connectors/yaml/pipeline/source-config-def.md" /%}
 
@@ -84,8 +84,7 @@ source:
       type: GluePipeline
       awsConfig:
 ```
-
-{% partial file="/v1.6/connectors/yaml/common/aws-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/common/aws-config.md" /%}
 
 {% partial file="/v1.6/connectors/yaml/pipeline/source-config.md" /%}
 

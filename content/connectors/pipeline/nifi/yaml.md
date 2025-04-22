@@ -4,10 +4,10 @@ slug: /connectors/pipeline/nifi/yaml
 ---
 
 {% connectorDetailsHeader
-name="NiFi"
+name="Nifi"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Pipelines"]
+availableFeatures=["Pipelines", "Usage"]
 unavailableFeatures=["Pipeline Status", "Owners", "Tags", "Lineage"]
 / %}
 
@@ -18,13 +18,13 @@ Configure and schedule NiFi metadata and profiler workflows from the OpenMetadat
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.6/connectors/python-requirements.md" /%}
+{% partial file="/v1.7/connectors/python-requirements.md" /%}
 
 To run the NiFi ingestion, you will need to install:
 
@@ -36,7 +36,7 @@ pip3 install "openmetadata-ingestion[nifi]"
 
 All connectors are defined as JSON Schemas.
 [Here](https://github.com/open-metadata/OpenMetadata/blob/main/openmetadata-spec/src/main/resources/json/schema/entity/services/connections/pipeline/nifiConnection.json)
-you can find the structure to create a connection to Nifi.
+you can find the structure to create a connection to NiFi.
 
 In order to create and run a Metadata Ingestion workflow, we will follow
 the steps to create a YAML configuration able to connect to the source,
@@ -75,11 +75,11 @@ This is a sample config for NiFi:
 {% /codeInfo %}
 
 
-{% partial file="/v1.6/connectors/yaml/pipeline/source-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/pipeline/source-config-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -107,15 +107,15 @@ source:
       hostPort: http://localhost:8000
 ```
 
-{% partial file="/v1.6/connectors/yaml/pipeline/source-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/pipeline/source-config.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
 
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}

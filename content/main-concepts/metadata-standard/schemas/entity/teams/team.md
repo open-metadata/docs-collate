@@ -40,4 +40,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/teams/team
 - **`teamType`** *(string)*: Organization is the highest level entity. An Organization has one of more Business Units, Division, Departments, Group, or Users. A Business Unit has one or more Divisions, Departments, Group, or Users. A Division has one or more Divisions, Departments, Group, or Users. A Department has one or more Departments, Group, or Users. A Group has only Users. Must be one of: `["Group", "Department", "Division", "BusinessUnit", "Organization"]`. Default: `"Group"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

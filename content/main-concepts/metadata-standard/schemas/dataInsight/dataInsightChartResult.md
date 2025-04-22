@@ -28,4 +28,4 @@ slug: /main-concepts/metadata-standard/schemas/datainsight/datainsightchartresul
 - **`dataInsightChartType`** *(string)*: chart type. Must match `name` of a `dataInsightChartDefinition`. Must be one of: `["DailyActiveUsers", "MostActiveUsers", "MostViewedEntities", "PageViewsByEntities", "UnusedAssets", "AggregatedUnusedAssetsSize", "AggregatedUnusedAssetsCount", "AggregatedUsedVsUnusedAssetsSize", "AggregatedUsedVsUnusedAssetsCount"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

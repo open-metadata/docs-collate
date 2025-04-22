@@ -8,7 +8,7 @@ slug: /connectors/dashboard/quicksight/yaml
   stage="PROD"
   platform="OpenMetadata"
   availableFeatures=["Dashboards", "Charts", "Lineage", "Datamodels"]
-  unavailableFeatures=["Owners", "Tags", "Projects"]
+  unavailableFeatures=["Owners", "Tags", "Projects"]  
 / %}
 
 In this section, we provide guides and references to use the QuickSight connector.
@@ -18,7 +18,7 @@ Configure and schedule QuickSight metadata and profiler workflows from the OpenM
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -72,7 +72,7 @@ Here is how to add Permissions to an IAM user.
 
 ### Python Requirements
 
-{% partial file="/v1.6/connectors/python-requirements.md" /%}
+{% partial file="/v1.7/connectors/python-requirements.md" /%}
 
 To run the QuickSight ingestion, you will need to install:
 
@@ -103,7 +103,7 @@ This is a sample config for QuickSight:
 
 #### Source Configuration - Service Connection
 
-{% partial file="/v1.6/connectors/yaml/common/aws-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/common/aws-config-def.md" /%}
 
 {% codeInfo srNumber=2 %}
 
@@ -123,11 +123,11 @@ This is a sample config for QuickSight:
 
 {% /codeInfo %}
 
-{% partial file="/v1.6/connectors/yaml/dashboard/source-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/dashboard/source-config-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -142,7 +142,7 @@ source:
       type: QuickSight
 ```
 
-{% partial file="/v1.6/connectors/yaml/common/aws-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/common/aws-config.md" /%}
 
 ```yaml {% srNumber=2 %}
       awsAccountId: <aws-account-id>
@@ -154,14 +154,14 @@ source:
       namespace: #to be provided if identityType is Anonymous
 ```
 
-{% partial file="/v1.6/connectors/yaml/dashboard/source-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/dashboard/source-config.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}

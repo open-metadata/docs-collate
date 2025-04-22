@@ -20,6 +20,8 @@ site_menu:
     url: /getting-started/day-1/hybrid-saas/github-actions
   - category: Getting Started / Day 1 / Hybrid SaaS / Credentials
     url: /getting-started/day-1/hybrid-saas/credentials
+  - category: Getting Started / Day 1 / Hybrid SaaS / Hybrid Ingestion Runner
+    url: /getting-started/day-1/hybrid-saas/hybrid-ingestion-runner
 
   - category: Connectors
     url: /connectors
@@ -68,12 +70,24 @@ site_menu:
     url: /connectors/database/bigtable/troubleshooting
   - category: Connectors / Database / BigTable / Roles
     url: /connectors/database/bigtable/roles
+  - category: Connectors / Database / Cassandra
+    url: /connectors/database/cassandra
+  - category: Connectors / Database / Cassandra / Run Externally
+    url: /connectors/database/cassandra/yaml
+  - category: Connectors / Database / Cassandra / Troubleshooting
+    url: /connectors/database/cassandra/troubleshooting
   - category: Connectors / Database / Clickhouse
     url: /connectors/database/clickhouse
   - category: Connectors / Database / Clickhouse / Run Externally
     url: /connectors/database/clickhouse/yaml
   - category: Connectors / Database / Clickhouse / Troubleshooting
     url: /connectors/database/clickhouse/troubleshooting
+  - category: Connectors / Database / Cockroach
+    url: /connectors/database/cockroach
+  - category: Connectors / Database / Cockroach / Run Externally
+    url: /connectors/database/cockroach/yaml
+  - category: Connectors / Database / Cockroach / Troubleshooting
+    url: /connectors/database/cockroach/troubleshooting
   - category: Connectors / Database / Couchbase
     url: /connectors/database/couchbase
   - category: Connectors / Database / Couchbase / Run Externally
@@ -361,8 +375,6 @@ site_menu:
     url: /connectors/dashboard/qliksense/certificates
   - category: Connectors / Dashboard / Qlik Sense / Troubleshooting
     url: /connectors/dashboard/qliksense/troubleshooting
-  - category: Connectors / Dashboard / Qlik Cloud / API Keys
-    url: /connectors/dashboard/qlikcloud/api_keys
   - category: Connectors / Dashboard / QuickSight
     url: /connectors/dashboard/quicksight
   - category: Connectors / Dashboard / QuickSight / Run Externally
@@ -499,7 +511,7 @@ site_menu:
     url: /connectors/pipeline/matillion
   - category: Connectors / Pipeline / Matillion / Run Externally
     url: /connectors/pipeline/matillion/yaml
-  - category: Connectors / Pipeline / Matillion / Troubleshooting
+  - category: Connectors / Pipeline / Troubleshooting
     url: /connectors/pipeline/matillion/troubleshooting
   - category: Connectors / Pipeline / Nifi
     url: /connectors/pipeline/nifi
@@ -580,6 +592,12 @@ site_menu:
     url: /connectors/search/elasticsearch/yaml
   - category: Connectors / Search / Elasticsearch / Troubleshooting
     url: /connectors/search/elasticsearch/troubleshooting
+  - category: Connectors / Search / OpenSearch
+    url: /connectors/search/opensearch
+  - category: Connectors / Search / OpenSearch / Run Externally
+    url: /connectors/search/opensearch/yaml
+  - category: Connectors / Search / OpenSearch / Troubleshooting
+    url: /connectors/search/opensearch/troubleshooting
 
   - category: Connectors / Metadata
     url: /connectors/metadata
@@ -669,6 +687,8 @@ site_menu:
     url: /connectors/ingestion/workflows/dbt/setup-multiple-dbt-projects
   - category: Connectors / Ingestion / Workflows / dbt / dbt troubleshooting
     url: /connectors/ingestion/workflows/dbt/dbt-troubleshooting
+  - category: Connectors / Ingestion / Workflows / Reverse Metadata Ingestion
+    url: /connectors/ingestion/workflows/reverse-metadata
   - category: Connectors / Ingestion / Lineage
     url: /connectors/ingestion/lineage
   - category: Connectors / Ingestion / Lineage / Edit Data Lineage Manually
@@ -856,7 +876,7 @@ site_menu:
   - category: How-to Guides / Data Quality and Observability / Data Profiler / Sample Data
     url: /how-to-guides/data-quality-observability/profiler/external-sample-data
   - category: How-to Guides / Data Quality and Observability / Data Profiler / External Workflow
-    url: /how-to-guides/data-quality-observability/profiler/external-workflow
+    url: /how-to-guides/data-quality-observability/profiler/auto-pii-tagging
   - category: How-to Guides / Data Quality and Observability / Data Observability
     url: /how-to-guides/data-quality-observability/observability
   - category: How-to Guides / Data Quality and Observability / Data Observability / Observability Alerts
@@ -905,6 +925,8 @@ site_menu:
     url: /how-to-guides/data-insights/data-culture
   - category: How-to Guides / Data Insights / Custom Data Insight Dashboards
     url: /how-to-guides/data-insights/custom-dashboard
+  - category: How-to Guides / Data Insights / Service Insights
+    url: /how-to-guides/data-insights/service-insights
 
   - category: How-to Guides / Data Governance
     url: /how-to-guides/data-governance
@@ -1028,6 +1050,8 @@ site_menu:
     url: /releases/supported
   - category: Releases / All Releases
     url: /releases/all-releases
+  - category: Releases / All Releases / 1.6.9 Release
+    url: /releases/all-releases/#1.6.9-release
   - category: Releases / All Releases / 1.6.8 Release
     url: /releases/all-releases/#1.6.8-release
   - category: Releases / All Releases / 1.6.7 Release
@@ -1621,6 +1645,8 @@ site_menu:
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/azuresqlconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / BigQueryConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/bigqueryconnection
+  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CassandraConnection
+    url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/cassandraconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / ClickhouseConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/clickhouseconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / Common / BasicAuth
@@ -1631,6 +1657,8 @@ site_menu:
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/common
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / Common / JwtAuth
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/common/jwtauth
+  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CockroachConnection
+    url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/cockroachconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CouchbaseConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/couchbaseconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CustomDatabaseConnection

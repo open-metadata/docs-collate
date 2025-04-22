@@ -16,7 +16,6 @@ Check the more information about environment variable [here](/deployment/securit
 
 
 {% codeWithLanguageSelector title="Auth Configuration" id="container-1" languagesArray=["implicit","authcode"] theme="dark" %}
-
 ```implicit
 # Implicit Flow
 AUTHORIZER_CLASS_NAME=org.openmetadata.service.security.DefaultAuthorizer
@@ -63,7 +62,7 @@ OIDC_CALLBACK: ${OIDC_CALLBACK:-"http://localhost:8585/callback"}
 docker compose --env-file ~/openmetadata_auth0.env up -d
 ```
 
-{% partial file="/v1.6/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.7/deployment/configure-ingestion.md" /%}
 
 
 {% inlineCalloutContainer %}

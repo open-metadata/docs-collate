@@ -7,8 +7,8 @@ slug: /connectors/dashboard/qlikcloud/yaml
   name="Qlik Cloud"
   stage="PROD"
   platform="OpenMetadata"
-  availableFeatures=["Dashboards", "Charts", "Datamodels", "Lineage"]
-  unavailableFeatures=["Owners", "Tags", "Projects"]
+  availableFeatures=[ "Projects", "Dashboards", "Charts", "Datamodels", "Lineage"]
+  unavailableFeatures=["Owners", "Tags"]
 / %}
 
 In this section, we provide guides and references to use the PowerBI connector.
@@ -18,13 +18,13 @@ Configure and schedule PowerBI metadata and profiler workflows from the OpenMeta
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.6/connectors/python-requirements.md" /%}
+{% partial file="/v1.7/connectors/python-requirements.md" /%}
 
 To run the QlikCloud ingestion, you will need to install:
 
@@ -59,7 +59,7 @@ This is a sample config for Qlik Cloud:
 
 **token**: Qlik Cloud API Access Token
 
-Enter the JWT Bearer token generated from Qlik Management Console->API-Keys . Refer to [this](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-generate-api-keys.htm) document for more details about 
+Enter the JWT Bearer token generated from Qlik Management Console->API-Keys . Refer to [this](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-generate-api-keys.htm) document for more details.
 
 Example: `eyJhbGciOiJFU***`
 
@@ -69,18 +69,28 @@ Example: `eyJhbGciOiJFU***`
 
 **hostPort**: Qlik Cloud Tenant URL
 
-This field refers to the base url of your Qlik Cloud Portal, will be used for generating the redirect links for dashboards and charts. 
+This field refers to the base url of your Qlik Cloud Portal, will be used for generating the redirect links for dashboards and charts.
 
 Example: `https://<TenantURL>.qlikcloud.com`
 
 {% /codeInfo %}
 
+{% codeInfo srNumber=3 %}
 
-{% partial file="/v1.6/connectors/yaml/dashboard/source-config-def.md" /%}
+**spaceTypes**: Qlik Cloud Space Types
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
+Select relevant space types of Qlik Cloud to filter the dashboards ingested into the platform.
 
-{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
+Example: `Personal`, `Shared`, `Managed`
+
+{% /codeInfo %}
+
+
+{% partial file="/v1.7/connectors/yaml/dashboard/source-config-def.md" /%}
+
+{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
+
+{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -98,17 +108,20 @@ source:
       token: eyJhbGciOiJFU***
 ```
 ```yaml {% srNumber=2 %}
-      hostPort: http://localhost:2000
+      hostPort: https://<TenantURL>.qlikcloud.com
+```
+```yaml {% srNumber=3 %}
+      spaceTypes: ["Personal", "Shared", "Managed"]
 ```
 
-{% partial file="/v1.6/connectors/yaml/dashboard/source-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/dashboard/source-config.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}

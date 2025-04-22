@@ -20,4 +20,4 @@ slug: /main-concepts/metadata-standard/schemas/analytics/webanalyticeventtype/cu
 - **`customEventTypes`** *(string)*: Type of events that can be performed. Must be one of: `["CLICK"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

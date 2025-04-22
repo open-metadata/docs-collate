@@ -7,7 +7,7 @@ slug: /connectors/database/bigquery
 name="BigQuery"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Tags", "Stored Procedures", "Sample Data"]
+availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Tags", "Stored Procedures", "Sample Data", "Reverse Metadata (Collate Only)"]
 unavailableFeatures=["Owners"]
 / %}
 
@@ -25,10 +25,11 @@ Configure and schedule BigQuery metadata and profiler workflows from the OpenMet
 - [Lineage](/connectors/ingestion/lineage)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Troubleshooting](/connectors/database/bigquery/troubleshooting)
+{% partial file="/v1.7/connectors/reverse-metadata-link.md" collate: true /%}
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/bigquery/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/bigquery/yaml"} /%}
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -43,7 +44,7 @@ link="/connectors/database/bigquery/create-credentials"
   / %}
 {% /tilesContainer %}
 
-{% partial file="/v1.6/connectors/database/partitioned-tables.md" /%}
+{% partial file="/v1.7/connectors/database/partitioned-tables.md" /%}
 
 ### Data Catalog API Permissions 
 
@@ -73,7 +74,6 @@ To execute metadata extraction and usage workflow successfully the user or the s
 | 12   | bigquery.readsessions.create  | Bigquery Usage & Lineage Workflow |
 | 13   | bigquery.readsessions.getData | Bigquery Usage & Lineage Workflow |
 | 14   | logging.operations.list       | Incremental Metadata Ingestion    |
-| 15   | logging.logEntries.list       | Incremental Metadata Ingestion    |
 
 {% /multiTablesWrapper %}
 
@@ -91,12 +91,12 @@ This will help you simplify your data management and optimize your performance i
 ## Metadata Ingestion
 
 {% partial
-  file="/v1.6/connectors/metadata-ingestion-ui.md"
+  file="/v1.7/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "BigQuery",
-    selectServicePath: "/images/v1.6/connectors/bigquery/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/bigquery/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/bigquery/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/bigquery/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/bigquery/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/bigquery/service-connection.png",
   }
 /%}
 
@@ -148,15 +148,15 @@ the GCP credentials empty. This is why they are not marked as required.
 {% /note %}
 
 
-{% partial file="/v1.6/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -164,4 +164,6 @@ the GCP credentials empty. This is why they are not marked as required.
 
 We support cross-project lineage, but the data must be ingested within a single service. This means you need to perform lineage ingestion for just one service while including multiple projects.
 
-{% partial file="/v1.6/connectors/database/related.md" /%}
+{% partial file="/v1.7/connectors/database/bigquery/reverse-metadata.md" collate: true /%}
+
+{% partial file="/v1.7/connectors/database/related.md" /%}

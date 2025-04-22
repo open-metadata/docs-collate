@@ -43,4 +43,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/data/apiendpoint
 - **`apiRequestMethod`** *(string)*: This schema defines the Request Method type for APIs . Must be one of: `["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "CONNECT", "OPTIONS", "TRACE"]`. Default: `"GET"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

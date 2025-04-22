@@ -20,4 +20,4 @@ slug: /main-concepts/metadata-standard/schemas/type/lifecycle
   - **`accessedByAProcess`** *(string)*: Any process that accessed the data asset that is not captured in OpenMetadata. Default: `null`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

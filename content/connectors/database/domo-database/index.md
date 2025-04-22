@@ -21,7 +21,7 @@ Configure and schedule DomoDatabase metadata and profiler workflows from the Ope
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Troubleshooting](/connectors/database/domo-database/troubleshoot)
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/domo-database/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/domo-database/yaml"} /%}
 
 ## Requirements
 
@@ -31,12 +31,12 @@ For questions related to scopes, click [here](https://developer.domo.com/portal/
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Domo Database", 
-    selectServicePath: "/images/v1.6/connectors/domodatabase/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/domodatabase/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/domodatabase/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/domodatabase/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/domodatabase/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/domodatabase/service-connection.png",
 } 
 /%}
 
@@ -53,12 +53,12 @@ For questions related to scopes, click [here](https://developer.domo.com/portal/
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.6/connectors/database/related.md" /%}
+{% partial file="/v1.7/connectors/database/related.md" /%}

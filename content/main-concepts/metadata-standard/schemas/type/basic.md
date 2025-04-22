@@ -49,4 +49,4 @@ slug: /main-concepts/metadata-standard/schemas/type/basic
   - **`iconURL`** *(string, format: url)*: An icon to associate with GlossaryTerm, Tag, Domain or Data Product.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

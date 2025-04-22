@@ -24,7 +24,7 @@ Collate's [**metadata ingestion workflow**](/connectors/ingestion/workflows/meta
 - **Relationship cardinality** is clearly indicated, helping users understand data connections.
 
 {% image
-src="/images/v1.6/how-to-guides/discovery/table-relationships.png"
+src="/images/v1.7/how-to-guides/discovery/table-relationships.png"
 alt="Visualizing Table Relationships"
 caption="Visualizing Table Relationships"
 /%}
@@ -45,7 +45,7 @@ caption="Visualizing Table Relationships"
 - Provides a **quick overview** of data dependencies.
 
 {% image
-src="/images/v1.6/how-to-guides/discovery/table-view.png"
+src="/images/v1.7/how-to-guides/discovery/table-view.png"
 alt="Table View for Simplified Insights"
 caption="Table View for Simplified Insights"
 /%}
@@ -54,7 +54,7 @@ caption="Table View for Simplified Insights"
 
 ### Improved Database Understanding
 
-- ER diagrams create a **common language** for database discussions.  
+- ER diagrams create a **common language** for database discussions.
 - Helps teams **visualize complex relationships** and constraints.  
 
 ### Enhanced Troubleshooting & Impact Analysis

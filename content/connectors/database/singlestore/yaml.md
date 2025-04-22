@@ -23,13 +23,13 @@ Configure and schedule SingleStore metadata and profiler workflows from the Open
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.6/connectors/python-requirements.md" /%}
+{% partial file="/v1.7/connectors/python-requirements.md" /%}
 
 To run the SingleStore ingestion, you will need to install:
 
@@ -41,7 +41,7 @@ pip3 install "openmetadata-ingestion[singlestore]"
 
 All connectors are defined as JSON Schemas.
 [Here](https://github.com/open-metadata/OpenMetadata/blob/main/openmetadata-spec/src/main/resources/json/schema/entity/services/connections/database/singleStoreConnection.json)
-you can find the structure to create a connection to Singlestore.
+you can find the structure to create a connection to SingleStore.
 
 In order to create and run a Metadata Ingestion workflow, we will follow
 the steps to create a YAML configuration able to connect to the source,
@@ -84,11 +84,11 @@ This is a sample config for SingleStore:
 
 {% /codeInfo %}
 
-{% partial file="/v1.6/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -140,25 +140,25 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.6/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/lineage.md" variables={connector: "singlestore"} /%}
+{% partial file="/v1.7/connectors/yaml/lineage.md" variables={connector: "singlestore"} /%}
 
-{% partial file="/v1.6/connectors/yaml/data-profiler.md" variables={connector: "singlestore"} /%}
+{% partial file="/v1.7/connectors/yaml/data-profiler.md" variables={connector: "singlestore"} /%}
 
-{% partial file="/v1.6/connectors/yaml/auto-classification.md" variables={connector: "singlestore"} /%}
+{% partial file="/v1.7/connectors/yaml/auto-classification.md" variables={connector: "singlestore"} /%}
 
-{% partial file="/v1.6/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.7/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 

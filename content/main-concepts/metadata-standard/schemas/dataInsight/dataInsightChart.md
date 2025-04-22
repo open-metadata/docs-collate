@@ -36,4 +36,4 @@ slug: /main-concepts/metadata-standard/schemas/datainsight/datainsightchart
 - **`dataReportIndex`** *(string)*: Index where data are stored. Must be one of: `["entity_report_data_index", "web_analytic_entity_view_report_data_index", "web_analytic_user_activity_report_data_index", "raw_cost_analysis_report_data_index", "aggregated_cost_analysis_report_data_index"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

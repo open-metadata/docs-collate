@@ -20,8 +20,7 @@ Configure and schedule DynamoDB metadata workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/database/dynamodb/troubleshooting)
 
-
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/dynamodb/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/dynamodb/yaml"} /%}
 
 ## Requirements
 
@@ -51,12 +50,12 @@ For more information on Dynamodb permissions visit the [AWS DynamoDB official do
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "DynamoDB", 
-    selectServicePath: "/images/v1.6/connectors/dynamodb/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/dynamodb/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/dynamodb/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/dynamodb/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/dynamodb/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/dynamodb/service-connection.png",
 } 
 /%}
 
@@ -133,12 +132,12 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.6/connectors/database/related.md" /%}
+{% partial file="/v1.7/connectors/database/related.md" /%}

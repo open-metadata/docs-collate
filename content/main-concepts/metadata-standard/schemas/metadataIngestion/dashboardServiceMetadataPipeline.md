@@ -30,4 +30,4 @@ slug: /main-concepts/metadata-standard/schemas/metadataingestion/dashboardservic
 - **`dashboardMetadataConfigType`** *(string)*: Dashboard Source Config Metadata Pipeline type. Must be one of: `["DashboardMetadata"]`. Default: `"DashboardMetadata"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

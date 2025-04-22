@@ -6,7 +6,7 @@ collate: false
 
 # OSS Security
 
-## Encryption of Connection Credentials  
+## Encryption of Connection Credentials
 
 OpenMetadata ensures that sensitive information, such as passwords and connection secrets, is securely stored.  
 

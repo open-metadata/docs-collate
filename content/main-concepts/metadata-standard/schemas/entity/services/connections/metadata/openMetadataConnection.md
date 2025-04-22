@@ -50,4 +50,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/services/connections/metad
 - **`authProvider`** *(string)*: OpenMetadata Server Authentication Provider. Make sure configure same auth providers as the one configured on OpenMetadata server. Must be one of: `["basic", "azure", "google", "okta", "auth0", "aws-cognito", "custom-oidc", "ldap", "saml", "openmetadata"]`. Default: `"basic"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

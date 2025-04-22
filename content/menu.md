@@ -78,7 +78,7 @@ site_menu:
   - category: Deployment / Enable Security / Ldap Authentication / Bare Metal
     url: /deployment/security/ldap/bare-metal
   - category: Deployment / Enable Security / Ldap Authentication / Kubernetes
-    url: /deployment/security/ldap/kubernetes
+    url: /deployment/security/ldap/kubernetes  
   - category: Deployment / Enable Security / Auth0 SSO
     url: /deployment/security/auth0
   - category: Deployment / Enable Security / Auth0 SSO / Docker
@@ -170,7 +170,7 @@ site_menu:
   - category: Deployment / Enable Security / Enable JWT Tokens
     url: /deployment/security/enable-jwt-tokens
   - category: Deployment / Enable Security / Configuration Reference Parameters
-    url: /deployment/security/configuration-parameters
+    url: /deployment/security/configuration-parameters  
   - category: Deployment / Enable Security / JWT Troubleshooting
     url: /deployment/security/jwt-troubleshooting
 
@@ -226,7 +226,7 @@ site_menu:
 
   - category: Deployment / Metrics
     url: /deployment/metrics
-
+  
   - category: Deployment / OSS Security
     url: /deployment/oss-security
 
@@ -277,12 +277,24 @@ site_menu:
     url: /connectors/database/bigtable/troubleshooting
   - category: Connectors / Database / BigTable / Roles
     url: /connectors/database/bigtable/roles
+  - category: Connectors / Database / Cassandra
+    url: /connectors/database/cassandra
+  - category: Connectors / Database / Cassandra / Run Externally
+    url: /connectors/database/cassandra/yaml
+  - category: Connectors / Database / Cassandra / Troubleshooting
+    url: /connectors/database/cassandra/troubleshooting
   - category: Connectors / Database / Clickhouse
     url: /connectors/database/clickhouse
   - category: Connectors / Database / Clickhouse / Run Externally
     url: /connectors/database/clickhouse/yaml
   - category: Connectors / Database / Clickhouse / Troubleshooting
     url: /connectors/database/clickhouse/troubleshooting
+  - category: Connectors / Database / Cockroach
+    url: /connectors/database/cockroach
+  - category: Connectors / Database / cockroach / Run Externally
+    url: /connectors/database/cockroach/yaml
+  - category: Connectors / Database / Cockroach / Troubleshooting
+    url: /connectors/database/cockroach/troubleshooting
   - category: Connectors / Database / Couchbase
     url: /connectors/database/couchbase
   - category: Connectors / Database / Couchbase / Run Externally
@@ -419,6 +431,8 @@ site_menu:
     url: /connectors/database/presto
   - category: Connectors / Database / Presto / Run Externally
     url: /connectors/database/presto/yaml
+  - category: Connectors / Database / Presto / Troubleshooting
+    url: /connectors/database/presto/troubleshooting
   - category: Connectors / Database / Redshift
     url: /connectors/database/redshift
   - category: Connectors / Database / Redshift / Run Externally
@@ -698,7 +712,7 @@ site_menu:
     url: /connectors/pipeline/spline
   - category: Connectors / Pipeline / Spline / Run Externally
     url: /connectors/pipeline/spline/yaml
-  - category: Connectors / Pipeline / Spline / Troubleshooting
+  - category: Connectors / Pipeline / Spline / troubleshooting
     url: /connectors/pipeline/spline/troubleshooting
 
   - category: Connectors / ML Model
@@ -739,6 +753,12 @@ site_menu:
     url: /connectors/search/elasticsearch/yaml
   - category: Connectors / Search / Elasticsearch / Troubleshooting
     url: /connectors/search/elasticsearch/troubleshooting
+  - category: Connectors / Search / OpenSearch
+    url: /connectors/search/opensearch
+  - category: Connectors / Search / OpenSearch / Run Externally
+    url: /connectors/search/opensearch/yaml
+  - category: Connectors / Search / OpenSearch / Troubleshooting
+    url: /connectors/search/opensearch/troubleshooting
 
   - category: Connectors / Metadata
     url: /connectors/metadata
@@ -1041,6 +1061,8 @@ site_menu:
     url: /how-to-guides/data-insights/email-report
   - category: How-to Guides / Data Insights / How to Transform the Data Culture of Your Company
     url: /how-to-guides/data-insights/data-culture
+  - category: How-to Guides / Data Insights / Service Insights
+    url: /how-to-guides/data-insights/service-insights
 
   - category: How-to Guides / Data Governance
     url: /how-to-guides/data-governance
@@ -1101,6 +1123,8 @@ site_menu:
     url: /releases/supported
   - category: Releases / All Releases
     url: /releases/all-releases
+  - category: Releases / All Releases / 1.6.9 Release
+    url: /releases/all-releases/#1.6.9-release
   - category: Releases / All Releases / 1.6.8 Release
     url: /releases/all-releases/#1.6.8-release
   - category: Releases / All Releases / 1.6.7 Release
@@ -1115,6 +1139,8 @@ site_menu:
     url: /releases/all-releases/#1.6.3-release
   - category: Releases / All Releases / 1.6.2 Release
     url: /releases/all-releases/#1.6.2-release
+  - category: Releases / All Releases / 1.6.1 Release
+    url: /releases/all-releases/#1.6.1-release
   - category: Releases / All Releases / 1.6.1 Release
     url: /releases/all-releases/#1.6.1-release
   - category: Releases / All Releases / 1.5.15 Release
@@ -1700,6 +1726,12 @@ site_menu:
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/azuresqlconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / BigQueryConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/bigqueryconnection
+  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / Cassandra
+    url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/cassandra
+  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / Cassandra / CassandraValues
+    url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/cassandra/cassandravalues
+  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CassandraConnection
+    url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/cassandraconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / ClickhouseConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/clickhouseconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / Common / BasicAuth
@@ -1710,6 +1742,8 @@ site_menu:
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/common
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / Common / JwtAuth
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/common/jwtauth
+  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CockroachConnection
+    url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/cockroachconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CouchbaseConnection
     url: /main-concepts/metadata-standard/schemas/entity/services/connections/database/couchbaseconnection
   - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / Connections / Database / CustomDatabaseConnection

@@ -17,7 +17,7 @@ Check the more information about environment variable [here](/deployment/securit
 
 {% codeWithLanguageSelector title="Auth Configuration" id="container-1" languagesArray=["implicit","authcode"] theme="dark" %}
 
-```implicit
+``implicit
 # Implicit Flow
 AUTHORIZER_CLASS_NAME=org.openmetadata.service.security.DefaultAuthorizer
 AUTHORIZER_REQUEST_FILTER=org.openmetadata.service.security.JwtFilter
@@ -51,6 +51,7 @@ OIDC_DISCOVERY_URI: http://{ISSUER_URL}/.well-known/openid-configuration        
 OIDC_CALLBACK: ${OIDC_CALLBACK:-"http://localhost:8585/callback"}
 
 ```
+
 {% /codeWithLanguageSelector %}
 
 
@@ -60,7 +61,7 @@ OIDC_CALLBACK: ${OIDC_CALLBACK:-"http://localhost:8585/callback"}
 docker compose --env-file ~/openmetadata_okta.env up -d
 ```
 
-{% partial file="/v1.6/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.7/deployment/configure-ingestion.md" /%}
 
 {% inlineCalloutContainer %}
   {% inlineCallout

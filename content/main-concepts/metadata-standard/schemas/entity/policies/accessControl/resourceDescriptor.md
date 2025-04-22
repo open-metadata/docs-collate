@@ -17,4 +17,4 @@ slug: /main-concepts/metadata-standard/schemas/entity/policies/accesscontrol/res
 - **`operation`** *(string)*: This schema defines all possible operations on metadata of entities in OpenMetadata. Must be one of: `["All", "Create", "CreateIngestionPipelineAutomator", "Delete", "ViewAll", "ViewBasic", "ViewUsage", "ViewTests", "ViewQueries", "ViewDataProfile", "ViewProfilerGlobalConfiguration", "ViewSampleData", "ViewTestCaseFailedRowsSample", "EditAll", "EditCustomFields", "EditDataProfile", "EditDescription", "EditDisplayName", "EditLineage", "EditEntityRelationship", "EditPolicy", "EditOwners", "EditQueries", "EditReviewers", "EditRole", "EditSampleData", "EditStatus", "EditTags", "EditGlossaryTerms", "EditTeams", "EditTier", "EditTests", "EditUsage", "EditUsers", "EditLifeCycle", "EditKnowledgePanel", "EditPage", "EditIngestionPipelineStatus", "DeleteTestCaseFailedRowsSample", "Deploy", "Trigger", "Kill", "GenerateToken"]`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

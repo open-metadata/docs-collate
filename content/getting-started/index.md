@@ -22,7 +22,7 @@ source of truth across your entire data estate.
 
 This centralized information is surfaced through a unified user interface for all your use cases so that different data
 practitioners no longer need to switch between different data catalogs, quality, or governance tools. Additionally, 
-Collate can be extended through the application ecosystem, such as with AI productivity applications like MetaPilot, 
+Collate can be extended through the application ecosystem, such as with AI productivity applications like Collate AI, 
 or with customer-built workflows to integrate Collate with your existing systems. These capabilities are built around 
 native collaboration capabilities for shared workflows across different teams so that every data practitioner can work 
 together: data platform, data governance, data scientist/analyst, and business user.
@@ -31,7 +31,7 @@ together: data platform, data governance, data scientist/analyst, and business u
 
 Before we get started, here’s a quick summary of some of Collate’s main features:
 
-- **Discovery**: integrated catalog, quality, and glossary; natural language search, filtering, and faceting, 90+ turnkey data connectors, and MetaPilot AI Chatbot.
+- **Discovery**: integrated catalog, quality, and glossary; natural language search, filtering, and faceting, 90+ turnkey data connectors, and Collate AI Chatbot.
 - **Lineage**: table and column-level lineage, automated data estate mapping and APIs, lineage layers and search, governance and PII automation and manual customization.
 - **Observability**: alerting and notifications, incident management, third-party notifications, pipeline monitoring, root cause analysis, anomaly detection, data profiler.
 - **Quality**: table and column test cases, no-code and SQL data quality tests, test suites, test case reporting, quality dashboards, widgets and data quality lineage maps.

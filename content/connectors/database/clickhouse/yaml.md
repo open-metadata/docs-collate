@@ -7,7 +7,7 @@ slug: /connectors/database/clickhouse/yaml
 name="Clickhouse"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Sample Data"]
+availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Sample Data", "Reverse Metadata (Collate Only)"]
 unavailableFeatures=["Owners", "Tags", "Stored Procedures"]
 / %}
 
@@ -22,8 +22,9 @@ Configure and schedule Clickhouse metadata and profiler workflows from the OpenM
 - [Data Profiler](#data-profiler)
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
+{% partial file="/v1.7/connectors/reverse-metadata-workflow-link.md" collate: true /%}
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -55,7 +56,7 @@ For the usage and lineage workflow, the user will need `SELECT` privilege. You c
 
 ### Python Requirements
 
-{% partial file="/v1.6/connectors/python-requirements.md" /%}
+{% partial file="/v1.7/connectors/python-requirements.md" /%}
 
 To run the Clickhouse ingestion, you will need to install:
 
@@ -152,11 +153,11 @@ This is a sample config for Clickhouse:
 {% /codeInfo %}
 
 
-{% partial file="/v1.6/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -222,27 +223,27 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.6/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/query-usage.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.7/connectors/yaml/query-usage.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.6/connectors/yaml/lineage.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.7/connectors/yaml/lineage.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.6/connectors/yaml/data-profiler.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.7/connectors/yaml/data-profiler.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.6/connectors/yaml/auto-classification.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.7/connectors/yaml/auto-classification.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.6/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.7/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 

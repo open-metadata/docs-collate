@@ -58,6 +58,7 @@ OIDC_DISCOVERY_URI="OIDC_DISCOVERY_URI=http://host.docker.internal:8081/realms/o
 OIDC_CALLBACK="http://localhost:8585/callback"     # Callback URL registered in Keycloak
 OIDC_SERVER_URL="http://localhost:8585"            # OpenMetadata server URL
 ```
+
 {% /codeWithLanguageSelector %}
 
 {% note %}
@@ -72,7 +73,7 @@ Altering the order of claims in `jwtPrincipalClaims` may lead to problems when m
 docker compose --env-file ~/openmetadata_keycloak.env up -d
 ```
 
-{% partial file="/v1.6/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.7/deployment/configure-ingestion.md" /%}
 
 
 {% inlineCalloutContainer %}

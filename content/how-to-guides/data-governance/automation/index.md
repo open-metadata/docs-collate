@@ -86,14 +86,14 @@ caption="Getting started with Automation"
 For the Action Configuration:
 1. First, we can choose if we want the propagation to happen at the Parent level (e.g., Table), Column Level, or both. This can be configured by selecting **Propagate Parent** and/or **Propagate Column Level**.
 2. Then, we can control which pieces of metadata we want to propagate via lineage:
-   - **Propagate Description**: Propagates the description from the source asset to the downstream assets. Works for both parent and column-level.
-   - **Propagate Tags**: Propagates the tags from the source asset to the downstream assets. Works for both parent and column-level.
-   - **Propagate Glossary Terms**: Propagates the glossary terms from the source asset to the downstream assets. Works for both parent and column-level.
-   - **Propagate Owners**: Only applicable for Parent assets. Propagates the owner information to downstream assets.
-   - **Propagate Tier**: Only applicable for Parent assets. Propagated the tier information to downstream assets.
+    - **Propagate Description**: Propagates the description from the source asset to the downstream assets. Works for both parent and column-level.
+    - **Propagate Tags**: Propagates the tags from the source asset to the downstream assets. Works for both parent and column-level.
+    - **Propagate Glossary Terms**: Propagates the glossary terms from the source asset to the downstream assets. Works for both parent and column-level.
+    - **Propagate Owners**: Only applicable for Parent assets. Propagates the owner information to downstream assets.
+    - **Propagate Tier**: Only applicable for Parent assets. Propagated the tier information to downstream assets.
 
 As with other actions, you can choose to **Overwrite Metadata** or keep the existing metadata and only apply the new metadata to assets that do not have the metadata already.
-   
+
 
 ### 5. Automatic PII Detection and Tagging
 

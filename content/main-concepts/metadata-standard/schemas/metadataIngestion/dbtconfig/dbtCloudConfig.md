@@ -17,4 +17,4 @@ slug: /main-concepts/metadata-standard/schemas/metadataingestion/dbtconfig/dbtcl
 - **`dbtCloudUrl`** *(string, format: uri)*: URL to connect to your dbt cloud instance. E.g., https://cloud.getdbt.com or https://emea.dbt.com/. Default: `"https://cloud.getdbt.com"`.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

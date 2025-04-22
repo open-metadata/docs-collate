@@ -20,9 +20,9 @@ Configure and schedule Exasol metadata from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/database/exasol/troubleshooting)
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/exasol/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/exasol/yaml"} /%}
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 {%inlineCallout icon="description" bold="OpenMetadata 1.6.1 or later" href="/deployment"%}
 To deploy OpenMetadata, check the Deployment guides.
@@ -35,12 +35,12 @@ The connector requires **Exasol version 7.1 or higher** to function correctly. E
 ## Metadata Ingestion
 
 {% partial
-  file="/v1.6/connectors/metadata-ingestion-ui.md"
+  file="/v1.7/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "Exasol",
-    selectServicePath: "/images/v1.6/connectors/exasol/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/exasol/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/exasol/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/exasol/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/exasol/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/exasol/service-connection.png",
   }
 /%}
 
@@ -65,7 +65,7 @@ The connector requires **Exasol version 7.1 or higher** to function correctly. E
 **ignore-certificate**: Enables Transport Layer Security (TLS) but disables validation of the server certificate. 
 
 {% note %}
-This mode should not be used in production. It is useful for testing with self-signed certificates.
+- This mode should not be used in production. It is useful for testing with self-signed certificates.
 {% /note %}
 
 **disable-tls**: Disables Transport Layer Security (TLS). Data is sent in plain text (no encryption).
@@ -76,14 +76,14 @@ This mode is not recommended for production and should only be used in debugging
 Ensure that the appropriate TLS setting is chosen based on your security and deployment requirements.
 {% /note %}
 
-{% partial file="/v1.6/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

@@ -26,4 +26,4 @@ slug: /main-concepts/metadata-standard/schemas/api/feed/createthread
   - **`suggestion`** *(string)*: The suggestion object for the task provided by the creator.
 
 
-Documentation file automatically generated at 2025-01-15 09:05:25.266839+00:00.
+Documentation file automatically generated at 2025-01-15 09:05:41.923720+00:00.

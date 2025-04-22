@@ -7,7 +7,7 @@ slug: /connectors/database/databricks
 name="Databricks"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Tags", "Sample Data"]
+availableFeatures=["Metadata", "Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "dbt", "Tags", "Sample Data", "Reverse Metadata (Collate Only)"]
 unavailableFeatures=["Owners", "Stored Procedures"]
 / %}
 
@@ -28,10 +28,11 @@ Configure and schedule Databricks metadata and profiler workflows from the OpenM
 - [Lineage](/how-to-guides/data-lineage/workflow)
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Troubleshooting](/connectors/database/databricks/troubleshooting)
+{% partial file="/v1.7/connectors/reverse-metadata-link.md" collate: true /%}
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/databricks/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/databricks/yaml"} /%}
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Unity Catalog
 
@@ -40,12 +41,12 @@ If you are using unity catalog in Databricks, then checkout the [Unity Catalog](
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Databricks", 
-    selectServicePath: "/images/v1.6/connectors/databricks/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/databricks/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/databricks/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/databricks/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/databricks/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/databricks/service-connection.png",
 } 
 /%}
 
@@ -61,16 +62,18 @@ If you are using unity catalog in Databricks, then checkout the [Unity Catalog](
 - **Catalog**: Catalog of the data source(Example: hive_metastore). This is optional parameter, if you would like to restrict the metadata reading to a single catalog. When left blank, OpenMetadata Ingestion attempts to scan all the catalog.
 - **DatabaseSchema**: databaseSchema of the data source. This is optional parameter, if you would like to restrict the metadata reading to a single databaseSchema. When left blank, OpenMetadata Ingestion attempts to scan all the databaseSchema.
 
-{% partial file="/v1.6/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.6/connectors/database/related.md" /%}
+{% partial file="/v1.7/connectors/database/databricks/reverse-metadata.md" collate: true /%}
+
+{% partial file="/v1.7/connectors/database/related.md" /%}

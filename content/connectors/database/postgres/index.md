@@ -7,7 +7,7 @@ slug: /connectors/database/postgres
 name="PostgreSQL"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Query Usage", "Data Profiler", "Data Quality", "dbt", "Lineage", "Column-level Lineage", "Owners", "Tags", "Stored Procedures", "Sample Data", "Stored Procedures Lineage"]
+availableFeatures=["Metadata", "Query Usage", "Data Profiler", "Data Quality", "dbt", "Lineage", "Column-level Lineage", "Owners", "Tags", "Stored Procedures", "Sample Data", "Stored Procedures Lineage", "Reverse Metadata (Collate Only)"]
 unavailableFeatures=[]
 / %}
 
@@ -24,8 +24,9 @@ Configure and schedule PostgreSQL metadata and profiler workflows from the OpenM
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Enable Security](#securing-postgres-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/database/postgres/troubleshooting)
+{% partial file="/v1.7/connectors/reverse-metadata-link.md" collate: true /%}
 
-{% partial file="/v1.6/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/postgres/yaml"} /%}
+{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/postgres/yaml"} /%}
 
 ## Requirements
 
@@ -64,8 +65,8 @@ When executing stored procedures in PostgreSQL, lineage extraction relies on cap
 To ensure OpenMetadata captures lineage from stored procedures, follow these steps:
 
 1. **Enable Logging for All Statements**
-   Modify the `postgresql.conf` file and set:
 
+Modify the `postgresql.conf` file and set:
    ```ini
    log_statement = 'all'
    ```
@@ -73,7 +74,7 @@ To ensure OpenMetadata captures lineage from stored procedures, follow these ste
  This will log all executed SQL statements, including those inside stored procedures.
 
 2. **Configure `pg_stat_statements` to Track Nested Queries**
-   
+
 By default, `pg_stat_statements` may only capture top-level procedure calls and not the internal queries. To change this behavior, update:
 
    ```ini
@@ -85,12 +86,12 @@ This ensures that statements executed within procedures are recorded.
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.6/connectors/metadata-ingestion-ui.md" 
+  file="/v1.7/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "PostgreSQL", 
-    selectServicePath: "/images/v1.6/connectors/postgres/select-service.png",
-    addNewServicePath: "/images/v1.6/connectors/postgres/add-new-service.png",
-    serviceConnectionPath: "/images/v1.6/connectors/postgres/service-connection.png",
+    selectServicePath: "/images/v1.7/connectors/postgres/select-service.png",
+    addNewServicePath: "/images/v1.7/connectors/postgres/add-new-service.png",
+    serviceConnectionPath: "/images/v1.7/connectors/postgres/service-connection.png",
 } 
 /%}
 
@@ -185,15 +186,15 @@ There are a couple of types of SSL modes that PostgreSQL supports which can be a
 
 In order to integrate SSL in the Metadata Ingestion Config, the user will have to add the SSL config under sslConfig which is placed in the source.
 
-{% partial file="/v1.6/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.6/connectors/test-connection.md" /%}
+{% partial file="/v1.7/connectors/test-connection.md" /%}
 
-{% partial file="/v1.6/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.6/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -210,9 +211,11 @@ For IAM authentication, it is recommended to choose the `allow` mode or another 
 {% /note %}
 
 {% image
-  src="/images/v1.6/connectors/ssl_connection.png"
+  src="/images/v1.7/connectors/ssl_connection.png"
   alt="SSL Configuration"
   height="450px"
   caption="SSL Configuration" /%}
 
-{% partial file="/v1.6/connectors/database/related.md" /%}
+{% partial file="/v1.7/connectors/database/postgres/reverse-metadata.md" collate: true /%}
+
+{% partial file="/v1.7/connectors/database/related.md" /%}

@@ -7,7 +7,7 @@ slug: /connectors/database/snowflake/yaml
 name="Snowflake"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Query Usage", "Data Profiler", "Data Quality", "Lineage", "Column-level Lineage", "dbt", "Stored Procedures", "Tags", "Sample Data"]
+availableFeatures=["Metadata", "Query Usage", "Data Profiler", "Data Quality", "Lineage", "Column-level Lineage", "dbt", "Stored Procedures", "Tags", "Sample Data", "Reverse Metadata (Collate Only)"]
 unavailableFeatures=["Owners"]
 / %}
 
@@ -23,14 +23,15 @@ Configure and schedule Snowflake metadata and profiler workflows from the OpenMe
 - [Data Profiler](#data-profiler)
 - [Data Quality](#data-quality)
 - [dbt Integration](#dbt-integration)
+{% partial file="/v1.7/connectors/reverse-metadata-workflow-link.md" collate: true /%}
 
-{% partial file="/v1.6/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.6/connectors/python-requirements.md" /%}
+{% partial file="/v1.7/connectors/python-requirements.md" /%}
 
 To run the Snowflake ingestion, you will need to install:
 
@@ -164,47 +165,53 @@ When using this field make sure you have all these tables available within your 
 
 {% /codeInfo %}
 
-{% codeInfo srNumber=39 %}
+{% codeInfo srNumber=7 %}
 
-**clientSessionKeepAlive**: Optional Configuration to keep the session active in case the ingestion job runs for longer duration. 
+**includeStreams**: Optional configuration for ingestion of streams, By default, it will skip the streams.
 
 {% /codeInfo %}
 
-{% codeInfo srNumber=7 %}
+{% codeInfo srNumber=39 %}
+
+**clientSessionKeepAlive**: Optional Configuration to keep the session active in case the ingestion job runs for longer duration.
+
+{% /codeInfo %}
+
+{% codeInfo srNumber=8 %}
 
 **privateKey**: If you have configured the key pair authentication for the given user you will have to pass the private key associated with the user in this field. You can checkout [this](https://docs.snowflake.com/en/user-guide/key-pair-auth) doc to get more details about key-pair authentication.
   - The multi-line key needs to be converted to one line with `\n` for line endings i.e. `-----BEGIN ENCRYPTED PRIVATE KEY-----\nMII...\n...\n-----END ENCRYPTED PRIVATE KEY-----`
 
 {% /codeInfo %}
 
-{% codeInfo srNumber=8 %}
+{% codeInfo srNumber=9 %}
 
 **snowflakePrivatekeyPassphrase**: If you have configured the encrypted key pair authentication for the given user you will have to pass the paraphrase associated with the private key in this field. You can checkout [this](https://docs.snowflake.com/en/user-guide/key-pair-auth) doc to get more details about key-pair authentication.
 
 
 {% /codeInfo %}
 
-{% codeInfo srNumber=9 %}
+{% codeInfo srNumber=10 %}
 
 **role**: You can specify the role of user that you would like to ingest with, if no role is specified the default roles assigned to user will be selected.
 
 {% /codeInfo %}
 
-{% partial file="/v1.6/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
-{% codeInfo srNumber=10 %}
+{% codeInfo srNumber=11 %}
 
 **Connection Options (Optional)**: Enter the details for any additional connection options that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
 {% /codeInfo %}
 
-{% codeInfo srNumber=11 %}
+{% codeInfo srNumber=12 %}
 
 **Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to database during the connection. These details must be added as Key-Value pairs.
 
@@ -245,50 +252,53 @@ source:
 ```yaml {% srNumber=6 %}
       includeTransientTables: false
 ```
+```yaml {% srNumber=7 %}
+      includeStreams: false
+```
 ```yaml {% srNumber=39 %}
       clientSessionKeepAlive: false
 ```
-```yaml {% srNumber=7 %}
+```yaml {% srNumber=8 %}
       # privateKey: <privateKey>
 ```
-```yaml {% srNumber=8 %}
+```yaml {% srNumber=9 %}
       # snowflakePrivatekeyPassphrase: <passphrase>
 ```
-```yaml {% srNumber=9 %}
+```yaml {% srNumber=10 %}
       # role: <role>
 ```
-```yaml {% srNumber=10 %}
+```yaml {% srNumber=11 %}
       # connectionOptions:
       #   key: value
 ```
-```yaml {% srNumber=11 %}
+```yaml {% srNumber=12 %}
       # connectionArguments:
       #   key: value
 ```
 
-{% partial file="/v1.6/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.6/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
 
-{% partial file="/v1.6/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}
 
 
-{% partial file="/v1.6/connectors/yaml/query-usage.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.7/connectors/yaml/query-usage.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.6/connectors/yaml/lineage.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.7/connectors/yaml/lineage.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.6/connectors/yaml/data-profiler.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.7/connectors/yaml/data-profiler.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.6/connectors/yaml/auto-classification.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.7/connectors/yaml/auto-classification.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.6/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.7/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 
