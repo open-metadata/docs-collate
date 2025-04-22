@@ -1,3 +1,5 @@
 [submodule "docs-v1"]
 	path = docs-v1
 	url = https://github.com/open-metadata/docs-v1.git
+	branch = main
+	ignore = dirty 
