@@ -32,3 +32,75 @@ body {
   font-weight: 400;
   background-color: transparent;
 }
+
+.cookie-card {
+	background: linear-gradient(112.27deg, #f4fdff 17.47%, #fcf4f4 84.06%);
+  border: 1px solid #6863ce;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  z-index: 30;
+  padding: 6px 16px 16px;
+  margin: 20px;
+  max-width: 850px;
+  box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.12);
+}
+
+.cookie-content {
+  color: #475569;
+  font-weight: 300;
+}
+
+.privacy-policy-link {
+  text-decoration: underline;
+}
+
+.button-group {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.button {
+  border-radius: 1.5rem; 
+  padding: 0.5rem 2rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+}
+
+.button-accept {
+  background-color: #CD3C4D;
+  color: white;
+}
+
+.button-reject {
+  background-color: white;
+  color: #CD3C4D;
+  border: 1px solid #CD3C4D;
+}
+
+@media (max-width: 640px) {
+  .cookie-card {
+    margin: 0px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cookie-card {
+    max-width: 576px;
+  }
+}
+
+.cookie-modal {
+    transform: translateY(100%); 
+    transition: transform 1.2s ease-in-out, visibility 1.2s ease-in-out;
+    visibility: hidden;
+}
+
+.cookie-modal.visible {
+    transform: translateY(0); 
+    visibility: visible;
+}
