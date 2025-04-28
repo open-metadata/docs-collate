@@ -102,7 +102,7 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
           defer
         ></script> */}
       </Head>
-      <GoogleTagManagerScript />
+      {!storedCookie || storedCookie === 'Accept' && <GoogleTagManagerScript />}
         <ErrorBoundary>
           <RouteChangingContextProvider>
             <DocVersionContextProvider enableVersion={false}>
