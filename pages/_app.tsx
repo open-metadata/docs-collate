@@ -15,7 +15,6 @@ import { MenuItemsContextProvider } from "../docs-v1/context/MenuItemsContext";
 import { NavBarCollapseContextProvider } from "../docs-v1/context/NavBarCollapseContext";
 import { RouteChangingContextProvider } from "../docs-v1/context/RouteChangingContext";
 import { StepsContextProvider } from "../docs-v1/context/StepsContext";
-import GoogleTagManagerScript from "../components/GoogleTagManagerScript/GoogleTagManagerScript";
 import CookieModal from "../components/CookieModal/CookieModal";
 
 const TITLE = "Collate Documentation: Get Help Instantly";
@@ -45,32 +44,27 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
     }, [])
 
     useEffect(() => {
-        if (!storedCookie || storedCookie === 'Accept') {
-            const gtmScript = document.createElement('script')
-            gtmScript.src =
-                'https://www.googletagmanager.com/gtag/js?id=G-8N4ZPTEDL2'
-            gtmScript.async = true
-            document.head.appendChild(gtmScript)
-
-            const inlineScript = document.createElement('script')
-            inlineScript.id = 'gtag-init'
-            inlineScript.defer = true
-            inlineScript.innerHTML = `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-8N4ZPTEDL2');
+      if (!storedCookie || storedCookie === 'Accept') {
+          // Google Tag Manager
+          const gtmTagScript = document.createElement('script')
+          gtmTagScript.innerHTML = `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-554C968W');
           `
-            document.head.appendChild(inlineScript)
-        } else {
-            window.dataLayer = []
+          gtmTagScript.id = 'gtm-init'
+          document.head.appendChild(gtmTagScript)
+      } else {
+          window.dataLayer = []
 
-            const scriptTags = document.querySelectorAll(
-                'script[src*="googletagmanager"], script#gtag-init'
-            )
-            scriptTags.forEach((tag) => tag.remove())
-        }
-    }, [storedCookie])
+          const scriptTags = document.querySelectorAll(
+              'script[src*="googletagmanager"], script#gtm-init'
+          )
+          scriptTags.forEach((tag) => tag.remove())
+      }
+  }, [storedCookie])
   return (
     <>
       <Head>
@@ -102,7 +96,6 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
           defer
         ></script> */}
       </Head>
-      {!storedCookie || storedCookie === 'Accept' && <GoogleTagManagerScript />}
         <ErrorBoundary>
           <RouteChangingContextProvider>
             <DocVersionContextProvider enableVersion={false}>
