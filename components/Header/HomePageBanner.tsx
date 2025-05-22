@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   HEADER_INFO,
   HEADER_TABS,
@@ -7,6 +6,7 @@ import {
 import YouTube from "../../docs-v1/components/common/Youtube/Youtube";
 import { HomePageBannerProps } from "./HomePageBanner.interface";
 import styles from "./HomePageBanner.module.css";
+import ParamLink from "../../docs-v1/components/ParamLink";
 
 export default function HomePageBanner({
   bannerInfo,
@@ -32,18 +32,16 @@ export default function HomePageBanner({
             />
           </div>
           <div>
-            <Link href="/how-to-guides" className={styles.BannerHeading}>
-              {HEADER_INFO.header}
-            </Link>
+            <ParamLink link="/how-to-guides" name={HEADER_INFO.header} className={styles.BannerHeading} />
             <div className={styles.DescriptionText}>
               {HEADER_INFO.description}
             </div>
             <div className={styles.TabContainer}>
               {HEADER_TABS.map(({ link, Icon, name }) => (
-                <Link href={link} key={name} className={styles.Tabs}>
+                <ParamLink link={link} key={name} className={styles.Tabs}>
                   <Icon height={20} />
                   <span>{name}</span>
-                </Link>
+                </ParamLink>
               ))}
             </div>
           </div>
