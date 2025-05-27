@@ -13,7 +13,7 @@ export default function Footer({ bordered }: { bordered?: boolean }) {
     >
       <div className={styles.InnerContainer}>
         {footerItemsData.map((item) => (
-          <ParamLink className={styles.Link} link={item.href} key={item.href} name={item.name} />
+          <ParamLink className={styles.Link} href={item.href} key={item.href} name={item.name} />
         ))}
       </div>
     </footer>

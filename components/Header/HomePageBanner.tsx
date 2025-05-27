@@ -32,13 +32,13 @@ export default function HomePageBanner({
             />
           </div>
           <div>
-            <ParamLink link="/how-to-guides" name={HEADER_INFO.header} className={styles.BannerHeading} />
+            <ParamLink href="/how-to-guides" name={HEADER_INFO.header} className={styles.BannerHeading} />
             <div className={styles.DescriptionText}>
               {HEADER_INFO.description}
             </div>
             <div className={styles.TabContainer}>
               {HEADER_TABS.map(({ link, Icon, name }) => (
-                <ParamLink link={link} key={name} className={styles.Tabs}>
+                <ParamLink href={link} key={name} className={styles.Tabs}>
                   <Icon height={20} />
                   <span>{name}</span>
                 </ParamLink>

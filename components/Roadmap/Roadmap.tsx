@@ -58,16 +58,16 @@ function Roadmap() {
         <ParamLink
           target="_blank"
           name="GitHub"
-          link="https://github.com/open-metadata/OpenMetadata/issues"
+          href="https://github.com/open-metadata/OpenMetadata/issues"
         />{" "}
         or ping us on{" "}
-        <ParamLink target="_blank" link="https://slack.open-metadata.org/" name="Slack" />
+        <ParamLink target="_blank" href="https://slack.open-metadata.org/" name="Slack" />
         if you would like to prioritize any feature or would like to add a new
         feature.
       </p>
       <p>
         You can check the latest release{" "}
-        <ParamLink link={getUrl({ url: ALL_RELEASES_URL, docVersion, enableVersion })} name="here" />
+        <ParamLink href={getUrl({ url: ALL_RELEASES_URL, docVersion, enableVersion })} name="here" />
         .
       </p>
 

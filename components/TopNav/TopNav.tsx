@@ -48,7 +48,7 @@ export default function TopNav() {
         )}
       >
         <div className={OMStyles.LogoContainer}>
-          <ParamLink link="/" aria-label="collate-icon">
+          <ParamLink href="/" aria-label="collate-icon">
             <CollateIcon width={128} height={50} />
           </ParamLink>
         </div>
@@ -75,7 +75,7 @@ export default function TopNav() {
       </SearchContextProvider>
       <ParamLink
         className={classNames(OMStyles.IconContainer, collateStyles.Icon)}
-        link="/swagger.html"
+        href="/swagger.html"
         target="_blank"
         aria-label="api-icon"
       >
