@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import { isEmpty } from "lodash";
-import Link from "next/link";
 import { useCallback, useMemo, useRef, useState } from "react";
 import {
   ALL_RELEASES_URL,
@@ -12,6 +11,7 @@ import styles from "../../docs-v1/components/Roadmap/Roadmap.module.css";
 import RoadmapFeatureItem from "../../docs-v1/components/Roadmap/RoadmapFeatureItem/RoadmapFeatureItem";
 import { useDocVersionContext } from "../../docs-v1/context/DocVersionContext";
 import { generateIdFromHeading, getUrl } from "../../docs-v1/utils/CommonUtils";
+import ParamLink from "../../docs-v1/components/ParamLink";
 
 function Roadmap() {
   const { docVersion, enableVersion } = useDocVersionContext();
@@ -55,26 +55,19 @@ function Roadmap() {
       <p>
         The below roadmap is subject to change based on community needs and
         feedback. Please file an Issue on{" "}
-        <Link
+        <ParamLink
           target="_blank"
+          name="GitHub"
           href="https://github.com/open-metadata/OpenMetadata/issues"
-        >
-          GitHub
-        </Link>{" "}
+        />{" "}
         or ping us on{" "}
-        <Link target="_blank" href="https://slack.open-metadata.org/">
-          Slack
-        </Link>{" "}
+        <ParamLink target="_blank" href="https://slack.open-metadata.org/" name="Slack" />
         if you would like to prioritize any feature or would like to add a new
         feature.
       </p>
       <p>
         You can check the latest release{" "}
-        <Link
-          href={getUrl({ url: ALL_RELEASES_URL, docVersion, enableVersion })}
-        >
-          here
-        </Link>
+        <ParamLink href={getUrl({ url: ALL_RELEASES_URL, docVersion, enableVersion })} name="here" />
         .
       </p>
 

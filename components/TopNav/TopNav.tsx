@@ -1,17 +1,16 @@
 import algoliasearch from "algoliasearch/lite";
 import classNames from "classnames";
-import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { MdMenu, MdMenuOpen } from "react-icons/md";
 import { InstantSearch } from "react-instantsearch";
 import OMStyles from "../../docs-v1/components/TopNav/TopNav.module.css";
-import { useDocVersionContext } from "../../docs-v1/context/DocVersionContext";
 import { useNavBarCollapsedContext } from "../../docs-v1/context/NavBarCollapseContext";
 import { SearchContextProvider } from "../../docs-v1/context/SearchContext";
 import { ReactComponent as ApiIcon } from "../../docs-v1/images/icons/api.svg";
 import { ReactComponent as CollateIcon } from "../../images/icons/collate-logo.svg";
 import Search from "../Search/Search";
 import collateStyles from "./TopNav.module.css";
+import ParamLink from "../../docs-v1/components/ParamLink";
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
@@ -21,7 +20,6 @@ const searchClient = algoliasearch(
 export default function TopNav() {
   const [displayNavBarCollapseButton, setDisplayNavBarCollapseButton] =
     useState(false);
-  const { docVersion } = useDocVersionContext();
   const { navBarCollapsed, onChangeNavBarCollapsed } =
     useNavBarCollapsedContext();
 
@@ -50,9 +48,9 @@ export default function TopNav() {
         )}
       >
         <div className={OMStyles.LogoContainer}>
-          <Link href="/" aria-label="collate-icon">
+          <ParamLink href="/" aria-label="collate-icon">
             <CollateIcon width={128} height={50} />
-          </Link>
+          </ParamLink>
         </div>
         {displayNavBarCollapseButton && (
           <button
@@ -75,15 +73,14 @@ export default function TopNav() {
           <Search className={collateStyles.SearchDiv} />
         </InstantSearch>
       </SearchContextProvider>
-      <a
+      <ParamLink
         className={classNames(OMStyles.IconContainer, collateStyles.Icon)}
         href="/swagger.html"
         target="_blank"
-        title="Swagger"
         aria-label="api-icon"
       >
         <ApiIcon />
-      </a>
+      </ParamLink>
     </nav>
   );
 }

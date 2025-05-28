@@ -71,7 +71,12 @@ module.exports =
           source: '/how-to-guides/data-governance/classification/auto/auto-pii-tagging',
           destination: '/how-to-guides/data-governance/classification/auto-classification/auto-pii-tagging',
           permanent: true,
-        }
+        },
+        {
+          source: '/connectors/search/airflow/troubleshooting',
+          destination: '/connectors/pipeline/airflow/troubleshooting',
+          permanent: true,
+        },
       ];
     },
   });

@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { footerItemsData } from "../../constants/Footer.constants";
 import styles from "./Footer.module.css";
-import Link from "next/link";
+import ParamLink from "../../docs-v1/components/ParamLink";
 
 export default function Footer({ bordered }: { bordered?: boolean }) {
   return (
@@ -13,9 +13,7 @@ export default function Footer({ bordered }: { bordered?: boolean }) {
     >
       <div className={styles.InnerContainer}>
         {footerItemsData.map((item) => (
-          <Link className={styles.Link} href={item.href} key={item.href}>
-            {item.name}
-          </Link>
+          <ParamLink className={styles.Link} href={item.href} key={item.href} name={item.name} />
         ))}
       </div>
     </footer>
