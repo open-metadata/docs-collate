@@ -1,6 +1,6 @@
 ---
 title: External Storage for Sample Data
-slug: /how-to-guides/data-quality-observability/profiler/external-sample-data
+slug: /how-to-guides/data-governance/classification/auto-classification/external-sample-data
 ---
 
 # External Storage for Sample Data
