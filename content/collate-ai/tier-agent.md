@@ -4,17 +4,17 @@ slug: /collateai/tier-agent
 collate: true
 ---
 
-# Collate AI Tier Agent
+## Collate AI Tier Agent
 
-## Overview
+### Overview
 
 The Tier Agent analyzes data usage and lineage to suggest appropriate tier classifications for your assets, aiding in identifying business-critical data.
 
-## Key Features
+### Key Features
 
 - **Automated Tier Suggestions**: Assigns tier classifications to assets based on their usage patterns and lineage information.
 
-## Setup Instructions
+### Setup Instructions
 
 1. **Navigate to Applications**: Go to `Settings > Applications`.
 
