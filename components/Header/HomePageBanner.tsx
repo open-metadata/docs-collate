@@ -16,9 +16,9 @@ export default function HomePageBanner({
       <div className={styles.HeaderContainer}>
         <div className={styles.Content}>
           <div className="mb-8 flex flex-col items-center">
-            <div className={styles.Heading}>
+            <h1 className={styles.Heading}>
               Collate <span className={styles.SubHeading}>Documentation</span>
-            </div>
+            </h1>
             <p className="text-xl text-center text-[#3C4257]">
               {bannerInfo.description}
             </p>
