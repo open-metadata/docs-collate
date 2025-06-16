@@ -8,6 +8,8 @@ import { ReactComponent as ObservabilityIcon } from "../images/header-tabs/obser
 
 export const HOME_PAGE_BANNER_VIDEO_ID = "j5FPvmVQgEM";
 
+export const HOST_NAME = "https://docs.getcollate.io/";
+
 export const COLLATE_HOME_PAGE_BANNER_INFO = {
   ...HOME_PAGE_BANNER_INFO,
   title: "Collate Documentation",

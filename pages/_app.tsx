@@ -16,11 +16,13 @@ import { NavBarCollapseContextProvider } from "../docs-v1/context/NavBarCollapse
 import { RouteChangingContextProvider } from "../docs-v1/context/RouteChangingContext";
 import { StepsContextProvider } from "../docs-v1/context/StepsContext";
 import CookieModal from "../components/CookieModal/CookieModal";
+import { HOST_NAME } from "../constants/Homepage.constants";
+import { SlugProps } from "../docs-v1/pages/[version]/[...slug]";
 
 const TITLE = "Collate Documentation: Get Help Instantly";
 const DESCRIPTION = "Unified Platform for data discovery, observability and governance.";
 
-export type MyAppProps = MarkdocNextJsPageProps;
+export type MyAppProps = MarkdocNextJsPageProps & Partial<SlugProps>;
 
 declare global {
   interface Window {
@@ -30,6 +32,9 @@ declare global {
 
 export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
   const [storedCookie, setStoredCookie] = useState<string | null>(null);
+  const { slug, noindex, nofollow } = pageProps;
+
+  const canonicalUrl = `${HOST_NAME}${slug?.join('/') || ''}`;
 
 	const handleButtonClick = (choice: string) => {
         localStorage.setItem('docsCollateCookie', choice)
@@ -80,6 +85,11 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
           name="keywords"
           content="best open-source data catalog, #1 open source data catalog, openmetadata documentation, data governance solutions, centralized metadata platform, best data discovery tool, data collaboration platform, modern data catalog, data catalog data lineage, best metadata management tool"
         />
+        {(noindex || nofollow) ? (
+          <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+        ): (
+          <link rel="canonical" href={canonicalUrl} />
+        )}
         {DESCRIPTION && (
           <React.Fragment>
             <meta content={DESCRIPTION} name="description" />
