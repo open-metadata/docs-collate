@@ -2,7 +2,6 @@ import Markdoc from "@markdoc/markdoc";
 import fs from "fs";
 import matter from "gray-matter";
 import { isEqual, isObject } from "lodash";
-import Script from "next/script";
 import { basename } from "path";
 import { useMemo } from "react";
 import Footer from "../components/Footer/Footer";
@@ -25,6 +24,8 @@ interface Props {
   content: string;
   slug: string[];
   partials: Record<string, string>;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 export default function Article({ content, slug, partials }: Readonly<Props>) {
@@ -59,7 +60,6 @@ export default function Article({ content, slug, partials }: Readonly<Props>) {
   }, [slug]);
 
   return (
-    <>
       <ErrorBoundary>
         {isAPIsPage.value ? (
           <APIPageLayout
@@ -76,7 +76,6 @@ export default function Article({ content, slug, partials }: Readonly<Props>) {
           />
         )}
       </ErrorBoundary>
-    </>
   );
 }
 
@@ -89,6 +88,8 @@ export async function getServerSideProps(context: {
       content: "",
       slug: [],
       partials: {},
+      noindex: false,
+      nofollow: false,
     };
 
     let location = `/${context.params.slug.join("/")}`;
@@ -113,11 +114,13 @@ export async function getServerSideProps(context: {
 
       // Get the last element of the array to find the MD file
       const fileContents = fs.readFileSync(filename, "utf8");
-      const { content } = matter(fileContents);
+      const { content, data } = matter(fileContents);
 
       props["content"] = content;
       props["slug"] = context.params.slug;
       props["partials"] = partials;
+      props["noindex"] = data.noindex ?? false;
+      props["nofollow"] = data.nofollow ?? false;
     }
 
     return { props };
