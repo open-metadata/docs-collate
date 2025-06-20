@@ -441,10 +441,6 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://docs.getcollate.io/sdk/python/entities</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
         <loc>https://docs.getcollate.io/sdk/python/entities/ml-model</loc>
         <priority>1.00</priority>
     </url>

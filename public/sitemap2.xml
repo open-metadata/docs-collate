@@ -1109,10 +1109,6 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://docs.getcollate.io/connectors/ingestion/workflows/metadata/filter-patterns</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
         <loc>https://docs.getcollate.io/connectors/ingestion/workflows/metadata/filter-patterns/database</loc>
         <priority>1.00</priority>
     </url>

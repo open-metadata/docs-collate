@@ -450,10 +450,6 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/auth/servicetokenenum</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
         <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/auth/ssoauth</loc>
         <priority>1.00</priority>
     </url>
@@ -1154,10 +1150,6 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/entity/services/connections/messaging/saslmechanismtype</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
         <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/entity/services/connections/metadata/amundsenconnection</loc>
         <priority>1.00</priority>
     </url>
@@ -1343,10 +1335,6 @@
     </url>
     <url>
         <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/entity/services/searchservice</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/entity/services/servicetype</loc>
         <priority>1.00</priority>
     </url>
     <url>
@@ -1566,10 +1554,6 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/monitoring/eventmonitorprovider</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
         <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/monitoring</loc>
         <priority>1.00</priority>
     </url>
@@ -1658,15 +1642,7 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/security/secrets/secretsmanagerclientloader</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
         <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/security/secrets/secretsmanagerconfiguration</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/security/secrets/secretsmanagerprovider</loc>
         <priority>1.00</priority>
     </url>
     <url>
@@ -1758,10 +1734,6 @@
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/type/csverrortype</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
         <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/type/csvfile</loc>
         <priority>1.00</priority>
     </url>
@@ -1807,10 +1779,6 @@
     </url>
     <url>
         <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/type/function</loc>
-        <priority>1.00</priority>
-    </url>
-    <url>
-        <loc>https://docs.getcollate.io/main-concepts/metadata-standard/schemas/type/include</loc>
         <priority>1.00</priority>
     </url>
     <url>
