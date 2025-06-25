@@ -22,17 +22,17 @@ Configure and schedule PinotDB metadata and profiler workflows from the OpenMeta
 - [Lineage](/how-to-guides/data-lineage/workflow)
 - [Troubleshooting](/connectors/database/pinotdb/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/pinotdb/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/pinotdb/yaml"} /%}
 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "PinotDB", 
-    selectServicePath: "/images/v1.7/connectors/pinotdb/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/pinotdb/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/pinotdb/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/pinotdb/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/pinotdb/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/pinotdb/service-connection.png",
 } 
 /%}
 
@@ -50,16 +50,16 @@ Configure and schedule PinotDB metadata and profiler workflows from the OpenMeta
 - **sslCertificate**: Provide the path to ssl client certificate file (ssl_cert).
 - **sslKey**: Provide the path to ssl client certificate file (ssl_key).
 
-{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.7/connectors/database/related.md" /%}
+{% partial file="/v1.8/connectors/database/related.md" /%}

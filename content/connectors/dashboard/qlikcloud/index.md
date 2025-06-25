@@ -20,7 +20,7 @@ Configure and schedule QlikCloud metadata and profiler workflows from the OpenMe
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/qlikcloud/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/qlikcloud/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/qlikcloud/yaml"} /%}
 
 ## Requirements
 
@@ -31,12 +31,12 @@ To deploy OpenMetadata, check the Deployment guides.
 ## Metadata Ingestion
 
 {% partial
-  file="/v1.7/connectors/metadata-ingestion-ui.md"
+  file="/v1.8/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "QlikCloud",
-    selectServicePath: "/images/v1.7/connectors/qlikcloud/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/qlikcloud/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/qlikcloud/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/qlikcloud/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/qlikcloud/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/qlikcloud/service-connection.png",
  }
 /%}
 
@@ -51,12 +51,12 @@ To deploy OpenMetadata, check the Deployment guides.
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.7/connectors/dashboard/dashboard-lineage.md" /%}
+{% partial file="/v1.8/connectors/dashboard/dashboard-lineage.md" /%}

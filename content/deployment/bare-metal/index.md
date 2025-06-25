@@ -20,7 +20,7 @@ Type the following command to verify that you have a supported version of the Ja
 java --version
 ```
 
-To install Java or upgrade to Java 21 or greater, see the instructions for your operating system at [How do I install
+To install Java or upgrade to Java 21, see the instructions for your operating system at [How do I install
 Java?](https://java.com/en/download/help/download_options.html#mac).
 
 ## MySQL (version 8.0.0 or higher)
@@ -234,6 +234,7 @@ ELASTICSEARCH_USER="<OPENSEARCH_USERNAME>"
 ELASTICSEARCH_PASSWORD="<OPENSEARCH_PASSWORD>"
 ELASTICSEARCH_CLUSTER_ALIAS="<clusterAlias>"
 ```
+
 {% note %}
 
 If you want to separate indexes for production and non-production environments, you can set the `clusterAlias` in the configuration file.

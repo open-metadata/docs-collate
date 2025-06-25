@@ -11,7 +11,7 @@ availableFeatures=["Metadata"]
 unavailableFeatures=[]
 / %}
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/metadata/atlas/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/metadata/atlas/yaml"} /%}
 
 ## Requirements
 
@@ -28,12 +28,12 @@ we will use it to create Atlas Service.
 For example, to create a Hive Service you can follow these steps:
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Hive", 
-    selectServicePath: "/images/v1.7/connectors/hive/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/hive/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/hive/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/hive/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/hive/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/hive/service-connection.png",
 } 
 /%}
 
@@ -42,12 +42,12 @@ For example, to create a Hive Service you can follow these steps:
 Then, prepare the Atlas Service and configure the Ingestion:
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Atlas", 
-    selectServicePath: "/images/v1.7/connectors/atlas/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/atlas/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/atlas/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/atlas/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/atlas/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/atlas/service-connection.png",
 } 
 /%}
 
@@ -65,10 +65,10 @@ Then, prepare the Atlas Service and configure the Ingestion:
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/metadata/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/metadata/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

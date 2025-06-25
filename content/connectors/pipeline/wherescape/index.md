@@ -20,7 +20,7 @@ Configure and schedule Wherescape metadata workflow from the OpenMetadata UI:
     - [Connection Details](#connection-details)
 - [Troubleshooting](/connectors/pipeline/wherescape/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/wherescape/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/wherescape/yaml"} /%}
 
 ## Requirements
 To extract Wherescape metadata, we need the batabase connection details where the metadata is stored.
@@ -32,12 +32,12 @@ To extract Wherescape metadata, we need the batabase connection details where th
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Wherescape", 
-    selectServicePath: "/images/v1.7/connectors/wherescape/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/wherescape/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/wherescape/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/wherescape/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/wherescape/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/wherescape/service-connection.png",
 } 
 /%}
 
@@ -58,10 +58,10 @@ In terms of `connection` we support the following selections:
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

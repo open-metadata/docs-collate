@@ -26,7 +26,7 @@ Configure and schedule PostgreSQL metadata and profiler workflows from the OpenM
 {% collateContent %}
 - [Reverse Metadata](/connectors/ingestion/workflows/reverse-metadata)
 {% /collateContent %}
-{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -53,14 +53,13 @@ GRANT pg_read_all_stats TO your_user;
 
 ### Python Requirements
 
-{% partial file="/v1.7/connectors/python-requirements.md" /%}
+{% partial file="/v1.8/connectors/python-requirements.md" /%}
 
 To run the PostgreSQL ingestion, you will need to install:
 
 ```bash
 pip3 install "openmetadata-ingestion[postgres]"
 ```
-
 ### IAM Authentication
 
 In order to be able to connect via IAM, you need to have the following:
@@ -75,8 +74,10 @@ Even if you use IAM to connect to postgres, you need to specify a user to prepar
 CREATE USER iam_user WITH LOGIN;
 GRANT rds_iam TO iam_user;
 ```
+
 3. The AWS Role has the necessary permissions
 The role that is going to be used to perform the ingestion, needs to have the following permissions:
+
 ```json
 {
     "Version": "2012-10-17",
@@ -228,11 +229,11 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /codeInfo %}
 
-{% partial file="/v1.7/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -318,27 +319,27 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.7/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/query-usage.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.8/connectors/yaml/query-usage.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.7/connectors/yaml/lineage.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.8/connectors/yaml/lineage.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.7/connectors/yaml/data-profiler.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.8/connectors/yaml/data-profiler.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.7/connectors/yaml/auto-classification.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.8/connectors/yaml/auto-classification.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.7/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.8/connectors/yaml/data-quality.md" /%}
 
 ## Securing PostgreSQL Connection with SSL in OpenMetadata
 

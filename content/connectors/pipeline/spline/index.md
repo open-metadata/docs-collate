@@ -20,7 +20,7 @@ Configure and schedule Spline metadata and profiler workflows from the OpenMetad
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/pipeline/spline/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/spline/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/spline/yaml"} /%}
 
 ## Requirements
 
@@ -37,12 +37,12 @@ You can refer [this](https://github.com/AbsaOSS/spline-getting-started/tree/main
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Spline", 
-    selectServicePath: "/images/v1.7/connectors/spline/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/spline/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/spline/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/spline/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/spline/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/spline/service-connection.png",
 } 
 /%}
 
@@ -57,10 +57,10 @@ You can refer [this](https://github.com/AbsaOSS/spline-getting-started/tree/main
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

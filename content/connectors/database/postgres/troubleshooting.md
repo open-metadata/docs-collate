@@ -3,7 +3,7 @@ title: PostgreSQL Connector Troubleshooting
 slug: /connectors/database/postgres/troubleshooting
 ---
 
-{% partial file="/v1.7/connectors/troubleshooting.md" /%}
+{% partial file="/v1.8/connectors/troubleshooting.md" /%}
 
 ## Troubleshooting: `pg_stat_statements` Relation Does Not Exist
 
@@ -124,6 +124,7 @@ Even if you use IAM to connect to postgres, you need to specify a user to prepar
 CREATE USER iam_user WITH LOGIN;
 GRANT rds_iam TO iam_user;
 ```
+
 3. The AWS Role has the necessary permissions
 The role that is going to be used to perform the ingestion, needs to have the following permissions:
 ```json

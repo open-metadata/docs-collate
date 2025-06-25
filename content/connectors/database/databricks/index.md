@@ -33,9 +33,9 @@ Configure and schedule Databricks metadata and profiler workflows from the OpenM
 - [Reverse Metadata](#reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/databricks/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/databricks/yaml"} /%}
 
-{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -89,12 +89,12 @@ If you are using unity catalog in Databricks, then checkout the [Unity Catalog](
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Databricks", 
-    selectServicePath: "/images/v1.7/connectors/databricks/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/databricks/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/databricks/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/databricks/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/databricks/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/databricks/service-connection.png",
 } 
 /%}
 
@@ -110,20 +110,20 @@ If you are using unity catalog in Databricks, then checkout the [Unity Catalog](
 - **Catalog**: Catalog of the data source(Example: hive_metastore). This is optional parameter, if you would like to restrict the metadata reading to a single catalog. When left blank, OpenMetadata Ingestion attempts to scan all the catalog.
 - **DatabaseSchema**: databaseSchema of the data source. This is optional parameter, if you would like to restrict the metadata reading to a single databaseSchema. When left blank, OpenMetadata Ingestion attempts to scan all the databaseSchema.
 
-{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
 {% collateContent %}
-{% partial file="/v1.7/connectors/database/databricks/reverse-metadata.md" /%}
+{% partial file="/v1.8/connectors/database/databricks/reverse-metadata.md" /%}
 {% /collateContent %}
 
-{% partial file="/v1.7/connectors/database/related.md" /%}
+{% partial file="/v1.8/connectors/database/related.md" /%}

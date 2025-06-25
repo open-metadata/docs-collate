@@ -25,7 +25,7 @@ Configure and schedule KafkaConnect metadata and profiler workflows from the Ope
 - [Troubleshooting](/connectors/pipeline/glue-pipeline/troubleshooting)
     - [Workflow Deployment Error](#workflow-deployment-error)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/kafkaconnect/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/kafkaconnect/yaml"} /%}
 
 ## Requirements
 
@@ -38,12 +38,12 @@ The ingestion framework uses [kafkaconnect python client](https://libraries.io/p
 ## Metadata Ingestion
 
 {% partial 
-    file="/v1.7/connectors/metadata-ingestion-ui.md" 
+    file="/v1.8/connectors/metadata-ingestion-ui.md" 
     variables={
         connector: "KafkaConnect", 
-        selectServicePath: "/images/v1.7/connectors/kafkaconnect/select-service.webp",
-        addNewServicePath: "/images/v1.7/connectors/kafkaconnect/add-new-service.webp",
-        serviceConnectionPath: "/images/v1.7/connectors/kafkaconnect/service-connection.webp",
+        selectServicePath: "/images/v1.8/connectors/kafkaconnect/select-service.webp",
+        addNewServicePath: "/images/v1.8/connectors/kafkaconnect/add-new-service.webp",
+        serviceConnectionPath: "/images/v1.8/connectors/kafkaconnect/service-connection.webp",
     } 
 /%}
 
@@ -65,11 +65,11 @@ The ingestion framework uses [kafkaconnect python client](https://libraries.io/p
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -82,7 +82,7 @@ Steps to retrieve and display the lineage information for a Kafka Connect servic
 By successfully completing these steps, the lineage information for the service will be displayed.
 
 {% image
-  src="/images/v1.7/connectors/kafkaconnect/lineage.webp"
+  src="/images/v1.8/connectors/kafkaconnect/lineage.webp"
   alt="Kafkaconnect Lineage" /%}
 
 

@@ -21,7 +21,7 @@ Configure and schedule Delta Lake metadata and profiler workflows from the OpenM
 - [dbt Integration](/connectors/ingestion/workflows/dbt)
 - [Troubleshooting](/connectors/database/deltalake/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/deltalake/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/deltalake/yaml"} /%}
 
 
 ## Requirements
@@ -59,12 +59,12 @@ To execute metadata extraction AWS account should have enough access to fetch re
 ## Metadata Ingestion
 
 {% partial
-  file="/v1.7/connectors/metadata-ingestion-ui.md"
+  file="/v1.8/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "Deltalake",
-    selectServicePath: "/images/v1.7/connectors/deltalake/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/deltalake/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/deltalake/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/deltalake/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/deltalake/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/deltalake/service-connection.png",
 }
 /%}
 
@@ -179,16 +179,16 @@ Find more information about the [Role Session Name](https://docs.aws.amazon.com/
 Find more information about [Source Identity](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html#:~:text=Required%3A%20No-,SourceIdentity,-The%20source%20identity).
 
 
-{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.7/connectors/database/related.md" /%}
+{% partial file="/v1.8/connectors/database/related.md" /%}

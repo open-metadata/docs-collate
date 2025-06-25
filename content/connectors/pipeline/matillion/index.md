@@ -24,7 +24,7 @@ Configure and schedule Matillion metadata and profiler workflows from the OpenMe
 - [Troubleshooting](/connectors/pipeline/matillion/troubleshooting)
     - [Workflow Deployment Error](#workflow-deployment-error)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/matillion/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/matillion/yaml"} /%}
 
 ## Requirements
 To extract metadata from Matillion, you need to create a user with the following permissions:
@@ -40,12 +40,12 @@ OpenMetadata is integrated with matillion up to version [1.75.0](https://docs.ma
 ## Metadata Ingestion
 
 {% partial 
-    file="/v1.7/connectors/metadata-ingestion-ui.md" 
+    file="/v1.8/connectors/metadata-ingestion-ui.md" 
     variables={
         connector: "Matillion", 
-        selectServicePath: "/images/v1.7/connectors/matillion/select-service.webp",
-        addNewServicePath: "/images/v1.7/connectors/matillion/add-new-service.webp",
-        serviceConnectionPath: "/images/v1.7/connectors/matillion/service-connection.webp",
+        selectServicePath: "/images/v1.8/connectors/matillion/select-service.webp",
+        addNewServicePath: "/images/v1.8/connectors/matillion/add-new-service.webp",
+        serviceConnectionPath: "/images/v1.8/connectors/matillion/service-connection.webp",
     } 
 /%}
 
@@ -64,16 +64,16 @@ OpenMetadata is integrated with matillion up to version [1.75.0](https://docs.ma
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
 By successfully completing these steps, the lineage information for the service will be displayed.
 
 {% image
-  src="/images/v1.7/connectors/matillion/lineage.webp"
+  src="/images/v1.8/connectors/matillion/lineage.webp"
   alt="Matillion Lineage" /%}

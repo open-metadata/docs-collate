@@ -23,6 +23,7 @@ After the API call, you will get a response like this.
 {
   "id": "7f0b032f-cdc8-4573-abb0-22165dcd8e07",
   "name": "table",
+  ...
 }
 ```
 
@@ -135,7 +136,7 @@ curl -X PATCH http://localhost:8585/api/v1/tables/208598fc-bd5f-458c-bf98-59224e
 
 When finished your new custom property should be present and updated for the `raw_product_catalog` table
 
-{% image src="/images/v1.7/developers/custom-properties.png" alt="Custom property added to table" caption=" " /%}
+{% image src="/images/v1.8/developers/custom-properties.png" alt="Custom property added to table" caption=" " /%}
 
 ### Step 5: Delete custom property.
 
@@ -143,5 +144,5 @@ To finish this tutorial, delete the newly created custom property, `tableSize` b
 
 Click **Delete Property**, then **Confirm**.
 
-{% image src="/images/v1.7/developers/delete-custom-properties.png" alt="Delete custom property added to table" caption=" " /%}
+{% image src="/images/v1.8/developers/delete-custom-properties.png" alt="Delete custom property added to table" caption=" " /%}
 

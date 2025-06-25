@@ -7,8 +7,8 @@ slug: /connectors/database/unity-catalog/yaml
 name="Unity Catalog"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Query Usage", "Data Profiler", "Data Quality", "Lineage", "Column-level Lineage", "dbt", "Sample Data", "Reverse Metadata (Collate Only)"]
-unavailableFeatures=["Owners", "Tags", "Stored Procedures"]
+availableFeatures=["Metadata", "Query Usage", "Data Profiler", "Data Quality", "Lineage", "Column-level Lineage", "dbt", "Sample Data", "Reverse Metadata (Collate Only)", "Owners", "Tags"]
+unavailableFeatures=["Stored Procedures"]
 / %}
 
 In this section, we provide guides and references to use the Unity Catalog connector.
@@ -24,20 +24,19 @@ Configure and schedule Unity Catalog metadata workflow from the OpenMetadata UI:
 - [Reverse Metadata](/connectors/ingestion/workflows/reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.7/connectors/python-requirements.md" /%}
+{% partial file="/v1.8/connectors/python-requirements.md" /%}
 
 To run the Unity Catalog ingestion, you will need to install:
 
 ```bash
 pip3 install "openmetadata-ingestion[databricks]"
 ```
-
 ### Permission Requirement
 
 To enable full functionality of metadata extraction, profiling, usage, and lineage features in OpenMetadata, the following permissions must be granted to the relevant users in your Databricks environment.
@@ -131,11 +130,11 @@ This is a sample config for Unity Catalog:
 {% /codeInfo %}
 
 
-{% partial file="/v1.7/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -193,21 +192,21 @@ source:
 ```
 
 
-{% partial file="/v1.7/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/query-usage.md" variables={connector: "unitycatalog"} /%}
+{% partial file="/v1.8/connectors/yaml/query-usage.md" variables={connector: "unitycatalog"} /%}
 
-{% partial file="/v1.7/connectors/yaml/lineage.md" variables={connector: "unitycatalog"} /%}
+{% partial file="/v1.8/connectors/yaml/lineage.md" variables={connector: "unitycatalog"} /%}
 
 ## dbt Integration
 

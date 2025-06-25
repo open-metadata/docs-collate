@@ -19,7 +19,7 @@ Configure and schedule SAS metadata workflow from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/database/sas/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/sas/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/sas/yaml"} /%}
 
 ## Requirements
 
@@ -32,12 +32,12 @@ To deploy OpenMetadata, check the Deployment guides.
 Prepare the SAS Service and configure the Ingestion:
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "SAS", 
-    selectServicePath: "/images/v1.7/connectors/sas/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/sas/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/sas/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/sas/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/sas/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/sas/service-connection.png",
 } 
 /%}
 
@@ -53,10 +53,10 @@ Prepare the SAS Service and configure the Ingestion:
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/metadata/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/metadata/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

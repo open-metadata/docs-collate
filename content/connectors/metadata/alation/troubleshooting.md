@@ -4,4 +4,4 @@ slug: /connectors/metadata/alation/troubleshooting
 collate: true
 ---
 
-{% partial file="/v1.7/connectors/troubleshooting.md" /%}
+{% partial file="/v1.8/connectors/troubleshooting.md" /%}

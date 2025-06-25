@@ -29,7 +29,7 @@ To create lineage between tableau dashboard and any database service via the que
 For more information on enabling the Tableau Metadata APIs follow the link [here](https://help.tableau.com/current/api/metadata_api/en-us/docs/meta_api_start.html)
 
 {% note %}
-- If using a **default site** on Tableau Server, leave the **Site Name** field **blank** in the ingestion configuration.  
+- If using a **default site** on Tableau Server, leave the **Site Name** fields **blank** in the ingestion configuration.  
 - Ensure that the **Metadata API** is enabled for the user performing the ingestion. If it is not enabled, ingestion may fail. Follow the official Tableau documentation to [enable the Metadata API](https://help.tableau.com/current/api/metadata_api/en-us/docs/meta_api_start.html#enable-the-tableau-metadata-api-for-tableau-server).  
 {% /note %}
 
@@ -290,11 +290,8 @@ source:
       type: Tableau
       username: username
       password: password
-      env: tableau_prod
       hostPort: http://localhost
       siteName: openmetadata
-      siteUrl: openmetadata
-      apiVersion: api_version
       # If not setting user and password
       # personalAccessTokenName: personal_access_token_name
       # personalAccessTokenSecret: personal_access_token_secret

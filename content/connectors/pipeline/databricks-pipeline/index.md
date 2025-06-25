@@ -18,17 +18,17 @@ Configure and schedule Databricks Pipeline metadata workflows from the OpenMetad
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/pipeline/databricks-pipeline/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/databricks-pipeline/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/databricks-pipeline/yaml"} /%}
 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Databricks Pipeline", 
-    selectServicePath: "/images/v1.7/connectors/databrickspipeline/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/databrickspipeline/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/databrickspipeline/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/databrickspipeline/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/databrickspipeline/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/databrickspipeline/service-connection.png",
 } 
 /%}
 
@@ -43,10 +43,10 @@ Configure and schedule Databricks Pipeline metadata workflows from the OpenMetad
 - **Connection Arguments (Optional)**: Enter the details for any additional connection arguments such as security or protocol configs that can be sent to Databricks during the connection. These details must be added as Key-Value pairs.
   - In case you are using Single-Sign-On (SSO) for authentication, add the `authenticator` details in the Connection Arguments as a Key-Value pair as follows: `"authenticator" : "sso_login_url"`
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

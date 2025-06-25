@@ -3,7 +3,7 @@ title: Troubleshooting for MSSQL
 slug: /connectors/database/mssql/troubleshooting
 ---
 
-{% partial file="/v1.7/connectors/troubleshooting.md" /%}
+{% partial file="/v1.8/connectors/troubleshooting.md" /%}
 
 ## Resolving SQL Server Authentication Issue for Windows User
 

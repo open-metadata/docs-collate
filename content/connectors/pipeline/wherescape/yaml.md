@@ -18,13 +18,13 @@ Configure and schedule Wherescape metadata workflows from the OpenMetadata UI:
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.7/connectors/python-requirements.md" /%}
+{% partial file="/v1.8/connectors/python-requirements.md" /%}
 
 To run the Wherescape ingestion, you will need to install:
 
@@ -74,11 +74,11 @@ In terms of `connection` we support the following selections:
 
 {% /codeInfo %}
 
-{% partial file="/v1.7/connectors/yaml/pipeline/source-config-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/pipeline/source-config-def.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -103,15 +103,15 @@ source:
         hostPort: localhost:1433
 ```
 
-{% partial file="/v1.7/connectors/yaml/pipeline/source-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/pipeline/source-config.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
 

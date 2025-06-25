@@ -20,7 +20,7 @@ Configure and schedule OpenSearch metadata workflow from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/search/opensearch/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/search/opensearch/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/search/opensearch/yaml"} /%}
 
 ## Requirements
 
@@ -30,12 +30,12 @@ We extract OpenSearch's metadata by using its [API](https://opensearch.org/docs/
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "OpenSearch", 
-    selectServicePath: "/images/v1.7/connectors/opensearch/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/opensearch/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/opensearch/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/opensearch/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/opensearch/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/opensearch/service-connection.png",
 } 
 /%}
 
@@ -149,10 +149,10 @@ Possible values:
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/search/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/search/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

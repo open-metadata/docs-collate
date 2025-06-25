@@ -73,7 +73,7 @@ PARTICULAR PURPOSE.
 
 This program built for i386-apple-darwin11.3.0
 > python --version
-Python 3.9.9
+Python 3.10.17
 
 > node --version
 v20.19.2

@@ -45,7 +45,7 @@ AUTHENTICATION_CLIENT_TYPE=confidential
 
 OIDC_CLIENT_ID={Client ID}                      # Update with your Client ID
 OIDC_TYPE= azure
-OIDC_TENANT=https://login.microsoftonline.com/{Tenant ID}                                                          
+OIDC_TENANT=https://login.microsoftonline.com/{Tenant ID} 
 OIDC_CLIENT_SECRET={Client Secret}              # Update with your Client Secret
 OIDC_DISCOVERY_URI= https://login.microsoftonline.com/.well-known/openid-configuration  
 OIDC_DISCOVERY_URI= ""      
@@ -67,7 +67,7 @@ Altering the order of claims in `jwtPrincipalClaims` may lead to problems when m
 docker compose --env-file ~/openmetadata_azure.env up -d
 ```
 
-{% partial file="/v1.7/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.8/deployment/configure-ingestion.md" /%}
 
 
 {% inlineCalloutContainer %}

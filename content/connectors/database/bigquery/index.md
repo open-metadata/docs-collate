@@ -30,9 +30,9 @@ Configure and schedule BigQuery metadata and profiler workflows from the OpenMet
 {% /collateContent %}
 
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/bigquery/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/bigquery/yaml"} /%}
 
-{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -47,7 +47,7 @@ link="/connectors/database/bigquery/create-credentials"
   / %}
 {% /tilesContainer %}
 
-{% partial file="/v1.7/connectors/database/partitioned-tables.md" /%}
+{% partial file="/v1.8/connectors/database/partitioned-tables.md" /%}
 
 ### Data Catalog API Permissions 
 
@@ -94,12 +94,12 @@ This will help you simplify your data management and optimize your performance i
 ## Metadata Ingestion
 
 {% partial
-  file="/v1.7/connectors/metadata-ingestion-ui.md"
+  file="/v1.8/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "BigQuery",
-    selectServicePath: "/images/v1.7/connectors/bigquery/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/bigquery/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/bigquery/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/bigquery/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/bigquery/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/bigquery/service-connection.png",
   }
 /%}
 
@@ -118,6 +118,7 @@ You can check out [this](https://cloud.google.com/iam/docs/keys-create-delete#ia
 **GCP Credentials Values**: Passing the raw credential values provided by BigQuery. This requires us to provide the following information, all provided by BigQuery:
 
 - **Credentials type**: Credentials Type is the type of the account, for a service account the value of this field is `service_account`. To fetch this key, look for the value associated with the `type` key in the service account key file.
+- **Billing Project ID (Optional)**: A billing project ID is a unique string used to identify and authorize your project for billing in Google Cloud.
 - **Project ID**: A project ID is a unique string used to differentiate your project from all others in Google Cloud. To fetch this key, look for the value associated with the `project_id` key in the service account key file. You can also pass multiple project id to ingest metadata from different BigQuery projects into one service.
 - **Private Key ID**: This is a unique identifier for the private key associated with the service account. To fetch this key, look for the value associated with the `private_key_id` key in the service account file.
 - **Private Key**: This is the private key associated with the service account that is used to authenticate and authorize access to BigQuery. To fetch this key, look for the value associated with the `private_key` key in the service account file.
@@ -158,15 +159,15 @@ the GCP credentials empty. This is why they are not marked as required.
 {% /note %}
 
 
-{% partial file="/v1.7/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -175,7 +176,7 @@ the GCP credentials empty. This is why they are not marked as required.
 We support cross-project lineage, but the data must be ingested within a single service. This means you need to perform lineage ingestion for just one service while including multiple projects.
 
 {% collateContent %}
-{% partial file="/v1.7/connectors/database/bigquery/reverse-metadata.md" /%}
+{% partial file="/v1.8/connectors/database/bigquery/reverse-metadata.md" /%}
 {% /collateContent %}
 
-{% partial file="/v1.7/connectors/database/related.md" /%}
+{% partial file="/v1.8/connectors/database/related.md" /%}

@@ -27,13 +27,13 @@ Configure and schedule BigQuery metadata and profiler workflows from the OpenMet
 - [Reverse Metadata](/connectors/ingestion/workflows/reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.7/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.7/connectors/python-requirements.md" /%}
+{% partial file="/v1.8/connectors/python-requirements.md" /%}
 
 To run the BigQuery ingestion, you will need to install:
 
@@ -78,7 +78,7 @@ link="/connectors/database/bigquery/create-credentials"
   / %}
 {% /tilesContainer %}
 
-{% partial file="/v1.7/connectors/database/partitioned-tables.md" /%}
+{% partial file="/v1.8/connectors/database/partitioned-tables.md" /%}
 
 ## Metadata Ingestion
 
@@ -109,7 +109,7 @@ You can checkout [this](https://cloud.google.com/iam/docs/keys-create-delete#iam
 
 {% /codeInfo %}
 
-{% partial file="/v1.7/connectors/yaml/common/gcp-config-def.md" /%}
+{% partial file="/v1.8/connectors/yaml/common/gcp-config-def.md" /%}
 
 {% codeInfo srNumber=4 %}
 
@@ -159,11 +159,18 @@ the GCP credentials empty. This is why they are not marked as required.
 
 {% /codeInfo %}
 
-{% partial file="/v1.7/connectors/yaml/database/source-config-def.md" /%}
+{% codeInfo srNumber=5 %}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink-def.md" /%}
+**Billing Project ID (Optional)**: A billing project ID is a unique string used to identify and authorize your project for billing in Google Cloud.
 
-{% partial file="/v1.7/connectors/yaml/workflow-config-def.md" /%}
+{% /codeInfo %}
+
+
+{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+
+{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+
+{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -198,12 +205,15 @@ source:
         gcpConfig:
 ```
 
-{% partial file="/v1.7/connectors/yaml/common/gcp-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/common/gcp-config.md" /%}
 
 ```yaml {% srNumber=4 %}
       # taxonomyLocation: us
       # taxonomyProjectID: ["project-id-1", "project-id-2"]
       # usageLocation: us
+```
+```yaml {% srNumber=5 %}
+      # billingProjectId: project-id-1
 ```
 ```yaml {% srNumber=2 %}
       # connectionOptions:
@@ -214,27 +224,27 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.7/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.7/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.7/connectors/yaml/query-usage.md" variables={connector: "bigquery"} /%}
+{% partial file="/v1.8/connectors/yaml/query-usage.md" variables={connector: "bigquery"} /%}
 
-{% partial file="/v1.7/connectors/yaml/lineage.md" variables={connector: "bigquery"} /%}
+{% partial file="/v1.8/connectors/yaml/lineage.md" variables={connector: "bigquery"} /%}
 
-{% partial file="/v1.7/connectors/yaml/data-profiler.md" variables={connector: "bigquery"} /%}
+{% partial file="/v1.8/connectors/yaml/data-profiler.md" variables={connector: "bigquery"} /%}
 
-{% partial file="/v1.7/connectors/yaml/auto-classification.md" variables={connector: "bigquery"} /%}
+{% partial file="/v1.8/connectors/yaml/auto-classification.md" variables={connector: "bigquery"} /%}
 
-{% partial file="/v1.7/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.8/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 

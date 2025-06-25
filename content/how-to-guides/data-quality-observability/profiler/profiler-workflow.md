@@ -19,22 +19,22 @@ After the metadata ingestion has been done correctly, we can configure and deplo
 This Pipeline will be in charge of feeding the Profiler tab of the Table Entity, as well as running any tests configured in the Entity.
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/profiler-summary-table.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/profiler-summary-table.png"
   alt="Table profile summary page"
   caption="Table profile summary page"
  /%}
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/profiler-summary-column.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/profiler-summary-column.png"
   alt="Column profile summary page"
   caption="Column profile summary page"
  /%}
 
 ### 1. Add a Profiler Agent
-From the Service Page, go to the Agents tab to add a new Agent and click on Add Profiler Agent.
+From the Service Page, go to the Agents tab to add a new ingestion and click on Add Profiler Agent.
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/add-profiler-workflow.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/add-profiler-workflow.png"
   alt="Add a profiler service"
   caption="Add a profiler service"
  /%}
@@ -43,7 +43,7 @@ From the Service Page, go to the Agents tab to add a new Agent and click on Add 
 Here you can enter the Profiler Agent details.
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/configure-profiler-workflow.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/configure-profiler-workflow.png"
   alt="Set profiler configuration"
   caption="Set profiler configuration"
  /%}
@@ -83,7 +83,7 @@ This Flag is useful in scenarios when you have different schemas with same name 
 **Compute Metrics**  
 Set the Compute Metrics toggle off to not perform any metric computation during the profiler ingestion workflow. Used in combination with Ingest Sample Data toggle on allows you to only ingest sample data.
 
-**Advanced Configuration**
+**Advanced Configuration**  
 
 **Sample Data Rows Count**  
 Set the number of rows to ingest when Ingest Sample Data toggle is on. Defaults to 50.
@@ -101,13 +101,13 @@ After clicking Next, you will be redirected to the Scheduling form. This will be
 Once you have created your profiler you can adjust some behavior at the table level by going to the table and clicking on the profiler tab 
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/accessing-table-profile-settings.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/accessing-table-profile-settings.png"
   alt="table profile settings"
   caption="table profile settings"
  /%}
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/table-profile-summary-view.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/table-profile-summary-view.png"
   alt="table profile settings"
   caption="table profile settings"
  /%}
@@ -156,7 +156,7 @@ Once you have picked the `Interval Type` you will need to define the configurati
 The behavior of the profiler can be configured at the platform level. Navigating to `Settings > Preferences > Profiler Configuration` you will find settings to adjust the behavior of the profiler.
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/profiler-global-configuration.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/profiler-global-configuration.png"
   alt="table profile global settings"
   caption="table profile global settings"
  /%}
@@ -165,7 +165,7 @@ The behavior of the profiler can be configured at the platform level. Navigating
 Select the data type you want to disable all metric for. Then toggle disable on. When running the profiler all metric computation will be skipped for the data type.
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/disable-metric-computation.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/disable-metric-computation.png"
   alt="table profile global settings"
   caption="table profile global settings"
  /%}
@@ -174,7 +174,7 @@ Select the data type you want to disable all metric for. Then toggle disable on.
 Select the data type you want to disable a metric for. Then in the `Metric Type` section select the metric you to compute (or unselect the ones you don't want to compute). When running the profiler the unselected metric will not be computed.
 
 {% image
-  src="/images/v1.7/features/ingestion/workflows/profiler/disable-specific-metric-computation.png"
+  src="/images/v1.8/features/ingestion/workflows/profiler/disable-specific-metric-computation.png"
   alt="table profile global settings"
   caption="table profile global settings"
  /%}
@@ -325,7 +325,7 @@ processor:
     #   - fullyQualifiedName: <table fqn>
     #     profileSample: <number between 0 and 99> # default 
 
-    #     profileSample: <number between 0 and 99> # default will be 100 if omitted 
+    #     profileSample: <number between 0 and 99> # default will be 100 if omitted
     #     columnConfig:
     #       excludeColumns:
     #         - <column name>

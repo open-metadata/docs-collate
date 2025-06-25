@@ -19,7 +19,7 @@ Configure and schedule Sagemaker metadata and profiler workflows from the OpenMe
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/ml-model/sagemaker/troubleshooting)
 
-{% partial file="/v1.7/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/ml-model/sagemaker/yaml"} /%}
+{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/ml-model/sagemaker/yaml"} /%}
 
 ## Requirements
 
@@ -49,12 +49,12 @@ For more information on Sagemaker permissions visit the [AWS Sagemaker official 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.7/connectors/metadata-ingestion-ui.md" 
+  file="/v1.8/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "SageMaker", 
-    selectServicePath: "/images/v1.7/connectors/sagemaker/select-service.png",
-    addNewServicePath: "/images/v1.7/connectors/sagemaker/add-new-service.png",
-    serviceConnectionPath: "/images/v1.7/connectors/sagemaker/service-connection.png",
+    selectServicePath: "/images/v1.8/connectors/sagemaker/select-service.png",
+    addNewServicePath: "/images/v1.8/connectors/sagemaker/add-new-service.png",
+    serviceConnectionPath: "/images/v1.8/connectors/sagemaker/service-connection.png",
 } 
 /%}
 
@@ -131,10 +131,10 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /extraContent %}
 
-{% partial file="/v1.7/connectors/test-connection.md" /%}
+{% partial file="/v1.8/connectors/test-connection.md" /%}
 
-{% partial file="/v1.7/connectors/ml-model/configure-ingestion.md" /%}
+{% partial file="/v1.8/connectors/ml-model/configure-ingestion.md" /%}
 
-{% partial file="/v1.7/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

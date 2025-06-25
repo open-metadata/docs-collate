@@ -79,7 +79,7 @@ openmetadata:
 {% /codeWithLanguageSelector %}
 
 
-{% partial file="/v1.7/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.8/deployment/configure-ingestion.md" /%}
 
 
 {% inlineCalloutContainer %}
