@@ -73,6 +73,7 @@ export default function Article({ content, slug, partials }: Readonly<Props>) {
             slug={slug}
             footer={<Footer bordered />}
             componentsList={{ Roadmap }}
+            isCollate
           />
         )}
       </ErrorBoundary>
