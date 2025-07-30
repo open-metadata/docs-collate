@@ -32,9 +32,12 @@ declare global {
 
 export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
   const [storedCookie, setStoredCookie] = useState<string | null>(null);
-  const { slug, noindex, nofollow } = pageProps;
+  const { slug, noindex, nofollow, pageTitle, pageDescription } = pageProps;
 
   const canonicalUrl = `${HOST_NAME}${slug?.join('/') || ''}`;
+
+  const title = pageTitle || TITLE;
+  const description = pageDescription || DESCRIPTION;
 
 	const handleButtonClick = (choice: string) => {
         localStorage.setItem('docsCollateCookie', choice)
@@ -73,7 +76,7 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
   return (
     <>
       <Head>
-        <title>{TITLE}</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.png" />
         <link rel="alternate icon" href="/favicon.png" />
         <link rel="shortcut icon" href="/favicon.png" />
@@ -90,11 +93,11 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         ): (
           <link rel="canonical" href={canonicalUrl} />
         )}
-        {DESCRIPTION && (
+        {description && (
           <React.Fragment>
-            <meta content={DESCRIPTION} name="description" />
-            <meta content={DESCRIPTION} property="og:description" />
-            <meta content={DESCRIPTION} name="twitter:description" />
+            <meta content={description} name="description" />
+            <meta content={description} property="og:description" />
+            <meta content={description} name="twitter:description" />
           </React.Fragment>
         )}
         <meta property="og:type" content="website" />
