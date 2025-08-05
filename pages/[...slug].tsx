@@ -128,8 +128,12 @@ export async function getServerSideProps(context: {
       props["pageTitle"] = data.title ?? "";
       props["pageDescription"] = data.description ?? "";
       
-      if (props["pageTitle"] && props["pageTitle"].includes("`title`")) {
+      if (props["pageTitle"] && props["pageTitle"].includes("`brandName`")) {
         props["pageTitle"] = processDynamicTitle(props["pageTitle"], true); 
+      }
+      
+      if (props["pageDescription"] && props["pageDescription"].includes("`brandName`")) {
+        props["pageDescription"] = processDynamicTitle(props["pageDescription"], true); 
       }
     }
 
@@ -175,7 +179,7 @@ async function getPaths() {
         location: slug,
         version: version,
         fileName: articles[index],
-        title: data.title ? processDynamicTitle(data.title as string, true) : "Untitled", // true for main collate docs
+        title: data.title ? processDynamicTitle(data.title as string, true) : "Untitled",
         description: data.description ? (data.description as string) : "",
       },
     };
