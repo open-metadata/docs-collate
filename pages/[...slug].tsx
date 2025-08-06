@@ -19,7 +19,7 @@ import {
 } from "../docs-v1/lib/api";
 import { configs } from "../docs-v1/lib/markdoc";
 import { getFormattedPartials } from "../docs-v1/utils/CommonUtils";
-import { processDynamicTitle } from "../docs-v1/utils/SlugUtils";
+import { processDynamicContent } from "../docs-v1/utils/SlugUtils";
 
 interface Props {
   content: string;
@@ -129,11 +129,11 @@ export async function getServerSideProps(context: {
       props["pageDescription"] = data.description ?? "";
       
       if (props["pageTitle"] && props["pageTitle"].includes("`brandName`")) {
-        props["pageTitle"] = processDynamicTitle(props["pageTitle"], true); 
+        props["pageTitle"] = processDynamicContent(props["pageTitle"], true); 
       }
       
       if (props["pageDescription"] && props["pageDescription"].includes("`brandName`")) {
-        props["pageDescription"] = processDynamicTitle(props["pageDescription"], true); 
+        props["pageDescription"] = processDynamicContent(props["pageDescription"], true); 
       }
     }
 
@@ -179,8 +179,8 @@ async function getPaths() {
         location: slug,
         version: version,
         fileName: articles[index],
-        title: data.title ? processDynamicTitle(data.title as string, true) : "Untitled",
-        description: data.description ? (data.description as string) : "",
+        title: data.title ? processDynamicContent(data.title as string, true) : "Untitled",
+        description: data.description ? processDynamicContent(data.description as string, true) : "",
       },
     };
 
