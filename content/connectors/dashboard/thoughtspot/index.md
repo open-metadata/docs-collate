@@ -23,7 +23,7 @@ Configure and schedule ThoughtSpot metadata and profiler workflows from the Open
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/thoughtspot/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/thoughtspot/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/thoughtspot/yaml"} /%}
 
 ## Requirements
 
@@ -82,22 +82,22 @@ To access the ThoughtSpot APIs and import liveboards, charts, and data models fr
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "ThoughtSpot", 
-    selectServicePath: "/images/v1.8/connectors/thoughtspot/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/thoughtspot/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/thoughtspot/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/thoughtspot/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/thoughtspot/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/thoughtspot/service-connection.png",
 } 
 /%}
 
 {% stepsContainer %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 

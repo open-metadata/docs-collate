@@ -4,4 +4,4 @@ description: Solve Apache Superset connector issues with OpenMetadata'scomprehen
 slug: /connectors/dashboard/superset/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

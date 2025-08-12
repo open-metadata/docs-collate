@@ -19,7 +19,7 @@ Configure and schedule Glue metadata and profiler workflows from the OpenMetadat
 - [Metadata Ingestion](#metadata-ingestion)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -27,7 +27,7 @@ User must have `glue:GetDatabases` and `glue:GetTables` permissions to ingest th
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the Glue ingestion, you will need to install:
 
@@ -59,7 +59,7 @@ This is a sample config for Glue:
 
 #### Source Configuration - Service Connection
 
-{% partial file="/v1.8/connectors/yaml/common/aws-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/aws-config-def.md" /%}
 
 {% codeInfo srNumber=6 %}
 
@@ -68,11 +68,11 @@ This is a sample config for Glue:
 {% /codeInfo %}
 
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -104,7 +104,7 @@ source:
       awsConfig:
 ```
 
-{% partial file="/v1.8/connectors/yaml/common/aws-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/aws-config.md" /%}
 
 ```yaml {% srNumber=6 %}
       databaseName: database_name
@@ -119,17 +119,17 @@ source:
 ```
 
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
 
 ## dbt Integration

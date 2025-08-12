@@ -19,13 +19,13 @@ Configure and schedule MLflow metadata and profiler workflows from the OpenMetad
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the MLflow ingestion, you will need to install:
 
@@ -69,11 +69,11 @@ This is a sample config for MLflow:
 
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/ml-model/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ml-model/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -95,14 +95,14 @@ source:
       registryUri: mysql+pymysql://mlflow:password@localhost:3307/experiments
 ```
 
-{% partial file="/v1.8/connectors/yaml/ml-model/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/ml-model/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}

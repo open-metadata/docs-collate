@@ -4,4 +4,4 @@ description: Troubleshoot GCS Datalake ingestion problems including permission e
 slug: /connectors/database/gcs-datalake/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

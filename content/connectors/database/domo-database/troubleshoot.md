@@ -4,7 +4,7 @@ description: Debug Domo database ingestion errors like access token mismatches, 
 slug: /connectors/database/domo-database/troubleshoot
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the Domo Database connector.
 
@@ -13,7 +13,7 @@ Learn how to resolve the most common problems people encounter in the Domo Datab
 * After that click on `My Account`> `Manage Clients`(if created).
 
 {% image
-src="/images/v1.8/connectors/domodatabase/client-id.png"
+src="/images/v1.9/connectors/domodatabase/client-id.png"
 alt="Client-id"
 caption="Find Services under the Settings menu" /%}
 
@@ -24,7 +24,7 @@ caption="Find Services under the Settings menu" /%}
 * Under `Authentication` you will find `Access tokens`.
 
 {% image
-src="/images/v1.8/connectors/domodatabase/access-token.png"
+src="/images/v1.9/connectors/domodatabase/access-token.png"
 alt="Access Token"
 caption="access-token" /%}
 
@@ -33,7 +33,7 @@ caption="access-token" /%}
 * Scopes can be find Under `Manage Clients` section in `My Account` (If client not found, click [here](#how-to-find-clientid))
 
 {% image
-src="/images/v1.8/connectors/domodatabase/scopes.jpeg"
+src="/images/v1.9/connectors/domodatabase/scopes.jpeg"
 alt="Scopes"
 caption="Scopes" /%}
 

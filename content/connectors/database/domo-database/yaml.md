@@ -20,7 +20,7 @@ Configure and schedule DomoDatabase metadata and profiler workflows from the Ope
 - [Metadata Ingestion](#metadata-ingestion)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -32,7 +32,7 @@ Question related to scopes, click [here](https://developer.domo.com/portal/1845f
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the DomoDatabase ingestion, you will need to install:
 
@@ -99,11 +99,11 @@ This is a sample config for DomoDatabase:
 
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -162,17 +162,17 @@ source:
 ```
 
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
 ## dbt Integration
 

@@ -19,7 +19,7 @@ Configure and schedule PowerBI metadata and profiler workflows from the OpenMeta
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -102,7 +102,7 @@ For reference here is a [thread](https://community.powerbi.com/t5/Service/Error-
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the PowerBI ingestion, you will need to install:
 
@@ -233,11 +233,11 @@ Refer to the section [here](/connectors/dashboard/powerbi#powerbi-admin-and-nona
 - `pbitFilesExtractDir`: Specifies the local directory where extracted .pbit files will be stored for processing.
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/dashboard/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/dashboard/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -252,13 +252,13 @@ source:
       type: PowerBI
 ```
 ```yaml {% srNumber=1 %}
-      clientId: clientId
+      clientId: clientId  # REQUIRED - Azure AD application client ID
 ```
 ```yaml {% srNumber=2 %}
-      clientSecret: secret
+      clientSecret: secret  # REQUIRED - Azure AD application client secret
 ```
 ```yaml {% srNumber=3 %}
-      tenantId: tenant
+      tenantId: tenant  # REQUIRED - Azure AD tenant ID
 ```
 ```yaml {% srNumber=4 %}
       # scope:
@@ -350,14 +350,14 @@ source:
       #   pbitFilesExtractDir: /tmp/pbitFiles  # Local directory for extracted files
 ```
 
-{% partial file="/v1.8/connectors/yaml/dashboard/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/dashboard/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}

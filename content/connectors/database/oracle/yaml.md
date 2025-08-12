@@ -25,7 +25,7 @@ Configure and schedule Oracle metadata and profiler workflows from the OpenMetad
 {% collateContent %}
 - [Reverse Metadata](/connectors/ingestion/workflows/reverse-metadata)
 {% /collateContent %}
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -94,7 +94,7 @@ there is no routine out of the box in Oracle to grant SELECT to a full schema.
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the Oracle ingestion, you will need to install:
 
@@ -161,11 +161,11 @@ This is a sample config for Oracle:
 
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -222,25 +222,25 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/data-profiler.md" variables={connector: "oracle"} /%}
+{% partial file="/v1.9/connectors/yaml/data-profiler.md" variables={connector: "oracle"} /%}
 
-{% partial file="/v1.8/connectors/yaml/auto-classification.md" variables={connector: "oracle"} /%}
+{% partial file="/v1.9/connectors/yaml/auto-classification.md" variables={connector: "oracle"} /%}
 
-{% partial file="/v1.8/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.9/connectors/yaml/data-quality.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/lineage.md" variables={connector: "oracle"} /%}
+{% partial file="/v1.9/connectors/yaml/lineage.md" variables={connector: "oracle"} /%}
 
 ## dbt Integration
 

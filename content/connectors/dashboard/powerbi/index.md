@@ -21,7 +21,7 @@ Configure and schedule PowerBI metadata and profiler workflows from the OpenMeta
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/powerbi/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/powerbi/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/powerbi/yaml"} /%}
 
 ## Requirements
 
@@ -105,12 +105,12 @@ For reference here is a [thread](https://community.powerbi.com/t5/Service/Error-
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "PowerBI", 
-    selectServicePath: "/images/v1.8/connectors/powerbi/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/powerbi/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/powerbi/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/powerbi/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/powerbi/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/powerbi/service-connection.png",
 } 
 /%}
 
@@ -182,12 +182,12 @@ Refer to the section [here](/connectors/dashboard/powerbi#powerbi-admin-and-nona
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.8/connectors/dashboard/dashboard-lineage.md" /%}
+{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.md" /%}

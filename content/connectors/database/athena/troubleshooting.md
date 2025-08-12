@@ -4,4 +4,4 @@ description: Resolve OpenMetadata Athena connector issues fast with our comprehe
 slug: /connectors/database/athena/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

@@ -4,7 +4,7 @@ description: Troubleshoot Impala connector for ingestion failures, type mismatch
 slug: /connectors/database/impala/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the Impala connector.
 

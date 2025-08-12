@@ -4,4 +4,4 @@ description: Troubleshoot MySQL ingestion including connection string errors, ac
 slug: /connectors/database/mysql/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

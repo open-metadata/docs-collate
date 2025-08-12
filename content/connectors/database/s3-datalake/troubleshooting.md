@@ -4,7 +4,7 @@ description: Fix S3 Datalake ingestion problems like IAM permission errors, sche
 slug: /connectors/database/s3-datalake/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the S3 Datalake connector.
 

@@ -4,4 +4,4 @@ description: Troubleshoot Flink ingestion including access errors, execution iss
 slug: /connectors/pipeline/flink/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

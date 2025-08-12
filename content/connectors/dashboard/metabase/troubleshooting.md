@@ -4,4 +4,4 @@ description: Resolve Metabase connector issues with OpenMetadata'scomprehensive 
 slug: /connectors/dashboard/metabase/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

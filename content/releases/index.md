@@ -4,4 +4,4 @@ description: Discover the latest OpenMetadata releases, new features, bug fixes,
 slug: /releases
 ---
 
-{% partial file="/v1.8/releases/latest.md" /%}
+{% partial file="/v1.9/releases/latest.md" /%}

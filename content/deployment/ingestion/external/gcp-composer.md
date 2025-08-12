@@ -5,7 +5,7 @@ slug: /deployment/ingestion/external/gcp-composer
 collate: false
 ---
 
-{% partial file="/v1.8/deployment/external-ingestion.md" /%}
+{% partial file="/v1.9/deployment/external-ingestion.md" /%}
 
 # Run the ingestion from GCP Composer 
 
@@ -94,7 +94,7 @@ with DAG(
     )
 ```
 
-{% partial file="/v1.8/deployment/run-connectors-class.md" /%}
+{% partial file="/v1.9/deployment/run-connectors-class.md" /%}
 
 ## Using the Kubernetes Pod Operator
 

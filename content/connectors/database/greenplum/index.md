@@ -26,19 +26,19 @@ Configure and schedule Greenplum metadata and profiler workflows from the OpenMe
 - [Enable Security](#securing-greenplum-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/database/greenplum/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/greenplum/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/greenplum/yaml"} /%}
 
 ## Requirements
 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Greenplum", 
-    selectServicePath: "/images/v1.8/connectors/greenplum/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/greenplum/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/greenplum/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/greenplum/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/greenplum/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/greenplum/service-connection.png",
 } 
 /%}
 
@@ -134,15 +134,15 @@ There are a couple of types of SSL modes that Greenplum supports which can be ad
 
 In order to integrate SSL in the Metadata Ingestion Config, the user will have to add the SSL config under sslConfig which is placed in the source.
 
-{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.9/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -159,9 +159,9 @@ For IAM authentication, it is recommended to choose the `allow` mode or another 
 {% /note %}
 
 {% image
-  src="/images/v1.8/connectors/ssl_connection.png"
+  src="/images/v1.9/connectors/ssl_connection.png"
   alt="SSL Configuration"
   height="450px"
   caption="SSL Configuration" /%}
 
-{% partial file="/v1.8/connectors/database/related.md" /%}
+{% partial file="/v1.9/connectors/database/related.md" /%}

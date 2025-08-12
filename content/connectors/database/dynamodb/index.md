@@ -9,7 +9,7 @@ name="DynamoDB"
 stage="PROD"
 platform="OpenMetadata"
 availableFeatures=["Metadata", "Data Profiler", "Auto-Classification"]
-unavailableFeatures=["Query Usage", "Owners", "Tags", "Stored Procedures", "Data Quality", "Lineage", "Column-level Lineage", "dbt", "Sample Data", "Auto-Classification"]
+unavailableFeatures=["Query Usage", "Owners", "Tags", "Stored Procedures", "Data Quality", "Lineage", "Column-level Lineage", "dbt", "Sample Data"]
 / %}
 
 
@@ -21,7 +21,7 @@ Configure and schedule DynamoDB metadata workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/database/dynamodb/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/dynamodb/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/dynamodb/yaml"} /%}
 
 ## Requirements
 
@@ -51,12 +51,12 @@ For more information on Dynamodb permissions visit the [AWS DynamoDB official do
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "DynamoDB", 
-    selectServicePath: "/images/v1.8/connectors/dynamodb/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/dynamodb/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/dynamodb/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/dynamodb/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/dynamodb/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/dynamodb/service-connection.png",
 } 
 /%}
 
@@ -133,12 +133,12 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.8/connectors/database/related.md" /%}
+{% partial file="/v1.9/connectors/database/related.md" /%}

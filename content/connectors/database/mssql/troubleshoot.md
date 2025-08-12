@@ -4,7 +4,7 @@ description: Resolve MSSQL ingestion issues such as incorrect authentication, in
 slug: /connectors/database/mssql/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 ## Resolving SQL Server Authentication Issue for Windows User
 

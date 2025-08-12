@@ -20,7 +20,7 @@ Configure and schedule REST metadata workflows from the OpenMetadata UI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/api/rest/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/api/rest/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/api/rest/yaml"} /%}
 
 ## Requirements
 
@@ -32,12 +32,12 @@ Configure and schedule REST metadata workflows from the OpenMetadata UI:
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "VertexAI", 
-    selectServicePath: "/images/v1.8/connectors/rest/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/rest/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/rest/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/rest/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/rest/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/rest/service-connection.png",
 } 
 /%}
 
@@ -54,9 +54,9 @@ An OpenAPI schema URL typically refers to the URL where the OpenAPI Specificatio
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

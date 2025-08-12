@@ -44,7 +44,7 @@ To enable Slack integration in Collate:
 1. Navigate to **Settings** → **Applications** → **Add Apps**.
 
 {% image
-src="/images/v1.8/applications/slack1.png"
+src="/images/v1.9/applications/slack1.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -52,7 +52,7 @@ caption="Configuration"
 2. Search for **Slack** and install the application.
 
 {% image
-src="/images/v1.8/applications/slack2.png"
+src="/images/v1.9/applications/slack2.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -63,7 +63,7 @@ caption="Configuration"
 - **Bot Token**: Token used to authenticate Slack API requests on behalf of the bot.
 
 {% image
-src="/images/v1.8/applications/slack3.png"
+src="/images/v1.9/applications/slack3.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -86,7 +86,7 @@ To integrate Slack with Collate, you need to generate both a **Bot Token** and a
 2. Click **Create New App**.
 
 {% image
-src="/images/v1.8/applications/slack4.png"
+src="/images/v1.9/applications/slack4.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -94,7 +94,7 @@ caption="Configuration"
 3. Select **From scratch**.
 
 {% image
-src="/images/v1.8/applications/slack5.png"
+src="/images/v1.9/applications/slack5.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -103,7 +103,7 @@ caption="Configuration"
 5. Click **Create App**.
 
 {% image
-src="/images/v1.8/applications/slack6.png"
+src="/images/v1.9/applications/slack6.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -113,7 +113,7 @@ caption="Configuration"
 1. In your app’s dashboard, navigate to **OAuth & Permissions**.
 
 {% image
-src="/images/v1.8/applications/slack7.png"
+src="/images/v1.9/applications/slack7.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -121,7 +121,7 @@ caption="Configuration"
 2. Under **Scopes**, configure the following:
 
 {% image
-src="/images/v1.8/applications/slack8.png"
+src="/images/v1.9/applications/slack8.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -155,7 +155,7 @@ Only add the scopes you need. Ensure your Slack workspace allows user token gene
 1. Still in **OAuth & Permissions**, click **Install** to install App to your Workspace.
 
 {% image
-src="/images/v1.8/applications/slack9.png"
+src="/images/v1.9/applications/slack9.png"
 alt="Configuration"
 caption="Configuration"
 /%}

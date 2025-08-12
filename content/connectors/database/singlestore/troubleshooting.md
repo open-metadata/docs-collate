@@ -4,4 +4,4 @@ description: Resolve SingleStore database connector issues in OpenMetadata with 
 slug: /connectors/database/singlestore/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

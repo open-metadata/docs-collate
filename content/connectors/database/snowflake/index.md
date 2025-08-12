@@ -30,7 +30,7 @@ Configure and schedule Snowflake metadata and profiler workflows from the OpenMe
 - [Reverse Metadata](#reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/snowflake/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/snowflake/yaml"} /%}
 
 ## Requirements
 
@@ -93,12 +93,12 @@ You can find more information about the `account_usage` schema [here](https://do
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Snowflake", 
-    selectServicePath: "/images/v1.8/connectors/snowflake/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/snowflake/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/snowflake/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/snowflake/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/snowflake/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/snowflake/service-connection.png",
 } 
 /%}
 
@@ -125,15 +125,15 @@ Optional configuration for ingestion of streams, By default, it will skip the st
 
 When using this field make sure you have all these tables available within your custom schema  `QUERY_HISTORY`, `TAG_REFERENCES`, `PROCEDURES`, `FUNCTIONS`.
 
-{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.9/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -153,7 +153,7 @@ GRANT APPLY TAG TO ROLE NEW_ROLE;
 Depending on your view ddl you can grant the relevant privileged as per above queries.
 
 {% collateContent %}
-{% partial file="/v1.8/connectors/database/snowflake/reverse-metadata.md" /%}
+{% partial file="/v1.9/connectors/database/snowflake/reverse-metadata.md" /%}
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/database/related.md" /%}
+{% partial file="/v1.9/connectors/database/related.md" /%}

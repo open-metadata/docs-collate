@@ -18,7 +18,7 @@ Configure and schedule Glue metadata and profiler workflows from the OpenMetadat
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -33,7 +33,7 @@ The user must have the following permissions for the ingestion to run successful
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the Glue ingestion, you will need to install:
 
@@ -64,13 +64,13 @@ This is a sample config for Glue:
 
 #### Source Configuration - Service Connection
 
-{% partial file="/v1.8/connectors/yaml/common/aws-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/aws-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/pipeline/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/pipeline/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -85,16 +85,16 @@ source:
       type: GluePipeline
       awsConfig:
 ```
-{% partial file="/v1.8/connectors/yaml/common/aws-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/aws-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/pipeline/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/pipeline/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}

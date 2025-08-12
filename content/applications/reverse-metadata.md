@@ -160,7 +160,7 @@ This sets or updates schema-level labels, such as sensitive classifications. Use
 1. Navigate to **Settings > Applications**.
 
 {% image
-src="/images/v1.8/applications/autopilot.png"
+src="/images/v1.9/applications/autopilot.png"
 alt="Install Reverse Metadata Application"
 caption="Install Reverse Metadata Application"
 /%}
@@ -169,7 +169,7 @@ caption="Install Reverse Metadata Application"
 3. After installation, configure the synchronization channels as described below in screenshot. The Filter section allows you to define which assets should be included in a sync channel by applying conditions based on  tables: the service, database or schema they belong to, their name, owners, domain, and even by Custom Properties!
 
 {% image
-src="/images/v1.8/applications/reverse/reverse-metadata-application.png"
+src="/images/v1.9/applications/reverse/reverse-metadata-application.png"
 alt="Configuration"
 caption="Configuration"
 /%}
@@ -226,7 +226,7 @@ The **Sink Service** parameter allows you to redirect metadata changes from one 
 ## Run Now to Clean Workflows
 
 {% image
-src="/images/v1.8/applications/reverse/reverse-metadata-application1.png"
+src="/images/v1.9/applications/reverse/reverse-metadata-application1.png"
 alt="Scheduling"
 caption="Scheduling"
 /%}
@@ -245,7 +245,7 @@ Support for batch reverse metadata execution via Run Now is planned for future r
 {% /note %}
 
 {% image
-src="/images/v1.8/applications/reverse/reverse-metadata-application2.png"
+src="/images/v1.9/applications/reverse/reverse-metadata-application2.png"
 alt="Recent Runs"
 caption="Recent Runs"
 /%}

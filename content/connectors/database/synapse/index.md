@@ -26,7 +26,7 @@ Configure and schedule Synapse metadata and profiler workflows from the OpenMeta
   - [Workflow Deployment Error](#workflow-deployment-error)
 - [Related](#related)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/synapse/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/synapse/yaml"} /%}
 
 ## Requirements
 
@@ -45,12 +45,12 @@ GRANT SELECT TO Mary;
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Synapse", 
-    selectServicePath: "/images/v1.8/connectors/synapse/select-service.webp",
-    addNewServicePath: "/images/v1.8/connectors/synapse/add-new-service.webp",
-    serviceConnectionPath: "/images/v1.8/connectors/synapse/service-connection.webp",
+    selectServicePath: "/images/v1.9/connectors/synapse/select-service.webp",
+    addNewServicePath: "/images/v1.9/connectors/synapse/add-new-service.webp",
+    serviceConnectionPath: "/images/v1.9/connectors/synapse/service-connection.webp",
 } 
 /%}
 
@@ -85,16 +85,16 @@ You can download the ODBC driver from [here](https://learn.microsoft.com/en-us/s
    - The `connectionTimeout` parameter specifies the maximum time (in seconds) that your application will wait while attempting to establish a connection to Synapse.
    - If the connection cannot be established within this timeframe, an error will be raised.
 
-{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.9/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.8/connectors/database/related.md" /%}
+{% partial file="/v1.9/connectors/database/related.md" /%}

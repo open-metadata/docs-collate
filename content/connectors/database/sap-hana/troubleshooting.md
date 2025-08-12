@@ -4,4 +4,4 @@ description: Resolve SAP HANA connector issues with OpenMetadata'scomprehensive 
 slug: /connectors/database/sap-hana/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

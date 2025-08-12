@@ -4,7 +4,7 @@ description: Troubleshoot Postgres connector for issues like access denial, colu
 slug: /connectors/database/postgres/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 ## Troubleshooting: `pg_stat_statements` Relation Does Not Exist
 

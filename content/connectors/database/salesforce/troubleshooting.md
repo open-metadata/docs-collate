@@ -4,4 +4,4 @@ description: Fix Salesforce ingestion errors such as access denial, API rate lim
 slug: /connectors/database/salesforce/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

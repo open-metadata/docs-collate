@@ -336,4 +336,4 @@ discussions [here](https://github.com/Azure/azure-storage-fuse/issues/1171) and 
 
 # FAQs
 
-{% partial file="/v1.8/deployment/faqs.md" /%}
+{% partial file="/v1.9/deployment/faqs.md" /%}

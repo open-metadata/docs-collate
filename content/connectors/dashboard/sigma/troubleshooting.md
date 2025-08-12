@@ -4,4 +4,4 @@ description: Fix Sigma dashboard connector issues fast with OpenMetadata'stroubl
 slug: /connectors/dashboard/sigma/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

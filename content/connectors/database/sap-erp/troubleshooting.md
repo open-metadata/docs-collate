@@ -4,4 +4,4 @@ description: Troubleshoot SAP ERP ingestion issues such as invalid token, missin
 slug: /connectors/database/sap-erp/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

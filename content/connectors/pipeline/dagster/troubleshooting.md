@@ -4,4 +4,4 @@ description: Resolve Dagster pipeline ingestion issues such as metadata gaps, AP
 slug: /connectors/pipeline/dagster/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

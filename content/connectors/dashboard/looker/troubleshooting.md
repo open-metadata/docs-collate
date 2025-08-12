@@ -4,4 +4,4 @@ description: Solve Looker connector issues in OpenMetadata with expert troublesh
 slug: /connectors/dashboard/looker/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

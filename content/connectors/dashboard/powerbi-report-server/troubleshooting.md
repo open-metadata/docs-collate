@@ -4,4 +4,4 @@ description: Fix Power BI Report Server integration issues like failed authentic
 slug: /connectors/dashboard/powerbireportserver/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

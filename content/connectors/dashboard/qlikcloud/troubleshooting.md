@@ -4,4 +4,4 @@ description: Fix QlikCloud connector issues fast with OpenMetadata'sexpert troub
 slug: /connectors/dashboard/qlikcloud/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

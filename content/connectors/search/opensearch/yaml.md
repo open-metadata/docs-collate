@@ -19,7 +19,7 @@ Configure and schedule OpenSearch metadata and profiler workflows from the OpenM
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -27,7 +27,7 @@ We extract OpenSearch's metadata by using its [API](https://opensearch.org/docs/
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the OpenSearch ingestion, you will need to install:
 
@@ -184,11 +184,11 @@ information in AWS CloudTrail logs to determine who took actions with a role.
 - **connectionTimeoutSecs**: Connection timeout configuration for communicating with OpenSearch APIs.
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/search/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/search/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -237,14 +237,14 @@ source:
       connectionTimeoutSecs: 30
 ```
 
-{% partial file="/v1.8/connectors/yaml/search/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/search/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}

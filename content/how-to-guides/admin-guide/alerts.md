@@ -36,7 +36,7 @@ Navigate to Observability > Alerts.
 
 Once on the Observability alerts page, click on button **Add Alert** in the top right corner.
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/alert1.webp"
+src="/images/v1.9/how-to-guides/admin-guide/alert1.webp"
 alt="Create Observability Alerts"
 caption="Create Observability Alerts"
 /%}
@@ -48,7 +48,7 @@ As with most configuration in OpenMetadata you will first need to add a **Name**
 1. **Source**: Specify the data asset for which the alert must be set up. Alerts can be set up for Container, Ingestion Pipeline, Pipeline, Table, Test Case, Test Suite, and Topic.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/source.webp"
+src="/images/v1.9/how-to-guides/admin-guide/source.webp"
 alt="Specify the Data Asset"
 caption="Specify the Data Asset"
 /%}
@@ -56,13 +56,13 @@ caption="Specify the Data Asset"
 2. **Filter**: Specify the change events to narrow the scope of your alerts. Filters are based on source selected. For example, if the source is a Table, then you can filter by Table Name, Domain, or Owner Name. Use the toggle button to **Include** or **Exclude** the selected filter option. Selecting **Include** will result in an alert being sent if the condition is met. If the Include toggle is turned off, then the condition will be silenced and an alert will not be sent for the denied event. You can add multiple filters.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/filter.webp"
+src="/images/v1.9/how-to-guides/admin-guide/filter.webp"
 alt="Define the Filter"
 caption="Define the Filter"
 /%}
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/filter2.webp"
+src="/images/v1.9/how-to-guides/admin-guide/filter2.webp"
 alt="Include/Exclude the Filter"
 caption="Include/Exclude the Filter"
 /%}
@@ -78,7 +78,7 @@ caption="Include/Exclude the Filter"
 Multiple triggers can be added.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/trigger.webp"
+src="/images/v1.9/how-to-guides/admin-guide/trigger.webp"
 alt="Select Important Trigger Events"
 caption="Select Important Trigger Events"
 /%}
@@ -86,7 +86,7 @@ caption="Select Important Trigger Events"
 4. **Destination**: Specify the destination for the alerts. OpenMetadata supports sending alerts to the users within OpenMetadata, i.e., **Internal** such as Admins, Followers, Owners, Teams and Users.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/internal.webp"
+src="/images/v1.9/how-to-guides/admin-guide/internal.webp"
 alt="Send Alerts to the Users and Teams within OpenMetadata"
 caption="Send Alerts to the Users and Teams within OpenMetadata"
 /%}
@@ -94,7 +94,7 @@ caption="Send Alerts to the Users and Teams within OpenMetadata"
 Alerts can be sent to **External** sources like **Email, G Chat, Generic Webhooks, MS Teams, and Slack**. Add the endpoint URL for the destinations. Alerts can be sent to multiple destinations.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/external.webp"
+src="/images/v1.9/how-to-guides/admin-guide/external.webp"
 alt="Send Alerts to Email, Slack, Teams, G Chat, & Webhooks"
 caption="Send Alerts to Email, Slack, Teams, G Chat, & Webhooks"
 /%}
@@ -106,13 +106,13 @@ In addition to setting up observability alerts, you can also set up notification
 Navigate to Settings > Notifications. Once on the Notifications page, click on button **Add Alert** in the top right corner.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/notify.webp"
+src="/images/v1.9/how-to-guides/admin-guide/notify.webp"
 alt="Add Notifications for Change Events"
 caption="Add Notifications for Change Events"
 /%}
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/alert2.webp"
+src="/images/v1.9/how-to-guides/admin-guide/alert2.webp"
 alt="Add an Alert"
 caption="Add an Alert"
 /%}
@@ -124,7 +124,7 @@ Add a **Name** and **Description** for your notification. Configure the notifica
 1. **Source**: Specify the data asset for which the notification must be set up. Notifications can be set up for Announcements, Chart, Conversation, Dashboard, Dashboard Data Model, Dashboard Service, Database, Database Schema, Database Service, Glossary, Glossary Term, Ingestion Pipeline, Location, Messaging Service, Metadata Service, ML Model, ML Model Service, Pipeline, Pipeline Service, Storage Service, Table, Tag, Tag Category, Task, Topic, or for all the data assets.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/source2.webp"
+src="/images/v1.9/how-to-guides/admin-guide/source2.webp"
 alt="Specify the Data Asset"
 caption="Specify the Data Asset"
 /%}
@@ -134,7 +134,7 @@ caption="Specify the Data Asset"
 Use the toggle button to **Include** or **Exclude** the selected filter option. Selecting **Include** will result in a notification being sent if the condition is met. If the Include toggle is turned off, then the condition will be silenced and a notification will not be sent for the denied event. You can add multiple filters.
 
 {% image
-src="/images/v1.8/how-to-guides/admin-guide/filter3.webp"
+src="/images/v1.9/how-to-guides/admin-guide/filter3.webp"
 alt="Define the Filter"
 caption="Define the Filter"
 /%}
@@ -143,7 +143,7 @@ caption="Define the Filter"
 
 ## Additional Details for the Configuration of Destinations
 
-{% partial file="/v1.8/how-to-guides/email.md" /%}
+{% partial file="/v1.9/how-to-guides/email.md" /%}
 
 ### Slack
 For Slack configuration you will need to get the endpoint URL of the channel where you wish to send the alerts. Additionally, you can configure the following parameters:

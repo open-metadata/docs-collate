@@ -4,4 +4,4 @@ description: Resolve Databricks pipeline ingestion issues with steps for connect
 slug: /connectors/pipeline/databricks-pipeline/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

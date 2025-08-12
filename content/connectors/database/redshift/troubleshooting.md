@@ -4,7 +4,7 @@ description: Troubleshoot Redshift ingestion errors like driver issues, throttli
 slug: /connectors/database/redshift/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the Redshift connector.
 
@@ -19,7 +19,7 @@ does not match host name \"<host>:<port>\"
 If you get this error that time please pass `{'sslmode': 'verify-ca'}` in the connection arguments.
 
 {% image
-src="/images/v1.8/connectors/redshift/service-connection-arguments.png"
+src="/images/v1.9/connectors/redshift/service-connection-arguments.png"
 alt="Configure service connection"
 caption="Configure the service connection by filling the form" /%}
 

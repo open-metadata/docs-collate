@@ -4,4 +4,4 @@ description: Solve SQLite connector issues in OpenMetadata with our comprehensiv
 slug: /connectors/database/sqlite/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

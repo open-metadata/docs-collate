@@ -4,4 +4,4 @@ description: Troubleshoot dbt Cloud ingestion for API errors, job sync issues, o
 slug: /connectors/pipeline/dbtcloud/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

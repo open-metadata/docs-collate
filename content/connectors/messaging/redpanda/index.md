@@ -21,7 +21,7 @@ Configure and schedule Redpanda metadata and profiler workflows from the OpenMet
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/messaging/redpanda/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/messaging/redpanda/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/messaging/redpanda/yaml"} /%}
 
 ## Requirements
 
@@ -32,12 +32,12 @@ The ingestion of the Kafka topics' schema is done separately by configuring the 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Redpanda", 
-    selectServicePath: "/images/v1.8/connectors/redpanda/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/redpanda/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/redpanda/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/redpanda/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/redpanda/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/redpanda/service-connection.png",
 } 
 /%}
 
@@ -61,10 +61,10 @@ To ingest the topic schema `Schema Registry URL` must be passed
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/messaging/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/messaging/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

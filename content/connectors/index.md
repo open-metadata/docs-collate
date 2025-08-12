@@ -71,36 +71,40 @@ Set up auto-classification to detect and tag sensitive data automatically.
 
 ## API Services
 
-{% partial file="/v1.8/connectors/api/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/api/connectors-list.md" /%}
 
 ## Database / DataWarehouse Services
 
-{% partial file="/v1.8/connectors/database/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/database/connectors-list.md" /%}
 
 ## Dashboard Services
 
-{% partial file="/v1.8/connectors/dashboard/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/dashboard/connectors-list.md" /%}
 
 ## Messaging Services
 
-{% partial file="/v1.8/connectors/messaging/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/messaging/connectors-list.md" /%}
 
 ## Pipeline Services
 
-{% partial file="/v1.8/connectors/pipeline/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/pipeline/connectors-list.md" /%}
 
 ## ML Model Services
 
-{% partial file="/v1.8/connectors/ml-model/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/ml-model/connectors-list.md" /%}
 
 ## Storage Services
 
-{% partial file="/v1.8/connectors/storage/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/storage/connectors-list.md" /%}
 
 ## Metadata Services
 
-{% partial file="/v1.8/connectors/metadata/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/metadata/connectors-list.md" /%}
+
+## Security Services
+
+{% partial file="/v1.9/connectors/security/connectors-list.md" /%}
 
 ## Search Services
 
-{% partial file="/v1.8/connectors/search/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/search/connectors-list.md" /%}

@@ -21,9 +21,9 @@ Configure and schedule Cassandra metadata workflows from the OpenMetadata UI:
 - [Enable Security](#securing-cassandra-connection-with-ssl-in-openmetadata)
 
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/cassandra/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/cassandra/yaml"} /%}
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -34,7 +34,7 @@ To extract metadata using the Cassandra connector, ensure the user in the connec
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the Cassandra ingestion, you will need to install:
 
@@ -99,11 +99,11 @@ Configuration for connecting to DataStax Astra DB in the cloud.
 
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -179,17 +179,17 @@ source:
 ```
 
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
 ## Securing Cassandra Connection with SSL in OpenMetadata
 

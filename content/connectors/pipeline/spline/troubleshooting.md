@@ -4,4 +4,4 @@ description: Troubleshoot Spline ingestion failures such as missing lineage grap
 slug: /connectors/pipeline/spline/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

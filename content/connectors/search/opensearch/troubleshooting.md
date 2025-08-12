@@ -4,4 +4,4 @@ description: Troubleshoot OpenSearch ingestion issues like authentication failur
 slug: /connectors/search/opensearch/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

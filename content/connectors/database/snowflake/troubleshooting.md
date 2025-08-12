@@ -4,7 +4,7 @@ description: Fix Snowflake connector issues fast with OpenMetadata'stroubleshoot
 slug: /connectors/database/snowflake/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 ## Snowflake User Access Disabled
 

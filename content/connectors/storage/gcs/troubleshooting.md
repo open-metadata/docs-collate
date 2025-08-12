@@ -4,4 +4,4 @@ description: Troubleshoot GCS storage ingestion issues like API failures, object
 slug: /connectors/storage/gcs/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

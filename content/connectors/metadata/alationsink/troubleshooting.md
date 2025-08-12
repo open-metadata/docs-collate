@@ -4,4 +4,4 @@ description: Troubleshoot AlationSink connector for pushback failures, API error
 slug: /connectors/metadata/alationsink/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

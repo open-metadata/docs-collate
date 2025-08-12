@@ -16,7 +16,7 @@ To follow a data asset,
 - Select a data asset.
 
 {% image
-src="/images/v1.8/how-to-guides/user-guide-for-data-stewards/data4.png"
+src="/images/v1.9/how-to-guides/user-guide-for-data-stewards/data4.png"
 alt="Select a Data Asset"
 caption="Select a Data Asset"
 /%}
@@ -24,7 +24,7 @@ caption="Select a Data Asset"
 - Click the **Follow** button to start following it.
 
 {% image
-src="/images/v1.8/how-to-guides/user-guide-for-data-stewards/data5.png"
+src="/images/v1.9/how-to-guides/user-guide-for-data-stewards/data5.png"
 alt="Star the Data Asset"
 caption="Star the Data Asset"
 /%}
@@ -32,7 +32,7 @@ caption="Star the Data Asset"
 The data assets you are following will be displayed in the **Following** section in **My Data** page.
 
 {% image
-src="/images/v1.8/how-to-guides/user-guide-for-data-stewards/data6.png"
+src="/images/v1.9/how-to-guides/user-guide-for-data-stewards/data6.png"
 alt="Data Assets you are Following"
 caption="Data Assets you are Following"
 /%}
@@ -40,7 +40,7 @@ caption="Data Assets you are Following"
 Clicking on **View All** to check all the data assets you are following will redirect to the **Profile Page > Following Tab**.
 
 {% image
-src="/images/v1.8/how-to-guides/user-guide-for-data-stewards/profile1.png"
+src="/images/v1.9/how-to-guides/user-guide-for-data-stewards/profile1.png"
 alt="Profile Page: Following Tab"
 caption="Profile Page: Following Tab"
 /%}
@@ -48,7 +48,7 @@ caption="Profile Page: Following Tab"
 The Activity Feeds tab displays all the activities related to the data assets that you own, follow, or where you are mentioned.
 
 {% image
-src="/images/v1.8/how-to-guides/user-guide-for-data-stewards/activity.png"
+src="/images/v1.9/how-to-guides/user-guide-for-data-stewards/activity.png"
 alt="Activity Feeds Tab"
 caption="Activity Feeds Tab"
 /%}

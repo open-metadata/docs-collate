@@ -4,4 +4,4 @@ description: Troubleshoot SageMaker integration issues such as API failures, met
 slug: /connectors/ml-model/sagemaker/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

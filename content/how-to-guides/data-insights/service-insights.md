@@ -59,7 +59,7 @@ If no data is displayed, verify that both the metadata ingestion pipeline and th
 {% /note %}
 
 {% image
-src="/images/v1.8/how-to-guides/insights/service-insights1.png"
+src="/images/v1.9/how-to-guides/insights/service-insights1.png"
 alt="Platform Insights"
 caption="Platform Insights"
 /%}
@@ -77,7 +77,7 @@ If the table shows no data, ensure that the Auto Classification pipeline, Auto D
 {% /note %}
 
 {% image
-src="/images/v1.8/how-to-guides/insights/service-insights2.png"
+src="/images/v1.9/how-to-guides/insights/service-insights2.png"
 alt="Generated Data with Collate AI"
 caption="Generated Data with Collate AI"
 /%}
@@ -103,7 +103,7 @@ If the table displays no data, ensure that the Auto Tiering pipeline (Collate on
 {% /note %}
 
 {% image
-src="/images/v1.8/how-to-guides/insights/service-insights3.png"
+src="/images/v1.9/how-to-guides/insights/service-insights3.png"
 alt="PII & Tier Distribution"
 caption="PII & Tier Distribution"
 /%}
@@ -119,7 +119,7 @@ If the table shows no data, verify that the usage pipeline has been executed suc
 {% /note %}
 
 {% image
-src="/images/v1.8/how-to-guides/insights/service-insights4.png"
+src="/images/v1.9/how-to-guides/insights/service-insights4.png"
 alt="Most Used Data Assets"
 caption="Most Used Data Assets"
 /%}
@@ -135,7 +135,7 @@ If the table shows no data, verify that the usage pipeline has been executed suc
 {% /note %}
 
 {% image
-src="/images/v1.8/how-to-guides/insights/service-insights5.png"
+src="/images/v1.9/how-to-guides/insights/service-insights5.png"
 alt="Most Expensive Queries"
 caption="Most Expensive Queries"
 /%}
@@ -151,7 +151,7 @@ If no data is displayed, verify that the data quality pipeline and the data insi
 {% /note %}
 
 {% image
-src="/images/v1.8/how-to-guides/insights/service-insights6.png"
+src="/images/v1.9/how-to-guides/insights/service-insights6.png"
 alt="Data Quality"
 caption="Data Quality"
 /%}

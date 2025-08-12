@@ -4,4 +4,4 @@ description: Troubleshoot ADLS ingestion errors like token expiration, file acce
 slug: /connectors/storage/adls/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

@@ -4,7 +4,7 @@ description: Resolve Hive ingestion issues like metastore connection failures, s
 slug: /connectors/database/hive/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the Hive connector.
 

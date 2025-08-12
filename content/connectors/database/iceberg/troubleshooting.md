@@ -4,4 +4,4 @@ description: Troubleshoot Iceberg metadata ingestion for schema misalignment, pa
 slug: /connectors/database/iceberg/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

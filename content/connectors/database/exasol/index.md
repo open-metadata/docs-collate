@@ -8,8 +8,8 @@ slug: /connectors/database/exasol
 name="Exasol"
 stage="PROD"
 platform="OpenMetadata"
-availableFeatures=["Metadata", "Lineage", "Column-level Lineage"]
-unavailableFeatures=["Query Usage", "Data Profiler", "Data Quality", "Owners", "dbt", "Tags", "Stored Procedures", "Sample Data", "Auto-Classification"]
+availableFeatures=["Metadata"]
+unavailableFeatures=["Query Usage", "Lineage", "Column-level Lineage", "Data Profiler", "Data Quality", "Owners", "dbt", "Tags", "Stored Procedures", "Sample Data", "Auto-Classification"]
 / %}
 
 
@@ -19,12 +19,11 @@ Configure and schedule Exasol metadata from the OpenMetadata UI:
 
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
-- [Lineage](/connectors/ingestion/lineage)
 - [Troubleshooting](/connectors/database/exasol/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/exasol/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/exasol/yaml"} /%}
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 {%inlineCallout icon="description" bold="OpenMetadata 1.6.1 or later" href="/deployment"%}
 To deploy OpenMetadata, check the Deployment guides.
@@ -34,22 +33,15 @@ To deploy OpenMetadata, check the Deployment guides.
 
 The connector requires **Exasol version 7.1 or higher** to function correctly. Ensure your Exasol instance meets this minimum version requirement before proceeding.
 
-To ingest basic metadata, an Exasol user must have the following privileges:
-  - `USAGE` privilege on Schema
-  - `SELECT` privilege on Tables
-
-Openmetadata fetches the query logs for the lineage workflow by querying `EXA_STATISTICS.EXA_DBA_AUDIT_SQL` table.
-For this, an Exasol user should be granted the `SELECT ANY DICTIONARY` system privilege.
-
 ## Metadata Ingestion
 
 {% partial
-  file="/v1.8/connectors/metadata-ingestion-ui.md"
+  file="/v1.9/connectors/metadata-ingestion-ui.md"
   variables={
     connector: "Exasol",
-    selectServicePath: "/images/v1.8/connectors/exasol/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/exasol/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/exasol/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/exasol/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/exasol/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/exasol/service-connection.png",
   }
 /%}
 
@@ -85,14 +77,14 @@ This mode is not recommended for production and should only be used in debugging
 Ensure that the appropriate TLS setting is chosen based on your security and deployment requirements.
 {% /note %}
 
-{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.9/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

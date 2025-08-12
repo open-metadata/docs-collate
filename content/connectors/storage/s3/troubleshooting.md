@@ -4,4 +4,4 @@ description: Troubleshoot S3 ingestion problems such as bucket not found, denied
 slug: /connectors/storage/s3/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

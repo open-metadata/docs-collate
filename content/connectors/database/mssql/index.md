@@ -29,7 +29,7 @@ Configure and schedule MSSQL metadata and profiler workflows from the OpenMetada
 - [Reverse Metadata](#reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mssql/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mssql/yaml"} /%}
 
 ## Requirements
 
@@ -62,7 +62,7 @@ Make sure the SQL server that you are trying to connect is in running state.
 This step allow the sql server to accept remote connection request.
 
 {% image
-src="/images/v1.8/connectors/mssql/remote-connection.png"
+src="/images/v1.9/connectors/mssql/remote-connection.png"
 alt="Remote Connection"
 caption="Rm"
 /%}
@@ -91,12 +91,12 @@ For details step please refer to this [link](https://docs.microsoft.com/en-us/sq
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "MSSQL", 
-    selectServicePath: "/images/v1.8/connectors/mssql/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/mssql/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/mssql/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/mssql/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/mssql/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/mssql/service-connection.png",
 } 
 /%}
 
@@ -113,20 +113,20 @@ For details step please refer to this [link](https://docs.microsoft.com/en-us/sq
 - **Database**: The initial database to establish a connection to the data source.
 - **Ingest All Databases**: If you need to ingest multiple databases - aside from the initial one above - you can enable this option.
 
-{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.9/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
 {% collateContent %}
-{% partial file="/v1.8/connectors/database/mssql/reverse-metadata.md" /%}
+{% partial file="/v1.9/connectors/database/mssql/reverse-metadata.md" /%}
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/database/related.md" /%}
+{% partial file="/v1.9/connectors/database/related.md" /%}

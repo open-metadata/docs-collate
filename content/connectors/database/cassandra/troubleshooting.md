@@ -4,4 +4,4 @@ description: Resolve Cassandra ingestion issues related to schema mismatches, dr
 slug: /connectors/database/cassandra/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

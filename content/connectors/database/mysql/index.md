@@ -28,7 +28,7 @@ Configure and schedule MySQL metadata and profiler workflows from the OpenMetada
 - [Reverse Metadata](#reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mysql/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/mysql/yaml"} /%}
 
 ## Requirements
 
@@ -136,12 +136,12 @@ Executing the profiler workflow or data quality tests, will require the user to 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "MySQL", 
-    selectServicePath: "/images/v1.8/connectors/mysql/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/mysql/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/mysql/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/mysql/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/mysql/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/mysql/service-connection.png",
 } 
 /%}
 
@@ -226,15 +226,15 @@ Executing the profiler workflow or data quality tests, will require the user to 
 - **sslCertificate**: Provide the path to ssl client certificate file (ssl_cert).
 - **sslKey**: Provide the path to ssl client certificate file (ssl_key).
 
-{% partial file="/v1.8/connectors/database/advanced-configuration.md" /%}
+{% partial file="/v1.9/connectors/database/advanced-configuration.md" /%}
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -243,13 +243,13 @@ Executing the profiler workflow or data quality tests, will require the user to 
 To establish secure connections between OpenMetadata and MySQL, navigate to the `Advanced Config` section. Here, you can provide the CA certificate used for SSL validation by specifying the `caCertificate`.  Alternatively, if both client and server require mutual authentication, you'll need to use all three parameters: `ssl_key`, `ssl_cert`, and `ssl_ca`. In this case, `ssl_cert` is used for the client's SSL certificate, `ssl_key` for the private key associated with the SSL certificate, and `ssl_ca` for the CA certificate to validate the server's certificate.
 
 {% image
-  src="/images/v1.8/connectors/ssl_connection.png"
+  src="/images/v1.9/connectors/ssl_connection.png"
   alt="SSL Configuration"
   height="450px"
   caption="SSL Configuration" /%}
 
 {% collateContent %}
-{% partial file="/v1.8/connectors/database/mysql/reverse-metadata.md" /%}
+{% partial file="/v1.9/connectors/database/mysql/reverse-metadata.md" /%}
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/database/related.md" /%}
+{% partial file="/v1.9/connectors/database/related.md" /%}

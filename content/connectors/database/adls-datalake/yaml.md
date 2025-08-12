@@ -19,7 +19,7 @@ Configure and schedule ADLS Datalake metadata and profiler workflows from the Op
 - [Metadata Ingestion](#metadata-ingestion)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -34,7 +34,7 @@ permissions on the Storage Account:
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 #### Azure installation
 
@@ -59,13 +59,13 @@ The workflow is modeled around the following JSON Schema.
 
 #### Source Configuration - Service Connection
 
-{% partial file="/v1.8/connectors/yaml/common/azure-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/azure-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -82,23 +82,23 @@ source:
       configSource:
         securityConfig:     
 ```
-{% partial file="/v1.8/connectors/yaml/common/azure-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/azure-config.md" /%}
 
 ```yaml {% srNumber=9 %}  
       prefix: prefix
 ```
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
 ## dbt Integration
 

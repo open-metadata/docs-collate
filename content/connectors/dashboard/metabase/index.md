@@ -21,7 +21,7 @@ Configure and schedule Metabase metadata and profiler workflows from the OpenMet
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/metabase/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/metabase/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/metabase/yaml"} /%}
 
 ## Requirements
 
@@ -30,12 +30,12 @@ Configure and schedule Metabase metadata and profiler workflows from the OpenMet
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Metabase", 
-    selectServicePath: "/images/v1.8/connectors/metabase/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/metabase/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/metabase/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/metabase/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/metabase/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/metabase/service-connection.png",
 } 
 /%}
 
@@ -50,12 +50,12 @@ Configure and schedule Metabase metadata and profiler workflows from the OpenMet
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
-{% partial file="/v1.8/connectors/dashboard/dashboard-lineage.md" /%}
+{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.md" /%}

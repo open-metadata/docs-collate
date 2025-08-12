@@ -4,4 +4,4 @@ description: Resolve BigTable connector issues quickly with OpenMetadata'scompre
 slug: /connectors/database/bigtable/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

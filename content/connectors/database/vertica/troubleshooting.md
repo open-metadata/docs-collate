@@ -4,7 +4,7 @@ description: Fix Vertica database connection issues with OpenMetadata'scomprehen
 slug: /connectors/database/vertica/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the Vertica connector.
 

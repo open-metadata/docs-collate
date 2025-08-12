@@ -4,4 +4,4 @@ description: Troubleshoot DB2 connector setup, query failures, or credential pro
 slug: /connectors/database/db2/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

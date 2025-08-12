@@ -4,4 +4,4 @@ description: Troubleshoot WhereScape integration problems such as job fetch erro
 slug: /connectors/pipeline/wherescape/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

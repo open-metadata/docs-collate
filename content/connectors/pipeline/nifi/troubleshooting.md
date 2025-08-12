@@ -4,7 +4,7 @@ description: Troubleshoot NiFi ingestion problems including access errors, broke
 slug: /connectors/pipeline/nifi/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}
 
 Learn how to resolve the most common problems people encounter in the Nifi connector.
 

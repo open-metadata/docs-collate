@@ -65,9 +65,7 @@ openmetadata:
       callbackUrl: "http://localhost:8585/callback"
       oidcConfiguration:
         oidcType: "azure"
-        enabled: true
-        tenant: "{Tenant ID}"
-        scope: openid email profile offline_access
+        oidcConfiguration.enabled: true
         clientId:
           secretRef: oidc-secrets
           secretKey: openmetadata-oidc-client-id  
@@ -87,7 +85,7 @@ Altering the order of claims in `jwtPrincipalClaims` may lead to problems when m
 
 {% /note %}
 
-{% partial file="/v1.8/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.9/deployment/configure-ingestion.md" /%}
 
 
 {% inlineCalloutContainer %}

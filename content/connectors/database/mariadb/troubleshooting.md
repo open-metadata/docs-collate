@@ -4,4 +4,4 @@ description: Resolve MariaDB connector issues including schema drift, access den
 slug: /connectors/database/mariadb/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

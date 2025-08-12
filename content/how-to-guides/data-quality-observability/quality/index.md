@@ -17,7 +17,7 @@ OpenMetadata provides Data Quality workflows, which helps with:
 The data quality in OpenMetadata is also **extensible** to adapt to your needs. 
 
 {% image
-src="/images/v1.8/how-to-guides/quality/quality1.png"
+src="/images/v1.9/how-to-guides/quality/quality1.png"
 alt="Profiler & Data Quality"
 caption="Profiler & Data Quality"
 /%}
@@ -59,6 +59,12 @@ Here's the latest on OpenMetadata's data quality.
     bold="Tests - YAML Config"
     href="/how-to-guides/data-quality-observability/quality/tests-yaml"%}
     Learn how to configure data quality tests in the YAML config file.
+ {%/inlineCallout%}
+  {%inlineCallout
+    icon="MdOutlineDashboardCustomize"
+    bold="UI Config"
+    href="/how-to-guides/data-quality-observability/quality/tests-UI"%}
+    Learn how to configure data quality tests in the UI.
  {%/inlineCallout%}
  {%inlineCallout
     icon="MdOutlineDashboardCustomize"

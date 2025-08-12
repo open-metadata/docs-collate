@@ -31,4 +31,4 @@ global:
     callbackUrl: "http://localhost:8585/callback"
 ```
 
-{% partial file="/v1.8/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.9/deployment/configure-ingestion.md" /%}

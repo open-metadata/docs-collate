@@ -22,7 +22,7 @@ Configure and schedule SSAS metadata and profiler workflows from the Collate UI:
 - [Troubleshooting](/connectors/database/ssas/troubleshooting)
 
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/ssas/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/database/ssas/yaml"} /%}
 
 ## Requirements
 To extract metadata from SSAS, ensure the following requirements are met:
@@ -38,12 +38,12 @@ These steps are necessary to allow the connector to communicate with your SSAS i
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "SSAS", 
-    selectServicePath: "/images/v1.8/connectors/ssas/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/ssas/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/ssas/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/ssas/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/ssas/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/ssas/service-connection.png",
 } 
 /%}
 
@@ -61,11 +61,11 @@ These steps are necessary to allow the connector to communicate with your SSAS i
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/database/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/database/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 

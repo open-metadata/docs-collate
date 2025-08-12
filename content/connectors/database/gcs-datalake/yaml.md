@@ -19,7 +19,7 @@ Configure and schedule GCS Datalake metadata and profiler workflows from the Ope
 - [Metadata Ingestion](#metadata-ingestion)
 - [dbt Integration](#dbt-integration)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Configure and schedule GCS Datalake metadata and profiler workflows from the Ope
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 If running OpenMetadata version greater than 0.13, you will need to install the Datalake ingestion for GCS
 
@@ -63,7 +63,7 @@ The workflow is modeled around the following JSON Schema.
 
 #### Source Configuration - Service Connection
 
-{% partial file="/v1.8/connectors/yaml/common/gcp-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/gcp-config-def.md" /%}
 
 {% codeInfo srNumber=5 %}
 
@@ -73,11 +73,11 @@ The workflow is modeled around the following JSON Schema.
 {% /codeInfo %}
 
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -94,24 +94,24 @@ source:
         securityConfig:
           gcpConfig:
 ```
-{% partial file="/v1.8/connectors/yaml/common/gcp-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/common/gcp-config.md" /%}
 
 ```yaml {% srNumber=5 %}
       bucketName: bucket name
       prefix: prefix
 ```
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
 ## dbt Integration
 

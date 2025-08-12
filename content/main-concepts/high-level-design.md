@@ -22,7 +22,7 @@ The goal of this first section is to get familiar with the high-level concepts a
 Here we have the main actors of the solution:
 
 {% image
-src="/images/v1.8/main-concepts/high-level-design/system-context.png"
+src="/images/v1.9/main-concepts/high-level-design/system-context.png"
 alt="system-context" /%}
 
 
@@ -76,7 +76,7 @@ in a simple language (REST), without the learning curve of diving into specific 
 
 
 {% image
-src="/images/v1.8/main-concepts/high-level-design/api-container-diagram.png"
+src="/images/v1.9/main-concepts/high-level-design/api-container-diagram.png"
 alt="api-container-diagram" /%}
 
 
@@ -178,7 +178,7 @@ We will start with the simplest scenario: Creating a new Entity via a `POST` cal
 as part of the logic and methods are reused during updates.
 
 {% image
-src="/images/v1.8/main-concepts/high-level-design/create-new-entity.png"
+src="/images/v1.9/main-concepts/high-level-design/create-new-entity.png"
 alt="create-new-entity" /%}
 
 
@@ -222,7 +222,7 @@ which have been validated and stored accordingly. We can then return the created
 Let's now build on top of what we learned during the `POST` discussion, expanding the example to a `PUT` request handling.
 
 {% image
-src="/images/v1.8/main-concepts/high-level-design/create-or-update.png"
+src="/images/v1.9/main-concepts/high-level-design/create-or-update.png"
 alt="create-update-entity" /%}
 
 

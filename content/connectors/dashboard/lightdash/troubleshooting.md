@@ -4,4 +4,4 @@ description: Solve Lightdash connector issues in OpenMetadata with our comprehen
 slug: /connectors/dashboard/lightdash/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

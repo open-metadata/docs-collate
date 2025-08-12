@@ -26,7 +26,7 @@ Configure and schedule dbt Cloud metadata and profiler workflows from the OpenMe
 - [Troubleshooting](/connectors/pipeline/dbtcloud/troubleshooting)
     - [Workflow Deployment Error](#workflow-deployment-error)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/dbtcloud/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/dbtcloud/yaml"} /%}
 
 ## Requirements
 
@@ -34,7 +34,7 @@ Configure and schedule dbt Cloud metadata and profiler workflows from the OpenMe
 
 OpenMetadata is integrated with dbt Cloud up to version [1.8](https://docs.getdbt.com/docs/get-started-dbt) and will continue to work for future dbt Cloud versions.
 
-The Ingestion framework uses [dbt Cloud APIs](https://docs.getdbt.com/dbt-cloud/api-v2#/) to connect to the dbt Cloud and fetch metadata.
+The Ingestion framework uses [dbt Cloud APIs](https://docs.getdbt.com/dbt-cloud/api-v2#/) to connect to  dbt Cloud and fetch metadata.
 
 ### dbt Cloud Permissions
 
@@ -50,12 +50,12 @@ To know more about permissions required refer [here](https://docs.getdbt.com/doc
 ## Metadata Ingestion
 
 {% partial 
-    file="/v1.8/connectors/metadata-ingestion-ui.md" 
+    file="/v1.9/connectors/metadata-ingestion-ui.md" 
     variables={
         connector: "DBTCloud", 
-        selectServicePath: "/images/v1.8/connectors/dbtcloud/select-service.png",
-        addNewServicePath: "/images/v1.8/connectors/dbtcloud/add-new-service.png",
-        serviceConnectionPath: "/images/v1.8/connectors/dbtcloud/service-connection.png",
+        selectServicePath: "/images/v1.9/connectors/dbtcloud/select-service.png",
+        addNewServicePath: "/images/v1.9/connectors/dbtcloud/add-new-service.png",
+        serviceConnectionPath: "/images/v1.9/connectors/dbtcloud/service-connection.png",
     } 
 /%}
 
@@ -66,7 +66,7 @@ To know more about permissions required refer [here](https://docs.getdbt.com/doc
 
 - **Host**: dbt Cloud Access URL eg.`https://abc12.us1.dbt.com`. Go to your dbt Cloud account settings to know your Access URL.
 
-- **Discovery API URL** : dbt cloud Access URL eg. `https://metadata.cloud.getdbt.com/graphql`. Go to your dbt Cloud account settings to know your Discovery API url. Make sure you have `/graphql` at the end of your URL.
+- **Discovery API URL** : dbt Cloud Access URL eg. `https://metadata.cloud.getdbt.com/graphql`. Go to your dbt Cloud account settings to know your Discovery API url. Make sure you have `/graphql` at the end of your URL.
 
 - **Account Id** : The Account ID of your dbt Cloud Project. Go to your dbt Cloud account settings to know your Account Id. This will be a numeric value but in openmetadata we parse it as a string.
 
@@ -81,11 +81,11 @@ Make sure you have the necessary permissions on the token to run graphql queries
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -97,11 +97,11 @@ Steps to retrieve and display the lineage information for a dbt Cloud service. N
 By successfully completing these steps, the lineage information for the service will be displayed.
 
 {% image
-  src="/images/v1.8/connectors/dbtcloud/lineage.png"
+  src="/images/v1.9/connectors/dbtcloud/lineage.png"
   alt="dbt Cloud Lineage" /%}
 
 ### Missing Lineage
 If lineage information is not displayed for a dbt Cloud service, follow these steps to diagnose the issue.
-1. *dbt Cloud Account*: Make sure that the dbt cloud instance you are ingesting have the necessary permissions to fetch jobs and run graphql queries over the API.
+1. *dbt Cloud Account*: Make sure that the dbt Cloud instance you are ingesting have the necessary permissions to fetch jobs and run graphql queries over the API.
 2. *Metadata Ingestion*: Ensure that metadata for both the source and sink database is ingested and passed to the lineage system. This typically involves configuring the relevant connectors to capture and transmit this information.
 3. *Last Run Successful*: Ensure that the Last Run for a Job is successful as OpenMetadata gets the metadata required to build the lineage using the last Run under a Job.

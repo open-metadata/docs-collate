@@ -14,7 +14,7 @@ Create a new entry in the JSON schema definition of the Secrets Manager provider
 
 ```json
 {
-  "$id": "https://open-metadata.org/schema/entity/services/connections/metadata/secretsManagerProvider.json",
+  "$id": "https://open-metadata.org/schema/security/secrets/secretsManagerProvider.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Secrets Manager Provider",
   "description": "OpenMetadata Secrets Manager Provider. Make sure to configure the same secrets manager providers as the ones configured on the OpenMetadata server.",

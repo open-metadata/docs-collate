@@ -20,7 +20,7 @@ Configure and schedule PowerBI Report Server metadata from CLI:
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/dashboard/powerbireportserver/troubleshooting)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -29,12 +29,12 @@ The PowerBI Report Server should be accessible from the ingestion environment.
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "PowerBIReportServer", 
-    selectServicePath: "/images/v1.8/connectors/powerbireportserver/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/powerbireportserver/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/powerbireportserver/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/powerbireportserver/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/powerbireportserver/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/powerbireportserver/service-connection.png",
 } 
 /%}
 
@@ -58,10 +58,10 @@ Web Portal Virtual Directory name which you have configured in your PowerBI Repo
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}

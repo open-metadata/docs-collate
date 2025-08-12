@@ -11,7 +11,7 @@ Once a glossary has been created, you can add multiple **Glossary Terms** and **
 - Once in the Glossary, click on **Add Term**.
 
 {% image
-src="/images/v1.8/how-to-guides/governance/glossary-term.png"
+src="/images/v1.9/how-to-guides/governance/glossary-term.png"
 alt="Add Glossary Term"
 caption="Add Glossary Term"
 /%}

@@ -31,17 +31,17 @@ OpenMetadata supports flexible nested team hierarchies under organizational stru
 {% /note %}
 
 {% image
-src="/images/v1.8/how-to-guides/teams-and-users/teams.png"
+src="/images/v1.9/how-to-guides/teams-and-users/teams.png"
 alt="team-structure"
 caption="Team Hierarchy in OpenMetadata"
 /%}
 {% image
-src="/images/v1.8/how-to-guides/teams-and-users/teams1.1.png"
+src="/images/v1.9/how-to-guides/teams-and-users/teams1.1.png"
 alt="team-structure"
 caption="Team Hierarchy in OpenMetadata"
 /%}
 {% image
-src="/images/v1.8/how-to-guides/teams-and-users/teams1.2.png"
+src="/images/v1.9/how-to-guides/teams-and-users/teams1.2.png"
 alt="team-structure"
 caption="Team Hierarchy in OpenMetadata"
 /%}

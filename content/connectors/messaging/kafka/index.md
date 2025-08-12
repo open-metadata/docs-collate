@@ -21,7 +21,7 @@ Configure and schedule Kafka metadata and profiler workflows from the OpenMetada
 - [Enable Security](#securing-kafka-connection-with-ssl-in-openmetadata)
 - [Troubleshooting](/connectors/messaging/kafka/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/messaging/kafka/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/messaging/kafka/yaml"} /%}
 
 ## Requirements
 
@@ -36,12 +36,12 @@ The ingestion of the Kafka topics' schema is done separately by configuring the 
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Kafka", 
-    selectServicePath: "/images/v1.8/connectors/kafka/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/kafka/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/kafka/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/kafka/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/kafka/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/kafka/service-connection.png",
 } 
 /%}
 
@@ -66,11 +66,11 @@ To ingest the topic schema `Schema Registry URL` must be passed
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/messaging/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/messaging/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -79,7 +79,7 @@ To ingest the topic schema `Schema Registry URL` must be passed
 To establish secure connections between OpenMetadata and Kafka, navigate to the `Advanced Config` section. Here, you can provide the CA certificate used for SSL validation by specifying the `caCertificate`. Alternatively, if both client and server require mutual authentication, you'll need to use all three parameters: `ssl key`, `ssl cert`, and `caCertificate`. In this case, `ssl_cert` is used for the client’s SSL certificate, `ssl_key` for the private key associated with the SSL certificate, and `caCertificate` for the CA certificate to validate the server’s certificate.
 
   {% image
-  src="/images/v1.8/connectors/ssl_kafka.png"
+  src="/images/v1.9/connectors/ssl_kafka.png"
   alt="SSL Configuration"
   height="450px"
   caption="SSL Configuration" /%}

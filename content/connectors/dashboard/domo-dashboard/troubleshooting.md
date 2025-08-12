@@ -4,4 +4,4 @@ description: Resolve Domo Dashboard connector issues in OpenMetadata with expert
 slug: /connectors/dashboard/domo-dashboard/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

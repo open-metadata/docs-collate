@@ -240,11 +240,9 @@ dbt test                 # Generate run_results.json
 ## What Gets Ingested
 
 - **Model Definitions**: Queries, configurations, and relationships
-- **Lineage**: 
-  - table-to-table lineage with column-level lineage (column-level lineage is supported only in dbt cloud).
-  - table-to-dashboard,mlmodel,apiendpoint through [dbt exposures](https://docs.getdbt.com/docs/build/exposures)
+- **Lineage**: Table-to-table and column-level lineage
 - **Documentation**: Model and column descriptions
-- **Data Quality**: dbt test definitions and results - including [dbt freshness](https://docs.getdbt.com/reference/resource-properties/freshness) tests
+- **Data Quality**: dbt test definitions and results
 - **Tags & Classification**: Model and column tags
 - **Ownership**: Model owners and team assignments
 

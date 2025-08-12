@@ -35,7 +35,7 @@ openmetadata:
       publicKeys:
       - "{OMD-server-domain}/api/v1/system/config/jwks" # Update with your Domain and Make sure this "/api/v1/system/config/jwks" is always configured to enable JWT tokens
       - "{Keycloak-server-URL}/realms/{your-realm-name}/protocol/openid-connect/certs"
-      authority: "{Keycloak-server-URL}/realms/{your-realm-name}/protocol/openid-connect/auth"      
+      authority: "{Keycloak-server-URL}/realms/{your-realm-name}/protocol/openid-connect/auth"
       clientId: "{Client ID}"                                        # Update your Client ID
       callbackUrl: "http://localhost:8585/callback"
 ```
@@ -60,7 +60,7 @@ openmetadata:
       publicKeys:
       - "{OMD-server-domain}/api/v1/system/config/jwks" # Update with your Domain and Make sure this "/api/v1/system/config/jwks" is always configured to enable JWT tokens
       - "{Keycloak-server-URL}/realms/{your-realm-name}/protocol/openid-connect/certs"
-      authority: "{Keycloak-server-URL}/realms/{your-realm-name}/protocol/openid-connect/auth"      
+      authority: "{Keycloak-server-URL}/realms/{your-realm-name}/protocol/openid-connect/auth"
       clientId: "{Client ID}"                                        # Update your Client ID
       callbackUrl: "http://localhost:8585/callback"
       oidcConfiguration:
@@ -85,7 +85,7 @@ Altering the order of claims in `jwtPrincipalClaims` may lead to problems when m
 
 {% /note %}
 
-{% partial file="/v1.8/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.9/deployment/configure-ingestion.md" /%}
 
 {% inlineCalloutContainer %}
   {% inlineCallout

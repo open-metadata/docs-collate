@@ -38,4 +38,4 @@ Below are the configuration types to set up the LDAP Authentication:
   {%/inlineCallout%}
 {%/inlineCalloutContainer%}
 
-{% partial file="/v1.8/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.9/deployment/configure-ingestion.md" /%}

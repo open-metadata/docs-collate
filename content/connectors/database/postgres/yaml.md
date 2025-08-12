@@ -27,7 +27,7 @@ Configure and schedule PostgreSQL metadata and profiler workflows from the OpenM
 {% collateContent %}
 - [Reverse Metadata](/connectors/ingestion/workflows/reverse-metadata)
 {% /collateContent %}
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -54,7 +54,7 @@ GRANT pg_read_all_stats TO your_user;
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the PostgreSQL ingestion, you will need to install:
 
@@ -230,11 +230,11 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -283,24 +283,24 @@ source:
       type: PostgreSQL
 ```
 ```yaml {% srNumber=1 %}
-      username: username
+      username: username  # REQUIRED
 ```
 ```yaml {% srNumber=2 %}
-      authType: 
-            password: <password>
+      authType:
+        password: <password>  # Basic Auth - most common
 ```
 ```yaml {% srNumber=3 %}
-      authType: 
-            awsConfig:
-                  awsAccessKeyId: access key id
-                  awsSecretAccessKey: access secret key
-                  awsRegion: aws region name
+      authType:
+        awsConfig:  # IAM Auth for AWS RDS PostgreSQL
+          awsAccessKeyId: access key id
+          awsSecretAccessKey: access secret key
+          awsRegion: aws region name
 ```
 ```yaml {% srNumber=4 %}
-      hostPort: localhost:5432
+      hostPort: localhost:5432  # REQUIRED - format: host:port
 ```
 ```yaml {% srNumber=5 %}
-      database: database
+      database: database  # REQUIRED - database name
 ```
 ```yaml {% srNumber=6 %}
       ingestAllDatabases: true
@@ -320,27 +320,27 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/query-usage.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.9/connectors/yaml/query-usage.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.8/connectors/yaml/lineage.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.9/connectors/yaml/lineage.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.8/connectors/yaml/data-profiler.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.9/connectors/yaml/data-profiler.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.8/connectors/yaml/auto-classification.md" variables={connector: "postgres"} /%}
+{% partial file="/v1.9/connectors/yaml/auto-classification.md" variables={connector: "postgres"} /%}
 
-{% partial file="/v1.8/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.9/connectors/yaml/data-quality.md" /%}
 
 ## Securing PostgreSQL Connection with SSL in OpenMetadata
 

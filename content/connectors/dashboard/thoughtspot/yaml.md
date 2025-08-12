@@ -20,7 +20,7 @@ Configure and schedule ThoughtSpot metadata and profiler workflows from the Open
 - [Requirements](#requirements)
 - [Metadata Ingestion](#metadata-ingestion)
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -33,7 +33,7 @@ To access the ThoughtSpot APIs and import liveboards, charts, and data models fr
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the ThoughtSpot ingestion, you will need to install:
 
@@ -106,7 +106,7 @@ To send the metadata to OpenMetadata, specify `type: metadata-rest`.
 
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 {% /codeInfoContainer %}
 
@@ -151,4 +151,4 @@ workflowConfig:
 
 ## Securing ThoughtSpot Connection with SSL in OpenMetadata
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}

@@ -4,4 +4,4 @@ description: Troubleshoot Airbyte connector ingestion issues like config errors,
 slug: /connectors/pipeline/airbyte/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

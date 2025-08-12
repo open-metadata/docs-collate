@@ -4,4 +4,4 @@ description: Solve BigQuery connector issues in OpenMetadata with expert trouble
 slug: /connectors/database/bigquery/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

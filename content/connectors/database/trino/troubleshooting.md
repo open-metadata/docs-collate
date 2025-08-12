@@ -4,4 +4,4 @@ description: Solve Trino database connector issues in OpenMetadata with expert t
 slug: /connectors/database/trino/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

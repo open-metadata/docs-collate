@@ -4,4 +4,4 @@ description: Resolve OpenLineage pipeline sync issues caused by execution trace 
 slug: /connectors/pipeline/openlineage/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

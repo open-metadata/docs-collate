@@ -27,7 +27,7 @@ Configure and schedule Clickhouse metadata and profiler workflows from the OpenM
 - [Reverse Metadata](/connectors/ingestion/workflows/reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
@@ -59,7 +59,7 @@ For the usage and lineage workflow, the user will need `SELECT` privilege. You c
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the Clickhouse ingestion, you will need to install:
 
@@ -156,11 +156,11 @@ This is a sample config for Clickhouse:
 {% /codeInfo %}
 
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -226,27 +226,27 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/query-usage.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.9/connectors/yaml/query-usage.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.8/connectors/yaml/lineage.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.9/connectors/yaml/lineage.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.8/connectors/yaml/data-profiler.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.9/connectors/yaml/data-profiler.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.8/connectors/yaml/auto-classification.md" variables={connector: "clickhouse"} /%}
+{% partial file="/v1.9/connectors/yaml/auto-classification.md" variables={connector: "clickhouse"} /%}
 
-{% partial file="/v1.8/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.9/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 

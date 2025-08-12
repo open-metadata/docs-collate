@@ -13,7 +13,7 @@ observability, and collaboration.
 OpenMetadata provides all the data context you need for different use cases in a single place.
 
 {% image
-  src="/images/v1.8/features/all-your-data-in-one-place.gif"
+  src="/images/v1.9/features/all-your-data-in-one-place.gif"
 /%}
 
 
@@ -27,7 +27,7 @@ topics, dashboards, pipelines, and services. OpenMetadata supports detailed meta
 Find assets based on name, description, component metadata (e.g., for columns, charts), and the containing service.
 
 {% image
-  src="/images/v1.8/features/data-discovery.gif"
+  src="/images/v1.9/features/data-discovery.gif"
 /%}
 
 
@@ -37,7 +37,7 @@ Discover assets through frequently joined tables and columns as measured by the 
 assets through relationships based on data lineage.
 
 {% image
-  src="/images/v1.8/features/data-discovery-association.gif"
+  src="/images/v1.9/features/data-discovery-association.gif"
 /%}
 
 
@@ -45,7 +45,7 @@ assets through relationships based on data lineage.
 Find assets matching strict criteria on metadata properties and Boolean operators.
 
 {% image
-  src="/images/v1.8/features/data-discovery-advanced-search.gif"
+  src="/images/v1.9/features/data-discovery-advanced-search.gif"
 /%}
 
 
@@ -58,7 +58,7 @@ are clickable including tables, dashboards, team names, etc. There are activity 
 - Data you are following
 
 {% image
-  src="/images/v1.8/features/activity-feeds.gif"
+  src="/images/v1.9/features/activity-feeds.gif"
 /%}
 
 
@@ -69,7 +69,7 @@ through APIs. Register URLs to receive metadata event notifications. Slack integ
 of many applications of this feature.
 
 {% image
-  src="/images/v1.8/features/event-notification-slack.gif"
+  src="/images/v1.9/features/event-notification-slack.gif"
 /%}
 
 ## Add Descriptive Metadata
@@ -78,7 +78,7 @@ names, and other metadata to enable keyword, advanced search, and filtering to e
 organization to discover your data.
 
 {% image
-  src="/images/v1.8/features/add-descriptive-metadata.gif"
+  src="/images/v1.9/features/add-descriptive-metadata.gif"
 /%}
 
 
@@ -87,7 +87,7 @@ Add descriptions and tags to nested fields in complex data types like arrays and
 keyword search or advanced search.
 
 {% image
-  src="/images/v1.8/features/complex-data-types.gif"
+  src="/images/v1.9/features/complex-data-types.gif"
 /%}
 
 ## Deleted Entity Metadata
@@ -98,7 +98,7 @@ easy to recreate it. OpenMetadata supports soft deletion in the UI and soft and 
 enabling you to choose whether to maintain metadata for deleted entities.
 
 {% image
-  src="/images/v1.8/features/deleted-entity.gif"
+  src="/images/v1.9/features/deleted-entity.gif"
 /%}
 
 
@@ -110,7 +110,7 @@ Use ownership metadata to determine the primary points of contact for any assets
 any questions you might have.
 
 {% image
-  src="/images/v1.8/features/importance-owners.gif"
+  src="/images/v1.9/features/importance-owners.gif"
 /%}
 
 
@@ -118,7 +118,7 @@ any questions you might have.
 User Tier tags and usage data to identify the relative importance of data assets.
 
 {% image
-  src="/images/v1.8/features/filter-asset-by-importance.gif"
+  src="/images/v1.9/features/filter-asset-by-importance.gif"
 /%}
 
 
@@ -126,7 +126,7 @@ User Tier tags and usage data to identify the relative importance of data assets
 Identify owners who can help with questions about an asset.
 
 {% image
-  src="/images/v1.8/features/identify-asset-owner.gif"
+  src="/images/v1.9/features/identify-asset-owner.gif"
 /%}
 
 
@@ -136,7 +136,7 @@ or more roles. Each role has a defined policy. Policies are composed of a set of
 metadata operations such as updating descriptions, tags, owners, and lineage.
 
 {% image
-  src="/images/v1.8/features/rbac.gif"
+  src="/images/v1.9/features/rbac.gif"
 /%}
 
 
@@ -144,7 +144,7 @@ metadata operations such as updating descriptions, tags, owners, and lineage.
 Trace the path of data across tables, pipelines, and dashboards.
 
 {% image
-  src="/images/v1.8/features/data-lineage.gif"
+  src="/images/v1.9/features/data-lineage.gif"
 /%}
 
 
@@ -154,7 +154,7 @@ drag and drop interface. Drop tables, pipelines, and dashboards onto the lineage
 delete existing edges to better represent data lineage.
 
 {% image
-  src="/images/v1.8/features/manual-lineage.gif"
+  src="/images/v1.9/features/manual-lineage.gif"
 /%}
 
 
@@ -164,7 +164,7 @@ a table was generated from. A dbt model provides specifics. OpenMetadata include
 you to see what models are being used to generate tables.
 
 {% image
-  src="/images/v1.8/features/dbt-integration.gif"
+  src="/images/v1.9/features/dbt-integration.gif"
 /%}
 
 
@@ -177,7 +177,7 @@ ingestion. Data profiles enable you to check for null values in non-null columns
 etc. You can gain a better understanding of column data distributions through descriptive statistics provided.
 
 {% image
-  src="/images/v1.8/features/data-profiler.gif"
+  src="/images/v1.9/features/data-profiler.gif"
 /%}
 
 
@@ -188,7 +188,7 @@ jobs. Admins can configure a service to run the OpenMetadata pipelines and add a
 kick off the ingestion jobs directly from the OpenMetadata UI.
 
 {% image
-  src="/images/v1.8/features/ingestion-pipelines.gif"
+  src="/images/v1.9/features/ingestion-pipelines.gif"
 /%}
 
 
@@ -216,7 +216,7 @@ a data issue. Data owners and admins can review changes and revert if necessary.
 
 
 {% image
-  src="/images/v1.8/features/data-versioning.gif"
+  src="/images/v1.9/features/data-versioning.gif"
 /%}
 
 
@@ -237,7 +237,7 @@ OpenMetadata UI. As of the 0.7 release, OpenMetadata automatically runs an index
 or updated through ingestion workflows.
 
 {% image
-  src="/images/v1.8/features/elasticsearch.gif"
+  src="/images/v1.9/features/elasticsearch.gif"
 /%}
 
 

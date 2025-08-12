@@ -142,6 +142,12 @@ site_menu:
     url: /connectors/database/exasol/yaml
   - category: Connectors / Database / Exasol / Troubleshooting
     url: /connectors/database/exasol/troubleshooting
+  - category: Connectors / Database / Epic
+    url: /connectors/database/epic
+  - category: Connectors / Database / Epic / Run Externally
+    url: /connectors/database/epic/yaml
+  - category: Connectors / Database / Epic / Troubleshooting
+    url: /connectors/database/epic/troubleshooting
   - category: Connectors / Database / GCS Datalake
     url: /connectors/database/gcs-datalake
   - category: Connectors / Database / GCS Datalake / Run Externally
@@ -321,6 +327,12 @@ site_menu:
     url: /connectors/dashboard/domo-dashboard/yaml
   - category: Connectors / Dashboard / Domo Dashboard / Troubleshooting
     url: /connectors/dashboard/domo-dashboard/troubleshooting
+  - category: Connectors / Database / Grafana
+    url: /connectors/dashboard/grafana
+  - category: Connectors / Database / Grafana / Run Externally
+    url: /connectors/dashboard/grafana/yaml
+  - category: Connectors / Database / Grafana / Troubleshooting
+    url: /connectors/dashboard/grafana/troubleshooting
   - category: Connectors / Dashboard / Lightdash
     url: /connectors/dashboard/lightdash
   - category: Connectors / Dashboard / Lightdash / Run Externally
@@ -621,10 +633,6 @@ site_menu:
     url: /connectors/search/opensearch/yaml
   - category: Connectors / Search / OpenSearch / Troubleshooting
     url: /connectors/search/opensearch/troubleshooting
-  - category: Main Concepts / Metadata Standard / Schemas / Api / Services / CreateSecurityService
-    url: /main-concepts/metadata-standard/schemas/api/services/createsecurityservice
-  - category: Main Concepts / Metadata Standard / Schemas / Entity / Services / SecurityService
-    url: /main-concepts/metadata-standard/schemas/entity/services/securityservice
 
   - category: Connectors / Metadata
     url: /connectors/metadata
@@ -926,6 +934,8 @@ site_menu:
     url: /how-to-guides/data-quality-observability/quality/configure
   - category: How-to Guides / Data Quality and Observability / Data Quality / Tests - YAML Config
     url: /how-to-guides/data-quality-observability/quality/tests-yaml
+  - category: How-to Guides / Data Quality and Observability / Data Quality / Tests - UI Config
+    url: /how-to-guides/data-quality-observability/quality/tests-ui
   - category: How-to Guides / Data Quality and Observability / Data Quality / Custom Tests
     url: /how-to-guides/data-quality-observability/quality/custom-tests
   - category: How-to Guides / Data Quality and Observability / Data Profiler
@@ -952,6 +962,18 @@ site_menu:
     url: /how-to-guides/data-quality-observability/incident-manager/workflow
   - category: How-to Guides / Data Quality and Observability / Incident Manager / Root Cause Analysis
     url: /how-to-guides/data-quality-observability/incident-manager/root-cause-analysis
+  - category: How-to Guides / Data Quality and Observability / Data Profiler / Spark Engine
+    url: /how-to-guides/data-quality-observability/profiler/spark-engine
+  - category: How-to Guides / Data Quality and Observability / Data Profiler / Spark Engine / Prerequisites
+    url: /how-to-guides/data-quality-observability/profiler/spark-engine/prerequisites
+  - category: How-to Guides / Data Quality and Observability / Data Profiler / Spark Engine / Partitioning
+    url: /how-to-guides/data-quality-observability/profiler/spark-engine/partitioning
+  - category: How-to Guides / Data Quality and Observability / Data Profiler / Spark Engine / Configuration
+    url: /how-to-guides/data-quality-observability/profiler/spark-engine/configuration
+  - category: How-to Guides / Data Quality and Observability / Data Profiler / Spark Engine / Configuration / UI Configuration
+    url: /how-to-guides/data-quality-observability/profiler/spark-engine/ui-configuration
+  - category: How-to Guides / Data Quality and Observability / Data Profiler / Spark Engine / Configuration / External Configuration
+    url: /how-to-guides/data-quality-observability/profiler/spark-engine/external-configuration
 
   - category: How-to Guides / Data Quality and Observability / Anomaly Detection
     url: /how-to-guides/data-quality-observability/anomaly-detection

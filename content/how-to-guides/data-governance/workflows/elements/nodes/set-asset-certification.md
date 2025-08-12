@@ -18,4 +18,4 @@ After you define a **Display Name** and a **Description** for this node, you can
 
 We can see an example of this node's configuration below:
 
-{% image src="/images/v1.8/how-to-guides/governance/workflows-set-asset-certification.png" alt="set-asset-certification" /%}
+{% image src="/images/v1.9/how-to-guides/governance/workflows-set-asset-certification.png" alt="set-asset-certification" /%}

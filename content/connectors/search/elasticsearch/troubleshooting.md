@@ -4,4 +4,4 @@ description: Resolve Elasticsearch ingestion issues like index not found, mappin
 slug: /connectors/search/elasticsearch/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

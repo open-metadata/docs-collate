@@ -4,4 +4,4 @@ description: Fix Mode dashboard connector issues with OpenMetadata'scomprehensiv
 slug: /connectors/dashboard/mode/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

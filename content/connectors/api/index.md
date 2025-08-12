@@ -12,7 +12,7 @@ The OpenMetadata API service facilitates metadata ingestion from RESTful APIs th
 
 This is the supported list of connectors for API Services:
 
-{% partial file="/v1.8/connectors/api/connectors-list.md" /%}
+{% partial file="/v1.9/connectors/api/connectors-list.md" /%}
 
 ## Supported Features
 

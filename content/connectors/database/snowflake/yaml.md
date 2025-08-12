@@ -28,13 +28,13 @@ Configure and schedule Snowflake metadata and profiler workflows from the OpenMe
 - [Reverse Metadata](/connectors/ingestion/workflows/reverse-metadata)
 {% /collateContent %}
 
-{% partial file="/v1.8/connectors/external-ingestion-deployment.md" /%}
+{% partial file="/v1.9/connectors/external-ingestion-deployment.md" /%}
 
 ## Requirements
 
 ### Python Requirements
 
-{% partial file="/v1.8/connectors/python-requirements.md" /%}
+{% partial file="/v1.9/connectors/python-requirements.md" /%}
 
 To run the Snowflake ingestion, you will need to install:
 
@@ -200,11 +200,11 @@ When using this field make sure you have all these tables available within your 
 
 {% /codeInfo %}
 
-{% partial file="/v1.8/connectors/yaml/database/source-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink-def.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config-def.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config-def.md" /%}
 
 #### Advanced Configuration
 
@@ -279,29 +279,29 @@ source:
       #   key: value
 ```
 
-{% partial file="/v1.8/connectors/yaml/database/source-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/database/source-config.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/ingestion-sink.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-sink.md" /%}
 
-{% partial file="/v1.8/connectors/yaml/workflow-config.md" /%}
+{% partial file="/v1.9/connectors/yaml/workflow-config.md" /%}
 
 {% /codeBlock %}
 
 {% /codePreview %}
 
 
-{% partial file="/v1.8/connectors/yaml/ingestion-cli.md" /%}
+{% partial file="/v1.9/connectors/yaml/ingestion-cli.md" /%}
 
 
-{% partial file="/v1.8/connectors/yaml/query-usage.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.9/connectors/yaml/query-usage.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.8/connectors/yaml/lineage.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.9/connectors/yaml/lineage.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.8/connectors/yaml/data-profiler.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.9/connectors/yaml/data-profiler.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.8/connectors/yaml/auto-classification.md" variables={connector: "snowflake"} /%}
+{% partial file="/v1.9/connectors/yaml/auto-classification.md" variables={connector: "snowflake"} /%}
 
-{% partial file="/v1.8/connectors/yaml/data-quality.md" /%}
+{% partial file="/v1.9/connectors/yaml/data-quality.md" /%}
 
 ## dbt Integration
 

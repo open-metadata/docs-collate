@@ -4,4 +4,4 @@ description: Troubleshoot Presto connector for query failures, ingestion errors,
 slug: /connectors/database/presto/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

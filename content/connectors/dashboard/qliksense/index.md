@@ -22,7 +22,7 @@ Configure and schedule Metabase metadata and profiler workflows from the OpenMet
 - [Lineage](#lineage)
 - [Troubleshooting](/connectors/dashboard/qliksense/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/qliksense/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/dashboard/qliksense/yaml"} /%}
 
 ## Requirements
 
@@ -33,12 +33,12 @@ To deploy OpenMetadata, check the Deployment guides.
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "QlikSense", 
-    selectServicePath: "/images/v1.8/connectors/qliksense/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/qliksense/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/qliksense/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/qliksense/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/qliksense/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/qliksense/service-connection.png",
 } 
 /%}
 
@@ -90,11 +90,11 @@ You will have to replace new lines with `\n` and the final private key that you 
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/dashboard/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/dashboard/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
 
@@ -110,15 +110,15 @@ Refer to the guide on how to generate authentication certificates so that OpenMe
 
 
 {% image
-  src="/images/v1.8/connectors/ssl_qlik_1.png"
+  src="/images/v1.9/connectors/ssl_qlik_1.png"
   alt="SSL Configuration by local file path"
   height="450px"
   caption="SSL Configuration by local file path" /%}
 
   {% image
-  src="/images/v1.8/connectors/ssl_qlik_2.png"
+  src="/images/v1.9/connectors/ssl_qlik_2.png"
   alt="SSL Configuration"
   height="450px"
   caption="SSL Configuration" /%}
 
-{% partial file="/v1.8/connectors/dashboard/dashboard-lineage.md" /%}
+{% partial file="/v1.9/connectors/dashboard/dashboard-lineage.md" /%}

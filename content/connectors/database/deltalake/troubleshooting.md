@@ -4,4 +4,4 @@ description: Fix Delta Lake ingestion issues such as path misconfigurations, sch
 slug: /connectors/database/deltalake/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

@@ -4,4 +4,4 @@ description: Resolve QlikSense connector issues in OpenMetadata with expert trou
 slug: /connectors/dashboard/qliksense/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

@@ -11,7 +11,7 @@ slug: /how-to-guides/guide-for-data-users/tags
 - Click on the checkmark to save the changes.
 
 {% image
-src="/images/v1.8/how-to-guides/governance/tag7.png"
+src="/images/v1.9/how-to-guides/governance/tag7.png"
 alt="Add Tags to Classify Data Assets"
 caption="Add Tags to Classify Data Assets"
 /%}
@@ -22,13 +22,13 @@ The tagged data assets can be discovered right from the Classification page.
 - Click on the Usage number to view the tagged assets.
 
 {% image
-src="/images/v1.8/how-to-guides/governance/tag2.png"
+src="/images/v1.9/how-to-guides/governance/tag2.png"
 alt="Usage: Number of Assets Tagged"
 caption="Usage: Number of Assets Tagged"
 /%}
 
 {% image
-src="/images/v1.8/how-to-guides/governance/tag3.png"
+src="/images/v1.9/how-to-guides/governance/tag3.png"
 alt="Discover the Tagged Data Assets"
 caption="Discover the Tagged Data Assets"
 /%}
@@ -46,7 +46,7 @@ OpenMetadata identifies PII data and auto tags or suggests the tags. The data pr
 In the example below, the columns ‘user_name’ and ‘social security number’ are auto-tagged as PII-sensitive. This works using NLP as part of the profiler during ingestion.
 
 {% image
-src="/images/v1.8/how-to-guides/governance/auto1.png"
+src="/images/v1.9/how-to-guides/governance/auto1.png"
 alt="User_name and Social Security Number are Auto-Classified as PII Sensitive"
 caption="User_name and Social Security Number are Auto-Classified as PII Sensitive"
 /%}
@@ -54,7 +54,7 @@ caption="User_name and Social Security Number are Auto-Classified as PII Sensiti
 In the below example, the column ‘dwh_x10’ is also auto-tagged as PII Sensitive, even though the column name does not provide much information. 
 
 {% image
-src="/images/v1.8/how-to-guides/governance/auto2.png"
+src="/images/v1.9/how-to-guides/governance/auto2.png"
 alt="Column Name does not provide much information"
 caption="Column Name does not provide much information"
 /%}
@@ -62,7 +62,7 @@ caption="Column Name does not provide much information"
 When we look at the content of the column ‘dwh_x10’ in the Sample Data tab, it becomes clear that the auto-classification is based on the data in the column.
 
 {% image
-src="/images/v1.8/how-to-guides/governance/auto3.png"
+src="/images/v1.9/how-to-guides/governance/auto3.png"
 alt="Column Data provides information"
 caption="Column Data provides information"
 /%}

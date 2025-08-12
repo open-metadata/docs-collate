@@ -143,4 +143,4 @@ openmetadata:
    ...
  ```
 
-{% partial file="/v1.8/deployment/configure-ingestion.md" /%}
+{% partial file="/v1.9/deployment/configure-ingestion.md" /%}

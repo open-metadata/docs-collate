@@ -4,4 +4,4 @@ description: Resolve common ingestion problems in Domo pipeline integration, inc
 slug: /connectors/pipeline/domo-pipeline/troubleshooting
 ---
 
-{% partial file="/v1.8/connectors/troubleshooting.md" /%}
+{% partial file="/v1.9/connectors/troubleshooting.md" /%}

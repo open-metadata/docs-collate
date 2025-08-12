@@ -20,7 +20,7 @@ Configure and schedule Glue metadata and profiler workflows from the OpenMetadat
 - [Metadata Ingestion](#metadata-ingestion)
 - [Troubleshooting](/connectors/pipeline/glue-pipeline/troubleshooting)
 
-{% partial file="/v1.8/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/glue-pipeline/yaml"} /%}
+{% partial file="/v1.9/connectors/ingestion-modes-tiles.md" variables={yamlPath: "/connectors/pipeline/glue-pipeline/yaml"} /%}
 
 ## Requirements
 
@@ -36,12 +36,12 @@ The user must have the following permissions for the ingestion to run successful
 ## Metadata Ingestion
 
 {% partial 
-  file="/v1.8/connectors/metadata-ingestion-ui.md" 
+  file="/v1.9/connectors/metadata-ingestion-ui.md" 
   variables={
     connector: "Glue Pipeline", 
-    selectServicePath: "/images/v1.8/connectors/gluepipeline/select-service.png",
-    addNewServicePath: "/images/v1.8/connectors/gluepipeline/add-new-service.png",
-    serviceConnectionPath: "/images/v1.8/connectors/gluepipeline/service-connection.png",
+    selectServicePath: "/images/v1.9/connectors/gluepipeline/select-service.png",
+    addNewServicePath: "/images/v1.9/connectors/gluepipeline/add-new-service.png",
+    serviceConnectionPath: "/images/v1.9/connectors/gluepipeline/service-connection.png",
 } 
 /%}
 
@@ -118,10 +118,10 @@ Find more information about [Source Identity](https://docs.aws.amazon.com/STS/la
 
 {% /extraContent %}
 
-{% partial file="/v1.8/connectors/test-connection.md" /%}
+{% partial file="/v1.9/connectors/test-connection.md" /%}
 
-{% partial file="/v1.8/connectors/pipeline/configure-ingestion.md" /%}
+{% partial file="/v1.9/connectors/pipeline/configure-ingestion.md" /%}
 
-{% partial file="/v1.8/connectors/ingestion-schedule-and-deploy.md" /%}
+{% partial file="/v1.9/connectors/ingestion-schedule-and-deploy.md" /%}
 
 {% /stepsContainer %}
