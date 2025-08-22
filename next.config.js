@@ -77,6 +77,11 @@ module.exports =
           destination: '/connectors/pipeline/airflow/troubleshooting',
           permanent: true,
         },
+        {
+          source: '/connectors/ingestion/workflows/reverse-metadata',
+          destination: '/applications/reverse-metadata',
+          permanent: true,
+        }
       ];
     },
   });
