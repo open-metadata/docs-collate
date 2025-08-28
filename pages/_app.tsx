@@ -18,6 +18,7 @@ import { StepsContextProvider } from "../docs-v1/context/StepsContext";
 import CookieModal from "../components/CookieModal/CookieModal";
 import { HOST_NAME } from "../constants/Homepage.constants";
 import { SlugProps } from "../docs-v1/pages/[version]/[...slug]";
+import Script from "next/script";
 
 const TITLE = "Collate Documentation: Get Help Instantly";
 const DESCRIPTION = "Unified Platform for data discovery, observability and governance.";
@@ -120,6 +121,22 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
                         <CookieModal handleButtonClick={handleButtonClick} />
                       )}
                       <Component {...pageProps} />
+                      <Script
+                        id="reo-script"
+                        dangerouslySetInnerHTML={{
+                          __html: `
+                            !function(){
+                            var e,t,n;
+                            e="31422172b6c48e5",
+                            t=function(){Reo.init({clientID:"31422172b6c48e5"})},
+                            (n=document.createElement("script")).src="https://static.reo.dev/"+e+"/reo.js",
+                            n.defer=!0,
+                            n.onload=t,
+                            document.head.appendChild(n)
+                          }();
+                          `,
+                        }}
+                      />
                     </CodeWithLanguageSelectorContextProvider>
                   </StepsContextProvider>
                 </NavBarCollapseContextProvider>
