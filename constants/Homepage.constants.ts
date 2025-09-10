@@ -6,7 +6,7 @@ import { ReactComponent as GovernanceIcon } from "../images/header-tabs/governan
 import { ReactComponent as LineageIcon } from "../images/header-tabs/lineage.svg";
 import { ReactComponent as ObservabilityIcon } from "../images/header-tabs/observability.svg";
 
-export const HOME_PAGE_BANNER_VIDEO_ID = "iTou2YcEO2o";
+export const HOME_PAGE_BANNER_VIDEO_ID = "vAwEIOqqaXw";
 
 export const HOST_NAME = "https://docs.getcollate.io/";
 
